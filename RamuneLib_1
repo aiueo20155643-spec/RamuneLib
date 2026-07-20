@@ -1,4 +1,4 @@
--- おい、お前カード見ようとしたな？おい？ぶち殺すぞカスが消えろカスそういう人間だからみんなに嫌われるんだよ？w --
+-- おい、お前RamuneLibのコード見ようとしたな？おい？ぶち殺すぞカスが消えろカスそういう人間だからみんなに嫌われるんだよ？w --
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
