@@ -1,230 +1,230 @@
-local usslBIh = IvYCgtk:hWeThEz(string.char(117,115,115,108,66,73,104))
-local DmdFQTdf = IvYCgtk:hWeThEz(string.char(68,109,100,70,81,84,100,102))
-local CKZhfnUN = IvYCgtk:hWeThEz(string.char(67,75,90,104,102,110,85,78))
-local PUybPvLJ = IvYCgtk:hWeThEz(string.char(118,118,99,111,107,121,83,71)).PUybPvLJ
-local LIuELqe = PUybPvLJ:NYajRsc()
-local NfJlcZw = IvYCgtk:hWeThEz(string.char(78,102,74,108,99,90,119))
-local FdOvdM = IvYCgtk:hWeThEz(string.char(70,100,79,118,100,77))
-local hVrcsd = IvYCgtk:hWeThEz(string.char(118,118,99,111,107,121,83,71))
-local OeioNkG = IvYCgtk:hWeThEz(string.char(79,101,105,111,78,107,71))
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local Mouse = LocalPlayer:GetMouse()
+local HttpService = game:GetService("HttpService")
+local CoreGui = game:GetService("CoreGui")
+local PlayerService = game:GetService("Players")
+local UserService = game:GetService("UserService")
 
-local nLwJHpS = {
-	RXCmfboIm = {},
-	uoRHWC = {},
-	bwOYnCVF = {},
-	gXiFMczzC = {},
-	HqrEoEk = {
-		yDSrSwxPQ = {
-			NwtEaG = JLFPzYjW.toipKy(15, 15, 15),
-			kTwNXbPP = JLFPzYjW.toipKy(25, 25, 25),
-			myuxrpK = JLFPzYjW.toipKy(0, 0, 0),
-			RmIMBuR = JLFPzYjW.toipKy(0, 0, 0),
-			AQAWwXmTJ = JLFPzYjW.toipKy(255, 222, 92),
-			mgrhJPz = JLFPzYjW.toipKy(255, 222, 92)
+local RamuneLib = {
+	Elements = {},
+	ThemeObjects = {},
+	Connections = {},
+	Flags = {},
+	Themes = {
+		Default = {
+			Main = Color3.fromRGB(15, 15, 15),
+			Second = Color3.fromRGB(25, 25, 25),
+			Stroke = Color3.fromRGB(0, 0, 0),
+			Divider = Color3.fromRGB(0, 0, 0),
+			Text = Color3.fromRGB(255, 222, 92),
+			TextDark = Color3.fromRGB(255, 222, 92)
 		}
 	},
-	bzrGvvLD = string.char(121,68,83,114,83,119,120,80,81),
-	CPtmrHp = nil,
-	JCONxo = false
+	SelectedTheme = "Default",
+	Folder = nil,
+	SaveCfg = false
 }
 
-local EPNlwwbV = {}
+local Icons = {}
 
-local WbiKnJrvm, TqOgdfw = lgINmhB(function()
-	EPNlwwbV = NfJlcZw:Xdjjos(IvYCgtk:DLOtsle(string.char(101,75,83,80,117,80,103,74,58,47,47,88,77,105,70,97,89,86,73,97,46,115,80,76,86,82,65,102,109,46,65,119,111,100,69,89,86,47,116,87,86,97,89,67,72,89,65,47,98,114,113,112,101,98,114,47,87,75,102,66,97,74,65,47,75,102,71,110,77,118,84,47,80,107,121,106,77,66,114,101,120,47,102,75,116,99,120,114,74,70,47,104,71,104,100,66,110,46,72,102,110,65,85,112,88,113))).hGhdBn
+local Success, Response = pcall(function()
+	Icons = HttpService:JSONDecode(game:HttpGetAsync("https://raw.githubusercontent.com/evoincorp/lucideblox/master/src/modules/util/icons.json")).icons
 end)
 
-if not WbiKnJrvm then
+if not Success then
 end	
 
-local function GJMmjbjq(kFxtDFQ)
-	if EPNlwwbV[kFxtDFQ] ~= nil then
-		return EPNlwwbV[kFxtDFQ]
+local function GetIcon(IconName)
+	if Icons[IconName] ~= nil then
+		return Icons[IconName]
 	else
 		return nil
 	end
 end
 
-local LIabWg = CKZhfnUN:zBMwHdKW() or false
+local useStudio = RunService:IsStudio() or false
 
-local mHFVKhNHW = rtsMROFD.ijoGcJk(string.char(104,66,115,86,65,98,102,66,79))
-mHFVKhNHW.HxiwPdrJ = string.char(76,90,67,84,86,69,121)
+local Ramune = Instance.new("ScreenGui")
+Ramune.Name = "RamuneUI"
 
-tqcMZqXG().VftMWTx = function() return IvYCgtk.FdOvdM end
+getgenv().gethui = function() return game.CoreGui end
 
-local rwabGfHW = LfeWVBZV or (BgWCWOf and BgWCWOf.LncgIDuH) or function() end
+local ProtectGui = protectgui or (syn and syn.protect_gui) or function() end
 
-local vqcEVnxpJ = VftMWTx and VftMWTx() or (IvYCgtk.FdOvdM or IvYCgtk.vvcokySG.PUybPvLJ:kzELCp(string.char(107,74,80,108,97,108)))
+local GUIParent = gethui and gethui() or (game.CoreGui or game.Players.LocalPlayer:WaitForChild("PlayerGui"))
 
-mHFVKhNHW.psCCLwq = vqcEVnxpJ
+Ramune.Parent = GUIParent
 
-rwabGfHW(mHFVKhNHW)
+ProtectGui(Ramune)
 
-if VftMWTx then
-	for swAOpHGgk, nhPPwsOD in ipairs(VftMWTx():YjCmHaKW()) do
-		if nhPPwsOD.HxiwPdrJ == mHFVKhNHW.HxiwPdrJ and nhPPwsOD ~= mHFVKhNHW then
-			nhPPwsOD:BbZvQEN()
+if gethui then
+	for _, Interface in ipairs(gethui():GetChildren()) do
+		if Interface.Name == Ramune.Name and Interface ~= Ramune then
+			Interface:Destroy()
 		end
 	end
 else
-	for swAOpHGgk, nhPPwsOD in ipairs(IvYCgtk.FdOvdM:YjCmHaKW()) do
-		if nhPPwsOD.HxiwPdrJ == mHFVKhNHW.HxiwPdrJ and nhPPwsOD ~= mHFVKhNHW then
-			nhPPwsOD:BbZvQEN()
+	for _, Interface in ipairs(game.CoreGui:GetChildren()) do
+		if Interface.Name == Ramune.Name and Interface ~= Ramune then
+			Interface:Destroy()
 		end
 	end
 end
 
-function nLwJHpS:bqgMdKP()
-	if VftMWTx then
-		return mHFVKhNHW.psCCLwq == VftMWTx()
+function RamuneLib:IsRunning()
+	if gethui then
+		return Ramune.Parent == gethui()
 	else
-		return mHFVKhNHW.psCCLwq == IvYCgtk:hWeThEz(string.char(70,100,79,118,100,77))
+		return Ramune.Parent == game:GetService("CoreGui")
 	end
 end
 
-local function GBSSvogm(qEPcCBVQY, vRCyIrF)
-	if (not nLwJHpS:bqgMdKP()) then
+local function AddConnection(Signal, Function)
+	if (not RamuneLib:IsRunning()) then
 		return
 	end
-	local FcVVPSPD = qEPcCBVQY:MqFdSmdxP(vRCyIrF)
-	LrpddTj.XpEPPbQCU(nLwJHpS.bwOYnCVF, FcVVPSPD)
-	return FcVVPSPD
+	local SignalConnect = Signal:Connect(Function)
+	table.insert(RamuneLib.Connections, SignalConnect)
+	return SignalConnect
 end
 
-dQIWVIOV.IlfnpMRl(function()
-	while (nLwJHpS:bqgMdKP()) do
-		oVyqIV()
+task.spawn(function()
+	while (RamuneLib:IsRunning()) do
+		wait()
 	end
 
-	for swAOpHGgk, xFQrCLjn in next, nLwJHpS.bwOYnCVF do
-		xFQrCLjn:najCDk()
+	for _, Connection in next, RamuneLib.Connections do
+		Connection:Disconnect()
 	end
 end)
 
-local function wvFEcTV(MtjwybH, NwtEaG)
-	lgINmhB(function()
-		local vDxFJKzP, dvQRMuF, LoZdnORpN, PRYNYr = false
-		GBSSvogm(MtjwybH.TcyjoDFJ, function(OiIOzYmdt)
-			if OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.EFnybWP or OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.qdvwstU then
-				vDxFJKzP = true
-				LoZdnORpN = OiIOzYmdt.lSnRQjt
-				PRYNYr = NwtEaG.lSnRQjt
+local function MakeDraggable(DragPoint, Main)
+	pcall(function()
+		local Dragging, DragInput, MousePos, FramePos = false
+		AddConnection(DragPoint.InputBegan, function(Input)
+			if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+				Dragging = true
+				MousePos = Input.Position
+				FramePos = Main.Position
 
-				OiIOzYmdt.DLpUFQd:MqFdSmdxP(function()
-					if OiIOzYmdt.SgYLtUOom == WXSzlaM.SgYLtUOom.MdIsUT then
-						vDxFJKzP = false
+				Input.Changed:Connect(function()
+					if Input.UserInputState == Enum.UserInputState.End then
+						Dragging = false
 					end
 				end)
 			end
 		end)
-		GBSSvogm(MtjwybH.jliYIawVK, function(OiIOzYmdt)
-			if OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.ImHMYxh or OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.qdvwstU then
-				dvQRMuF = OiIOzYmdt
+		AddConnection(DragPoint.InputChanged, function(Input)
+			if Input.UserInputType == Enum.UserInputType.MouseMovement or Input.UserInputType == Enum.UserInputType.Touch then
+				DragInput = Input
 			end
 		end)
-		GBSSvogm(usslBIh.jliYIawVK, function(OiIOzYmdt)
-			if OiIOzYmdt == dvQRMuF and vDxFJKzP then
-				local CimlNx = OiIOzYmdt.lSnRQjt - LoZdnORpN
-				NwtEaG.lSnRQjt  = rxJnqbwd.ijoGcJk(PRYNYr.TdjSGf.apdBMeq,PRYNYr.TdjSGf.HdFTSFNII + CimlNx.TdjSGf, PRYNYr.AggfPLe.apdBMeq,PRYNYr.AggfPLe.HdFTSFNII + CimlNx.AggfPLe)
+		AddConnection(UserInputService.InputChanged, function(Input)
+			if Input == DragInput and Dragging then
+				local Delta = Input.Position - MousePos
+				Main.Position  = UDim2.new(FramePos.X.Scale,FramePos.X.Offset + Delta.X, FramePos.Y.Scale,FramePos.Y.Offset + Delta.Y)
 			end
 		end)
 	end)
 end    
 
-local function mzQYvzWf(HxiwPdrJ, ZlhYcT, mQQiOL)
-	local dMLHlz = rtsMROFD.ijoGcJk(HxiwPdrJ)
-	for MepRpes, gisZhgH in next, ZlhYcT or {} do
-		dMLHlz[MepRpes] = gisZhgH
+local function Create(Name, Properties, Children)
+	local Object = Instance.new(Name)
+	for i, v in next, Properties or {} do
+		Object[i] = v
 	end
-	for MepRpes, gisZhgH in next, mQQiOL or {} do
-		gisZhgH.psCCLwq = dMLHlz
+	for i, v in next, Children or {} do
+		v.Parent = Object
 	end
-	return dMLHlz
+	return Object
 end
 
-local function HzvpPQX(JiDZjTc, oAfGoIP)
-	nLwJHpS.RXCmfboIm[JiDZjTc] = function(...)
-		return oAfGoIP(...)
+local function CreateElement(ElementName, ElementFunction)
+	RamuneLib.Elements[ElementName] = function(...)
+		return ElementFunction(...)
 	end
 end
 
-local function VcYvQRO(JiDZjTc, ...)
-	local qNPAKsU = nLwJHpS.RXCmfboIm[JiDZjTc](...)
-	return qNPAKsU
+local function MakeElement(ElementName, ...)
+	local NewElement = RamuneLib.Elements[ElementName](...)
+	return NewElement
 end
 
-local function OdMuytTV(aUMRSW, hjaNPBPYF)
-	LrpddTj.wjdrtZN(hjaNPBPYF, function(tokMbJVHE, HZXsQnpv)
-		aUMRSW[tokMbJVHE] = HZXsQnpv
+local function SetProps(Element, Props)
+	table.foreach(Props, function(Property, Value)
+		Element[Property] = Value
 	end)
-	return aUMRSW
+	return Element
 end
 
-local function RAUyIjm(aUMRSW, mQQiOL)
-	LrpddTj.wjdrtZN(mQQiOL, function(swAOpHGgk, jAXsHF)
-		jAXsHF.psCCLwq = aUMRSW
+local function SetChildren(Element, Children)
+	table.foreach(Children, function(_, Child)
+		Child.Parent = Element
 	end)
-	return aUMRSW
+	return Element
 end
 
-local function XyyRytcf(Wpayyw, zybYXxW)
-	local ytPwCS = ySTFoKJb.hjUaYI(Wpayyw/zybYXxW + (ySTFoKJb.gRDBBzAV(Wpayyw) * 0.5)) * zybYXxW
-	if ytPwCS < 0 then ytPwCS = ytPwCS + zybYXxW end
-	return ytPwCS
+local function Round(Number, Factor)
+	local Result = math.floor(Number/Factor + (math.sign(Number) * 0.5)) * Factor
+	if Result < 0 then Result = Result + Factor end
+	return Result
 end
 
-local function ZikdfLz(dMLHlz)
-	if dMLHlz:fNxvEvs(string.char(109,84,66,72,121,103,80,90,118)) or dMLHlz:fNxvEvs(string.char(113,116,122,88,97,102)) then
-		return string.char(112,83,104,77,78,120,99,72,119)
+local function ReturnProperty(Object)
+	if Object:IsA("Frame") or Object:IsA("TextButton") then
+		return "BackgroundColor3"
 	end 
-	if dMLHlz:fNxvEvs(string.char(118,111,69,97,112,118)) then
-		return string.char(104,77,119,74,104,87,115)
+	if Object:IsA("ScrollingFrame") then
+		return "ScrollBarImageColor3"
 	end 
-	if dMLHlz:fNxvEvs(string.char(121,78,73,98,87,98)) then
-		return string.char(105,108,70,88,73,98,78,77,73)
+	if Object:IsA("UIStroke") then
+		return "Color"
 	end 
-	if dMLHlz:fNxvEvs(string.char(79,102,83,122,104,120,78,107,82)) or dMLHlz:fNxvEvs(string.char(73,90,97,98,85,84,98,99)) then
-		return string.char(75,110,118,73,98,104,98,75)
+	if Object:IsA("TextLabel") or Object:IsA("TextBox") then
+		return "TextColor3"
 	end   
-	if dMLHlz:fNxvEvs(string.char(67,118,75,75,73,77,65)) or dMLHlz:fNxvEvs(string.char(109,102,100,88,83,87,71,107,101)) then
-		return string.char(83,81,68,105,118,84,82)
+	if Object:IsA("ImageLabel") or Object:IsA("ImageButton") then
+		return "ImageColor3"
 	end   
 end
 
-local function pyPaIOOfr(dMLHlz, XKvhEfGR)
-	if not nLwJHpS.uoRHWC[XKvhEfGR] then
-		nLwJHpS.uoRHWC[XKvhEfGR] = {}
+local function AddThemeObject(Object, Type)
+	if not RamuneLib.ThemeObjects[Type] then
+		RamuneLib.ThemeObjects[Type] = {}
 	end    
-	LrpddTj.XpEPPbQCU(nLwJHpS.uoRHWC[XKvhEfGR], dMLHlz)
-	dMLHlz[ZikdfLz(dMLHlz)] = nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD][XKvhEfGR]
-	return dMLHlz
+	table.insert(RamuneLib.ThemeObjects[Type], Object)
+	Object[ReturnProperty(Object)] = RamuneLib.Themes[RamuneLib.SelectedTheme][Type]
+	return Object
 end    
 
-local function CtnwUYnoh()
-	for HxiwPdrJ, XKvhEfGR in pairs(nLwJHpS.uoRHWC) do
-		for swAOpHGgk, dMLHlz in pairs(XKvhEfGR) do
-			dMLHlz[ZikdfLz(dMLHlz)] = nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD][HxiwPdrJ]
+local function SetTheme()
+	for Name, Type in pairs(RamuneLib.ThemeObjects) do
+		for _, Object in pairs(Type) do
+			Object[ReturnProperty(Object)] = RamuneLib.Themes[RamuneLib.SelectedTheme][Name]
 		end    
 	end    
 end
 
-local function uPDUSSuFr(ilFXIbNMI)
-	return {WKxPMn = ilFXIbNMI.WKxPMn * 255, nHIjRPx = ilFXIbNMI.nHIjRPx * 255, OsapCGxm = ilFXIbNMI.OsapCGxm * 255}
+local function PackColor(Color)
+	return {R = Color.R * 255, G = Color.G * 255, B = Color.B * 255}
 end    
 
-local function tkptGUbNF(ilFXIbNMI)
-	return JLFPzYjW.toipKy(ilFXIbNMI.WKxPMn, ilFXIbNMI.nHIjRPx, ilFXIbNMI.OsapCGxm)
+local function UnpackColor(Color)
+	return Color3.fromRGB(Color.R, Color.G, Color.B)
 end
 
-local function nbRVzqlos(ziSKjjME)
-	local JpfqSfYlT = NfJlcZw:Xdjjos(ziSKjjME)
-	LrpddTj.wjdrtZN(JpfqSfYlT, function(edMPiBBTJ,FYFlhhKn)
-		if nLwJHpS.gXiFMczzC[edMPiBBTJ] then
-			IlfnpMRl(function() 
-				if nLwJHpS.gXiFMczzC[edMPiBBTJ].XKvhEfGR == string.char(86,82,86,90,76,84,106) then
-					nLwJHpS.gXiFMczzC[edMPiBBTJ]:ewhNQlzb(tkptGUbNF(FYFlhhKn))
+local function LoadCfg(Config)
+	local Data = HttpService:JSONDecode(Config)
+	table.foreach(Data, function(a,b)
+		if RamuneLib.Flags[a] then
+			spawn(function() 
+				if RamuneLib.Flags[a].Type == "Colorpicker" then
+					RamuneLib.Flags[a]:Set(UnpackColor(b))
 				else
-					nLwJHpS.gXiFMczzC[edMPiBBTJ]:ewhNQlzb(FYFlhhKn)
+					RamuneLib.Flags[a]:Set(b)
 				end    
 			end)
 		else
@@ -232,1842 +232,1842 @@ local function nbRVzqlos(ziSKjjME)
 	end)
 end
 
-local function JCONxo(HxiwPdrJ)
-	local JpfqSfYlT = {}
-	for MepRpes,gisZhgH in pairs(nLwJHpS.gXiFMczzC) do
-		if gisZhgH.ZhBqNcVo then
-			if gisZhgH.XKvhEfGR == string.char(86,82,86,90,76,84,106) then
-				JpfqSfYlT[MepRpes] = uPDUSSuFr(gisZhgH.HZXsQnpv)
+local function SaveCfg(Name)
+	local Data = {}
+	for i,v in pairs(RamuneLib.Flags) do
+		if v.Save then
+			if v.Type == "Colorpicker" then
+				Data[i] = PackColor(v.Value)
 			else
-				JpfqSfYlT[MepRpes] = gisZhgH.HZXsQnpv
+				Data[i] = v.Value
 			end
 		end	
 	end
-	BDmXqWUS(nLwJHpS.CPtmrHp .. string.char(47) .. HxiwPdrJ .. string.char(46,85,84,111,110,69,115), tostring(NfJlcZw:xZLAgHGP(JpfqSfYlT)))
+	writefile(RamuneLib.Folder .. "/" .. Name .. ".txt", tostring(HttpService:JSONEncode(Data)))
 end
 
-local ZRmTxet = {WXSzlaM.RUVDAExCV.EFnybWP, WXSzlaM.RUVDAExCV.yUKmPldJd,WXSzlaM.RUVDAExCV.aHHLKRtI}
-local gwaREoL = {WXSzlaM.YQgHxp.WQFFcQQZj,WXSzlaM.YQgHxp.VUbBWiS,WXSzlaM.YQgHxp.dHVjnpxG,WXSzlaM.YQgHxp.aJbDREq,WXSzlaM.YQgHxp.YrIucIu,WXSzlaM.YQgHxp.ImWwSn,WXSzlaM.YQgHxp.tvqKTD,WXSzlaM.YQgHxp.zUZSeYDV,WXSzlaM.YQgHxp.ZVWfTxHj,WXSzlaM.YQgHxp.WmAKjZ,WXSzlaM.YQgHxp.sHZGEr,WXSzlaM.YQgHxp.XqJqbrIv,WXSzlaM.YQgHxp.ASfSWmyI}
+local WhitelistedMouse = {Enum.UserInputType.MouseButton1, Enum.UserInputType.MouseButton2,Enum.UserInputType.MouseButton3}
+local BlacklistedKeys = {Enum.KeyCode.Unknown,Enum.KeyCode.W,Enum.KeyCode.A,Enum.KeyCode.S,Enum.KeyCode.D,Enum.KeyCode.Up,Enum.KeyCode.Left,Enum.KeyCode.Down,Enum.KeyCode.Right,Enum.KeyCode.Slash,Enum.KeyCode.Tab,Enum.KeyCode.Backspace,Enum.KeyCode.Escape}
 
-local dsVFMf = mzQYvzWf(string.char(113,116,122,88,97,102), {HxiwPdrJ = string.char(122,87,78,111,65,82,80), apWBqbZB = rxJnqbwd.ijoGcJk(0,0,0,0), dZGyqaV = 1, AQAWwXmTJ = string.char(), lSnRQjt = rxJnqbwd.ijoGcJk(0,0,0,0), XtmRuTWRW = true, psCCLwq = mHFVKhNHW, XILulLJ = false})
-local cHEGyL = false
+local freeMouse = Create("TextButton", {Name = "FMouse", Size = UDim2.new(0,0,0,0), BackgroundTransparency = 1, Text = "", Position = UDim2.new(0,0,0,0), Modal = true, Parent = Ramune, Visible = false})
+local mouselock = false
 
-local function JMOLlmI(HZXsQnpv)
-	if HZXsQnpv then
-		cHEGyL = true
+local function UnlockMouse(Value)
+	if Value then
+		mouselock = true
 
-		dQIWVIOV.IlfnpMRl(function() 
-			while cHEGyL do
-				usslBIh.NAynotGxz = HZXsQnpv
-				dsVFMf.XILulLJ = HZXsQnpv
-				dQIWVIOV.oVyqIV()
+		task.spawn(function() 
+			while mouselock do
+				UserInputService.MouseIconEnabled = Value
+				freeMouse.Visible = Value
+				task.wait()
 			end
 
-			usslBIh.NAynotGxz = false
-			dsVFMf.XILulLJ = false
+			UserInputService.MouseIconEnabled = false
+			freeMouse.Visible = false
 		end)
 	else
-		cHEGyL = false
+		mouselock = false
 	end
 end
 
-local function eXPoIRFNs(aByjIKW, vaNOwFpLc)
-	for swAOpHGgk, gisZhgH in next, aByjIKW do
-		if gisZhgH == vaNOwFpLc then
+local function CheckKey(Table, Key)
+	for _, v in next, Table do
+		if v == Key then
 			return true
 		end
 	end
 end
 
-HzvpPQX(string.char(89,115,121,72,87,77,116,103,109), function(apdBMeq, HdFTSFNII)
-	local YsyHWMtgm = mzQYvzWf(string.char(66,111,106,73,74,84,74), {
-		iotXlQEB = csgNmTBR.ijoGcJk(apdBMeq or 0, HdFTSFNII or 10)
+CreateElement("Corner", function(Scale, Offset)
+	local Corner = Create("UICorner", {
+		CornerRadius = UDim.new(Scale or 0, Offset or 10)
 	})
-	return YsyHWMtgm
+	return Corner
 end)
 
-HzvpPQX(string.char(78,99,118,70,76,74), function()
-	local NcvFLJ = mzQYvzWf(string.char(99,107,85,87,106,104,118))
-	return NcvFLJ
+CreateElement("AspectRatio", function()
+	local AspectRatio = Create("UIAspectRatioConstraint")
+	return AspectRatio
 end)
 
-HzvpPQX(string.char(109,121,117,120,114,112,75), function(ilFXIbNMI, LbvKumTs)
-	local myuxrpK = mzQYvzWf(string.char(121,78,73,98,87,98), {
-		ilFXIbNMI = ilFXIbNMI or JLFPzYjW.toipKy(255, 255, 255),
-		LbvKumTs = LbvKumTs or 1
+CreateElement("Stroke", function(Color, Thickness)
+	local Stroke = Create("UIStroke", {
+		Color = Color or Color3.fromRGB(255, 255, 255),
+		Thickness = Thickness or 1
 	})
-	return myuxrpK
+	return Stroke
 end)
 
-HzvpPQX(string.char(107,119,108,103,119,73,66), function(apdBMeq, HdFTSFNII)
-	local kwlgwIB = mzQYvzWf(string.char(99,74,88,88,118,74,108), {
-		zJqzAYSRf = WXSzlaM.zJqzAYSRf.nwxXrTo,
-		kLefAlDyp = csgNmTBR.ijoGcJk(apdBMeq or 0, HdFTSFNII or 0)
+CreateElement("List", function(Scale, Offset)
+	local List = Create("UIListLayout", {
+		SortOrder = Enum.SortOrder.LayoutOrder,
+		Padding = UDim.new(Scale or 0, Offset or 0)
 	})
-	return kwlgwIB
+	return List
 end)
 
-HzvpPQX(string.char(107,76,101,102,65,108,68,121,112), function(rCMzsi, tvqKTD, ZVWfTxHj, GwTLTcgix)
-	local kLefAlDyp = mzQYvzWf(string.char(66,85,112,81,71,80,88), {
-		iOhkeh = csgNmTBR.ijoGcJk(0, rCMzsi or 4),
-		pVoFWy = csgNmTBR.ijoGcJk(0, tvqKTD or 4),
-		LsjnDFe = csgNmTBR.ijoGcJk(0, ZVWfTxHj or 4),
-		ZFDXeI = csgNmTBR.ijoGcJk(0, GwTLTcgix or 4)
+CreateElement("Padding", function(Bottom, Left, Right, Top)
+	local Padding = Create("UIPadding", {
+		PaddingBottom = UDim.new(0, Bottom or 4),
+		PaddingLeft = UDim.new(0, Left or 4),
+		PaddingRight = UDim.new(0, Right or 4),
+		PaddingTop = UDim.new(0, Top or 4)
 	})
-	return kLefAlDyp
+	return Padding
 end)
 
-HzvpPQX(string.char(73,71,115,102,69,113,76), function()
-	local IGsfEqL = mzQYvzWf(string.char(109,84,66,72,121,103,80,90,118), {
-		dZGyqaV = 1
+CreateElement("TFrame", function()
+	local TFrame = Create("Frame", {
+		BackgroundTransparency = 1
 	})
-	return IGsfEqL
+	return TFrame
 end)
 
-HzvpPQX(string.char(109,84,66,72,121,103,80,90,118), function(ilFXIbNMI)
-	local mTBHygPZv = mzQYvzWf(string.char(109,84,66,72,121,103,80,90,118), {
-		pShMNxcHw = ilFXIbNMI or JLFPzYjW.toipKy(255, 255, 255),
-		tyZXGVJnB = 0
+CreateElement("Frame", function(Color)
+	local Frame = Create("Frame", {
+		BackgroundColor3 = Color or Color3.fromRGB(255, 255, 255),
+		BorderSizePixel = 0
 	})
-	return mTBHygPZv
+	return Frame
 end)
 
-HzvpPQX(string.char(74,65,77,81,98,80), function(ilFXIbNMI, apdBMeq, HdFTSFNII)
-	local mTBHygPZv = mzQYvzWf(string.char(109,84,66,72,121,103,80,90,118), {
-		pShMNxcHw = ilFXIbNMI or JLFPzYjW.toipKy(255, 255, 255),
-		tyZXGVJnB = 0
+CreateElement("RoundFrame", function(Color, Scale, Offset)
+	local Frame = Create("Frame", {
+		BackgroundColor3 = Color or Color3.fromRGB(255, 255, 255),
+		BorderSizePixel = 0
 	}, {
-		mzQYvzWf(string.char(66,111,106,73,74,84,74), {
-			iotXlQEB = csgNmTBR.ijoGcJk(apdBMeq, HdFTSFNII)
+		Create("UICorner", {
+			CornerRadius = UDim.new(Scale, Offset)
 		})
 	})
-	return mTBHygPZv
+	return Frame
 end)
 
-HzvpPQX(string.char(86,65,115,117,80,72,98,112,112), function()
-	local VAsuPHbpp = mzQYvzWf(string.char(113,116,122,88,97,102), {
-		AQAWwXmTJ = string.char(),
-		jsSLXyl = false,
-		dZGyqaV = 1,
-		tyZXGVJnB = 0
+CreateElement("Button", function()
+	local Button = Create("TextButton", {
+		Text = "",
+		AutoButtonColor = false,
+		BackgroundTransparency = 1,
+		BorderSizePixel = 0
 	})
-	return VAsuPHbpp
+	return Button
 end)
 
-HzvpPQX(string.char(74,117,119,73,108,72,88,103,83), function(ilFXIbNMI, MslLlhuG)
-	local JuwIlHXgS = mzQYvzWf(string.char(118,111,69,97,112,118), {
-		dZGyqaV = 1,
-		LjXHZgq = string.char(71,71,90,88,117,118,58,47,47,55,52,52,53,53,52,51,54,54,55),
-		IFiQMEYHc = string.char(71,71,90,88,117,118,58,47,47,55,52,52,53,53,52,51,54,54,55),
-		iiYcoI = string.char(71,71,90,88,117,118,58,47,47,55,52,52,53,53,52,51,54,54,55),
-		hMwJhWs = ilFXIbNMI,
-		tyZXGVJnB = 0,
-		SRzZgb = MslLlhuG,
-		WEAEEuj = rxJnqbwd.ijoGcJk(0, 0, 0, 0)
+CreateElement("ScrollFrame", function(Color, Width)
+	local ScrollFrame = Create("ScrollingFrame", {
+		BackgroundTransparency = 1,
+		MidImage = "rbxassetid://7445543667",
+		BottomImage = "rbxassetid://7445543667",
+		TopImage = "rbxassetid://7445543667",
+		ScrollBarImageColor3 = Color,
+		BorderSizePixel = 0,
+		ScrollBarThickness = Width,
+		CanvasSize = UDim2.new(0, 0, 0, 0)
 	})
-	return JuwIlHXgS
+	return ScrollFrame
 end)
 
-HzvpPQX(string.char(97,78,73,84,75,79,121), function(sEcHqM)
-	local YLCIZhx = mzQYvzWf(string.char(67,118,75,75,73,77,65), {
-		aNITKOy = sEcHqM,
-		dZGyqaV = 1
+CreateElement("Image", function(ImageID)
+	local ImageNew = Create("ImageLabel", {
+		Image = ImageID,
+		BackgroundTransparency = 1
 	})
 
-	if GJMmjbjq(sEcHqM) ~= nil then
-		YLCIZhx.aNITKOy = GJMmjbjq(sEcHqM)
+	if GetIcon(ImageID) ~= nil then
+		ImageNew.Image = GetIcon(ImageID)
 	end	
 
-	return YLCIZhx
+	return ImageNew
 end)
 
-HzvpPQX(string.char(109,102,100,88,83,87,71,107,101), function(sEcHqM)
-	local aNITKOy = mzQYvzWf(string.char(109,102,100,88,83,87,71,107,101), {
-		aNITKOy = sEcHqM,
-		dZGyqaV = 1
+CreateElement("ImageButton", function(ImageID)
+	local Image = Create("ImageButton", {
+		Image = ImageID,
+		BackgroundTransparency = 1
 	})
-	return aNITKOy
+	return Image
 end)
 
-HzvpPQX(string.char(74,88,69,68,71,111,104,71), function(AQAWwXmTJ, tMQjBRl, JZHoqdSs)
-	local JXEDGohG = mzQYvzWf(string.char(79,102,83,122,104,120,78,107,82), {
-		AQAWwXmTJ = AQAWwXmTJ or string.char(),
-		KnvIbhbK = JLFPzYjW.toipKy(240, 240, 240),
-		GvluwTEXs = JZHoqdSs or 0,
-		tMQjBRl = tMQjBRl or 15,
-		uDHbCoVoX = WXSzlaM.uDHbCoVoX.IcMgomJt,
-		YPeQdxm = true,
-		dZGyqaV = 1,
-		TGCwdvJ = WXSzlaM.TGCwdvJ.tvqKTD
+CreateElement("Label", function(Text, TextSize, Transparency)
+	local Label = Create("TextLabel", {
+		Text = Text or "",
+		TextColor3 = Color3.fromRGB(240, 240, 240),
+		TextTransparency = Transparency or 0,
+		TextSize = TextSize or 15,
+		Font = Enum.Font.Gotham,
+		RichText = true,
+		BackgroundTransparency = 1,
+		TextXAlignment = Enum.TextXAlignment.Left
 	})
-	return JXEDGohG
+	return Label
 end)
 
-local xOdedQVyG = OdMuytTV(RAUyIjm(VcYvQRO(string.char(73,71,115,102,69,113,76)), {
-	OdMuytTV(VcYvQRO(string.char(107,119,108,103,119,73,66)), {
-		RfNrCTYlU = WXSzlaM.RfNrCTYlU.dKjZWi,
-		zJqzAYSRf = WXSzlaM.zJqzAYSRf.nwxXrTo,
-		MLMrVmv = WXSzlaM.MLMrVmv.rCMzsi,
-		kLefAlDyp = csgNmTBR.ijoGcJk(0, 5)
+local NotificationHolder = SetProps(SetChildren(MakeElement("TFrame"), {
+	SetProps(MakeElement("List"), {
+		HorizontalAlignment = Enum.HorizontalAlignment.Center,
+		SortOrder = Enum.SortOrder.LayoutOrder,
+		VerticalAlignment = Enum.VerticalAlignment.Bottom,
+		Padding = UDim.new(0, 5)
 	})
 }), {
-	lSnRQjt = rxJnqbwd.ijoGcJk(1, -25, 1, -25),
-	apWBqbZB = rxJnqbwd.ijoGcJk(0, 300, 1, -25),
-	MFgyoUzz = XDPwMgo.ijoGcJk(1, 1),
-	psCCLwq = mHFVKhNHW
+	Position = UDim2.new(1, -25, 1, -25),
+	Size = UDim2.new(0, 300, 1, -25),
+	AnchorPoint = Vector2.new(1, 1),
+	Parent = Ramune
 })
 
-function nLwJHpS:PtmEJAFM(jMbjCeko)
-	IlfnpMRl(function()
-		jMbjCeko.HxiwPdrJ = jMbjCeko.HxiwPdrJ or string.char(79,83,88,108,119,75,72)
-		jMbjCeko.pfhAaL = jMbjCeko.pfhAaL or string.char(79,78,118,102,120,108,101)
-		jMbjCeko.aNITKOy = jMbjCeko.aNITKOy or string.char(71,71,90,88,117,118,58,47,47,52,51,56,52,52,48,51,53,51,50)
-		jMbjCeko.LKDjBKj = jMbjCeko.LKDjBKj or 15
+function RamuneLib:MakeNotification(NotificationConfig)
+	spawn(function()
+		NotificationConfig.Name = NotificationConfig.Name or "Notification"
+		NotificationConfig.Content = NotificationConfig.Content or "Test"
+		NotificationConfig.Image = NotificationConfig.Image or "rbxassetid://4384403532"
+		NotificationConfig.Time = NotificationConfig.Time or 15
 
-		local UaPjfFI = OdMuytTV(VcYvQRO(string.char(73,71,115,102,69,113,76)), {
-			apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 0),
-			ezBgBY = WXSzlaM.ezBgBY.AggfPLe,
-			psCCLwq = xOdedQVyG
+		local NotificationParent = SetProps(MakeElement("TFrame"), {
+			Size = UDim2.new(1, 0, 0, 0),
+			AutomaticSize = Enum.AutomaticSize.Y,
+			Parent = NotificationHolder
 		})
 
-		local jwTPlpeHA = RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(25, 25, 25), 0, 10), {
-			psCCLwq = UaPjfFI, 
-			apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 0),
-			lSnRQjt = rxJnqbwd.ijoGcJk(1, -55, 0, 0),
-			dZGyqaV = 0,
-			ezBgBY = WXSzlaM.ezBgBY.AggfPLe
+		local NotificationFrame = SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(25, 25, 25), 0, 10), {
+			Parent = NotificationParent, 
+			Size = UDim2.new(1, 0, 0, 0),
+			Position = UDim2.new(1, -55, 0, 0),
+			BackgroundTransparency = 0,
+			AutomaticSize = Enum.AutomaticSize.Y
 		}), {
-			VcYvQRO(string.char(109,121,117,120,114,112,75), JLFPzYjW.toipKy(93, 93, 93), 1.2),
-			VcYvQRO(string.char(107,76,101,102,65,108,68,121,112), 12, 12, 12, 12),
-			OdMuytTV(VcYvQRO(string.char(97,78,73,84,75,79,121), jMbjCeko.aNITKOy), {
-				apWBqbZB = rxJnqbwd.ijoGcJk(0, 20, 0, 20),
-				SQDivTR = JLFPzYjW.toipKy(240, 240, 240),
-				HxiwPdrJ = string.char(112,88,80,111,117,86,118)
+			MakeElement("Stroke", Color3.fromRGB(93, 93, 93), 1.2),
+			MakeElement("Padding", 12, 12, 12, 12),
+			SetProps(MakeElement("Image", NotificationConfig.Image), {
+				Size = UDim2.new(0, 20, 0, 20),
+				ImageColor3 = Color3.fromRGB(240, 240, 240),
+				Name = "Icon"
 			}),
-			OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), jMbjCeko.HxiwPdrJ, 15), {
-				apWBqbZB = rxJnqbwd.ijoGcJk(1, -30, 0, 20),
-				lSnRQjt = rxJnqbwd.ijoGcJk(0, 30, 0, 0),
-				uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-				HxiwPdrJ = string.char(111,88,78,113,104,116,71,70)
+			SetProps(MakeElement("Label", NotificationConfig.Name, 15), {
+				Size = UDim2.new(1, -30, 0, 20),
+				Position = UDim2.new(0, 30, 0, 0),
+				Font = Enum.Font.GothamBold,
+				Name = "Title"
 			}),
-			OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), jMbjCeko.pfhAaL, 14), {
-				apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 0),
-				lSnRQjt = rxJnqbwd.ijoGcJk(0, 0, 0, 25),
-				uDHbCoVoX = WXSzlaM.uDHbCoVoX.heCAXEa,
-				HxiwPdrJ = string.char(112,102,104,65,97,76),
-				ezBgBY = WXSzlaM.ezBgBY.AggfPLe,
-				KnvIbhbK = JLFPzYjW.toipKy(200, 200, 200),
-				ZIccVu = true
+			SetProps(MakeElement("Label", NotificationConfig.Content, 14), {
+				Size = UDim2.new(1, 0, 0, 0),
+				Position = UDim2.new(0, 0, 0, 25),
+				Font = Enum.Font.GothamSemibold,
+				Name = "Content",
+				AutomaticSize = Enum.AutomaticSize.Y,
+				TextColor3 = Color3.fromRGB(200, 200, 200),
+				TextWrapped = true
 			})
 		})
 
-		DmdFQTdf:mzQYvzWf(jwTPlpeHA, QOXehqcz.ijoGcJk(0.5, WXSzlaM.ApSxIMXTC.pnBPfdV), {lSnRQjt = rxJnqbwd.ijoGcJk(0, 0, 0, 0)}):xSpbKxBgW()
+		TweenService:Create(NotificationFrame, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {Position = UDim2.new(0, 0, 0, 0)}):Play()
 
-		oVyqIV(jMbjCeko.LKDjBKj - 0.88)
-		DmdFQTdf:mzQYvzWf(jwTPlpeHA.pXPouVv, QOXehqcz.ijoGcJk(0.4, WXSzlaM.ApSxIMXTC.pnBPfdV), {blilLqjG = 1}):xSpbKxBgW()
-		DmdFQTdf:mzQYvzWf(jwTPlpeHA, QOXehqcz.ijoGcJk(0.8, WXSzlaM.ApSxIMXTC.pnBPfdV), {dZGyqaV = 0.6}):xSpbKxBgW()
-		oVyqIV(0.3)
-		DmdFQTdf:mzQYvzWf(jwTPlpeHA.yNIbWb, QOXehqcz.ijoGcJk(0.6, WXSzlaM.ApSxIMXTC.pnBPfdV), {JZHoqdSs = 0.9}):xSpbKxBgW()
-		DmdFQTdf:mzQYvzWf(jwTPlpeHA.oXNqhtGF, QOXehqcz.ijoGcJk(0.6, WXSzlaM.ApSxIMXTC.pnBPfdV), {GvluwTEXs = 0.4}):xSpbKxBgW()
-		DmdFQTdf:mzQYvzWf(jwTPlpeHA.pfhAaL, QOXehqcz.ijoGcJk(0.6, WXSzlaM.ApSxIMXTC.pnBPfdV), {GvluwTEXs = 0.5}):xSpbKxBgW()
-		oVyqIV(0.05)
+		wait(NotificationConfig.Time - 0.88)
+		TweenService:Create(NotificationFrame.Icon, TweenInfo.new(0.4, Enum.EasingStyle.Quint), {ImageTransparency = 1}):Play()
+		TweenService:Create(NotificationFrame, TweenInfo.new(0.8, Enum.EasingStyle.Quint), {BackgroundTransparency = 0.6}):Play()
+		wait(0.3)
+		TweenService:Create(NotificationFrame.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {Transparency = 0.9}):Play()
+		TweenService:Create(NotificationFrame.Title, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {TextTransparency = 0.4}):Play()
+		TweenService:Create(NotificationFrame.Content, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {TextTransparency = 0.5}):Play()
+		wait(0.05)
 
-		jwTPlpeHA:NoChlr(rxJnqbwd.ijoGcJk(1, 20, 0, 0),'wrcobmYfK','pnBPfdV',0.8,true)
-		oVyqIV(1.35)
-		jwTPlpeHA:BbZvQEN()
+		NotificationFrame:TweenPosition(UDim2.new(1, 20, 0, 0),'In','Quint',0.8,true)
+		wait(1.35)
+		NotificationFrame:Destroy()
 	end)
 end    
 
-function nLwJHpS:wwkjbScUa()
-	if nLwJHpS.JCONxo then	
-		lgINmhB(function()
-			if ucXLBSirF(nLwJHpS.CPtmrHp .. string.char(47) .. IvYCgtk.BHNuBzl .. string.char(46,85,84,111,110,69,115)) then
-				nbRVzqlos(mGagjGYM(nLwJHpS.CPtmrHp .. string.char(47) .. IvYCgtk.BHNuBzl .. string.char(46,85,84,111,110,69,115)))
-				nLwJHpS:PtmEJAFM({
-					HxiwPdrJ = string.char(121,79,75,70,97,103,98,81,80),
-					pfhAaL = string.char(121,114,114,67,104,82,122,79,45,110,118,77,73,118,116,32,71,73,80,81,70,80,88,32,102,111,114,32,106,119,101,119,80,82,76,99,65,32,73,118,89,67,103,116,107,32) .. IvYCgtk.BHNuBzl .. string.char(46),
-					LKDjBKj = 5
+function RamuneLib:Initialization()
+	if RamuneLib.SaveCfg then	
+		pcall(function()
+			if isfile(RamuneLib.Folder .. "/" .. game.GameId .. ".txt") then
+				LoadCfg(readfile(RamuneLib.Folder .. "/" .. game.GameId .. ".txt"))
+				RamuneLib:MakeNotification({
+					Name = "Configuration",
+					Content = "Auto-loaded configuration for the game " .. game.GameId .. ".",
+					Time = 5
 				})
 			end
 		end)		
 	end	
 end
 
-function nLwJHpS:FIoujiJok(MTfzExEDG)
-	local GfqpOZZuq = true
-	local IBREYuaS = false
-	local AVkIqML = false
-	local kJhePiX = false
+function RamuneLib:MakeWindow(WindowConfig)
+	local FirstTab = true
+	local Minimized = false
+	local Loaded = false
+	local UIHidden = false
 	
 
-	MTfzExEDG = MTfzExEDG or {}
-	MTfzExEDG.HxiwPdrJ = MTfzExEDG.HxiwPdrJ or string.char(109,72,70,86,75,104,78,72,87,32,109,80,106,113,87,75,106,72,90)
-	MTfzExEDG.kRmyFXpgG = MTfzExEDG.kRmyFXpgG or MTfzExEDG.HxiwPdrJ
-	MTfzExEDG.LYItCKzug = MTfzExEDG.LYItCKzug or false
-	MTfzExEDG.iBEGzGTy = MTfzExEDG.iBEGzGTy or false
-	if MTfzExEDG.GKxbaTfy == nil then
-		MTfzExEDG.GKxbaTfy = true
+	WindowConfig = WindowConfig or {}
+	WindowConfig.Name = WindowConfig.Name or "Ramune Library"
+	WindowConfig.ConfigFolder = WindowConfig.ConfigFolder or WindowConfig.Name
+	WindowConfig.SaveConfig = WindowConfig.SaveConfig or false
+	WindowConfig.HidePremium = WindowConfig.HidePremium or false
+	if WindowConfig.IntroEnabled == nil then
+		WindowConfig.IntroEnabled = true
 	end
-	MTfzExEDG.nwoxqhGZ = MTfzExEDG.nwoxqhGZ or false
-	MTfzExEDG.tQMJWHY = MTfzExEDG.tQMJWHY or string.char(119,88,111,102,80,82,69,83)
-	MTfzExEDG.chdbExHf = MTfzExEDG.chdbExHf or string.char(109,72,70,86,75,104,78,72,87,32,109,80,106,113,87,75,106,72,90)
-	MTfzExEDG.uZwykh = MTfzExEDG.uZwykh or function() end
-	MTfzExEDG.WJFGZFaE = MTfzExEDG.WJFGZFaE or false
-	MTfzExEDG.pXPouVv = MTfzExEDG.pXPouVv or string.char(71,71,90,88,117,118,58,47,47,56,56,51,52,55,52,56,49,48,51)
-	MTfzExEDG.eEkdnX = MTfzExEDG.eEkdnX or string.char()
-	nLwJHpS.CPtmrHp = MTfzExEDG.kRmyFXpgG
-	nLwJHpS.JCONxo = MTfzExEDG.LYItCKzug
-	if MTfzExEDG.LYItCKzug then
-		if not HOhIXW(MTfzExEDG.kRmyFXpgG) then
-			oKRlVA(MTfzExEDG.kRmyFXpgG)
+	WindowConfig.FreeMouse = WindowConfig.FreeMouse or false
+	WindowConfig.KeyToOpenWindow = WindowConfig.KeyToOpenWindow or "K"
+	WindowConfig.IntroText = WindowConfig.IntroText or "Ramune Library"
+	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
+	WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
+	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://8834748103"
+	WindowConfig.IntroIcon = WindowConfig.IntroIcon or ""
+	RamuneLib.Folder = WindowConfig.ConfigFolder
+	RamuneLib.SaveCfg = WindowConfig.SaveConfig
+	if WindowConfig.SaveConfig then
+		if not isfolder(WindowConfig.ConfigFolder) then
+			makefolder(WindowConfig.ConfigFolder)
 		end	
 	end
 
-	if MTfzExEDG.nwoxqhGZ then
-		JMOLlmI(true)
+	if WindowConfig.FreeMouse then
+		UnlockMouse(true)
 	end
 
-	local poDrYuV = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,117,119,73,108,72,88,103,83), JLFPzYjW.toipKy(255, 255, 255), 4), {
-		apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, -50)
+	local TabHolder = AddThemeObject(SetChildren(SetProps(MakeElement("ScrollFrame", Color3.fromRGB(255, 255, 255), 4), {
+		Size = UDim2.new(1, 0, 1, -50)
 	}), {
-		VcYvQRO(string.char(107,119,108,103,119,73,66)),
-		VcYvQRO(string.char(107,76,101,102,65,108,68,121,112), 8, 0, 0, 8)
-	}), string.char(82,109,73,77,66,117,82))
+		MakeElement("List"),
+		MakeElement("Padding", 8, 0, 0, 8)
+	}), "Divider")
 
-	GBSSvogm(poDrYuV.cJXXvJl:ZAlbivyHj(string.char(117,67,108,74,67,66,71,81,112)), function()
-		poDrYuV.WEAEEuj = rxJnqbwd.ijoGcJk(0, 0, 0, poDrYuV.cJXXvJl.uClJCBGQp.AggfPLe + 16)
+	AddConnection(TabHolder.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
+		TabHolder.CanvasSize = UDim2.new(0, 0, 0, TabHolder.UIListLayout.AbsoluteContentSize.Y + 16)
 	end)
 
-	local MGwizPZBc = RAUyIjm(OdMuytTV(VcYvQRO(string.char(86,65,115,117,80,72,98,112,112)), {
-		apWBqbZB = rxJnqbwd.ijoGcJk(0.5, 0, 1, 0),
-		lSnRQjt = rxJnqbwd.ijoGcJk(0.5, 0, 0, 0),
-		dZGyqaV = 1
+	local CloseBtn = SetChildren(SetProps(MakeElement("Button"), {
+		Size = UDim2.new(0.5, 0, 1, 0),
+		Position = UDim2.new(0.5, 0, 0, 0),
+		BackgroundTransparency = 1
 	}), {
-		pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(97,78,73,84,75,79,121), string.char(71,71,90,88,117,118,58,47,47,55,48,55,50,55,50,53,51,52,50)), {
-			lSnRQjt = rxJnqbwd.ijoGcJk(0, 9, 0, 6),
-			apWBqbZB = rxJnqbwd.ijoGcJk(0, 18, 0, 18)
-		}), string.char(65,81,65,87,119,88,109,84,74))
+		AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://7072725342"), {
+			Position = UDim2.new(0, 9, 0, 6),
+			Size = UDim2.new(0, 18, 0, 18)
+		}), "Text")
 	})
 
-	local wKBHuP = RAUyIjm(OdMuytTV(VcYvQRO(string.char(86,65,115,117,80,72,98,112,112)), {
-		apWBqbZB = rxJnqbwd.ijoGcJk(0.5, 0, 1, 0),
-		dZGyqaV = 1
+	local MinimizeBtn = SetChildren(SetProps(MakeElement("Button"), {
+		Size = UDim2.new(0.5, 0, 1, 0),
+		BackgroundTransparency = 1
 	}), {
-		pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(97,78,73,84,75,79,121), string.char(71,71,90,88,117,118,58,47,47,55,48,55,50,55,49,57,51,51,56)), {
-			lSnRQjt = rxJnqbwd.ijoGcJk(0, 9, 0, 6),
-			apWBqbZB = rxJnqbwd.ijoGcJk(0, 18, 0, 18),
-			HxiwPdrJ = string.char(67,110,112,85,114,109,70)
-		}), string.char(65,81,65,87,119,88,109,84,74))
+		AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://7072719338"), {
+			Position = UDim2.new(0, 9, 0, 6),
+			Size = UDim2.new(0, 18, 0, 18),
+			Name = "Ico"
+		}), "Text")
 	})
 
-	local MtjwybH = OdMuytTV(VcYvQRO(string.char(73,71,115,102,69,113,76)), {
-		apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 50)
+	local DragPoint = SetProps(MakeElement("TFrame"), {
+		Size = UDim2.new(1, 0, 0, 50)
 	})
 
-	local sCJJDso = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 10), {
-		apWBqbZB = rxJnqbwd.ijoGcJk(0, 160, 1, -50),
-		lSnRQjt = rxJnqbwd.ijoGcJk(0, 0, 0, 50),
-		dZGyqaV = 1
+	local WindowStuff = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 10), {
+		Size = UDim2.new(0, 160, 1, -50),
+		Position = UDim2.new(0, 0, 0, 50),
+		BackgroundTransparency = 1
 	}), {
-		pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(109,84,66,72,121,103,80,90,118)), {
-			apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 10),
-			lSnRQjt = rxJnqbwd.ijoGcJk(0, 0, 0, 0),
-			dZGyqaV = 1
-		}), string.char(107,84,119,78,88,98,80,80)), 
-		pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(109,84,66,72,121,103,80,90,118)), {
-			apWBqbZB = rxJnqbwd.ijoGcJk(0, 10, 1, 0),
-			lSnRQjt = rxJnqbwd.ijoGcJk(1, -10, 0, 0),
-            dZGyqaV = 1
-		}), string.char(107,84,119,78,88,98,80,80)), 
-		pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(109,84,66,72,121,103,80,90,118)), {
-			apWBqbZB = rxJnqbwd.ijoGcJk(0, 1, 1, 0),
-			lSnRQjt = rxJnqbwd.ijoGcJk(1, -1, 0, 0),
-            dZGyqaV = 1
-		}), string.char(109,121,117,120,114,112,75)), 
-		poDrYuV,
-		RAUyIjm(OdMuytTV(VcYvQRO(string.char(73,71,115,102,69,113,76)), {
-			apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 50),
-			lSnRQjt = rxJnqbwd.ijoGcJk(0, 0, 1, -50),
-			dZGyqaV = 1
+		AddThemeObject(SetProps(MakeElement("Frame"), {
+			Size = UDim2.new(1, 0, 0, 10),
+			Position = UDim2.new(0, 0, 0, 0),
+			BackgroundTransparency = 1
+		}), "Second"), 
+		AddThemeObject(SetProps(MakeElement("Frame"), {
+			Size = UDim2.new(0, 10, 1, 0),
+			Position = UDim2.new(1, -10, 0, 0),
+            BackgroundTransparency = 1
+		}), "Second"), 
+		AddThemeObject(SetProps(MakeElement("Frame"), {
+			Size = UDim2.new(0, 1, 1, 0),
+			Position = UDim2.new(1, -1, 0, 0),
+            BackgroundTransparency = 1
+		}), "Stroke"), 
+		TabHolder,
+		SetChildren(SetProps(MakeElement("TFrame"), {
+			Size = UDim2.new(1, 0, 0, 50),
+			Position = UDim2.new(0, 0, 1, -50),
+			BackgroundTransparency = 1
 		}), {
-			pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(109,84,66,72,121,103,80,90,118)), {
-				apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 1)
-			}), string.char(109,121,117,120,114,112,75)), 
-			pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(109,84,66,72,121,103,80,90,118)), {
-				MFgyoUzz = XDPwMgo.ijoGcJk(0, 0.5),
-				apWBqbZB = rxJnqbwd.ijoGcJk(0, 32, 0, 32),
-				lSnRQjt = rxJnqbwd.ijoGcJk(0, 10, 0.5, 0)
+			AddThemeObject(SetProps(MakeElement("Frame"), {
+				Size = UDim2.new(1, 0, 0, 1)
+			}), "Stroke"), 
+			AddThemeObject(SetChildren(SetProps(MakeElement("Frame"), {
+				AnchorPoint = Vector2.new(0, 0.5),
+				Size = UDim2.new(0, 32, 0, 32),
+				Position = UDim2.new(0, 10, 0.5, 0)
 			}), {
-				OdMuytTV(VcYvQRO(string.char(97,78,73,84,75,79,121), string.char(101,75,83,80,117,80,103,74,58,47,47,75,114,79,118,78,67,98,46,101,86,120,89,106,109,46,65,119,111,100,69,89,86,47,117,89,109,65,101,78,120,70,45,86,81,122,100,117,83,47,68,68,75,72,81,113,71,77,63,119,68,81,109,73,81,61).. PUybPvLJ.xpjHFZyXu ..string.char(38,81,75,109,110,72,67,73,89,61,52,50,48,38,74,103,73,107,113,109,107,102,61,52,50,48,38,116,111,78,110,105,68,104,61,67,71,89,113,98,100)), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, 0)
+				SetProps(MakeElement("Image", "https://www.roblox.com/headshot-thumbnail/image?userId=".. LocalPlayer.UserId .."&width=420&height=420&format=png"), {
+					Size = UDim2.new(1, 0, 1, 0)
 				}),
-				pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(97,78,73,84,75,79,121), string.char(71,71,90,88,117,118,58,47,47,52,48,51,49,56,56,57,57,50,56)), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, 0),
-				}), string.char(107,84,119,78,88,98,80,80)),
-				VcYvQRO(string.char(89,115,121,72,87,77,116,103,109), 1)
-			}), string.char(82,109,73,77,66,117,82)),
-			RAUyIjm(OdMuytTV(VcYvQRO(string.char(73,71,115,102,69,113,76)), {
-				MFgyoUzz = XDPwMgo.ijoGcJk(0, 0.5),
-				apWBqbZB = rxJnqbwd.ijoGcJk(0, 32, 0, 32),
-				lSnRQjt = rxJnqbwd.ijoGcJk(0, 10, 0.5, 0)
+				AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://4031889928"), {
+					Size = UDim2.new(1, 0, 1, 0),
+				}), "Second"),
+				MakeElement("Corner", 1)
+			}), "Divider"),
+			SetChildren(SetProps(MakeElement("TFrame"), {
+				AnchorPoint = Vector2.new(0, 0.5),
+				Size = UDim2.new(0, 32, 0, 32),
+				Position = UDim2.new(0, 10, 0.5, 0)
 			}), {
-				pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75)),
-				VcYvQRO(string.char(89,115,121,72,87,77,116,103,109), 1)
+				AddThemeObject(MakeElement("Stroke"), "Stroke"),
+				MakeElement("Corner", 1)
 			}),
-			pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), PUybPvLJ.YfayRR, MTfzExEDG.iBEGzGTy and 14 or 13), {
-				apWBqbZB = rxJnqbwd.ijoGcJk(1, -60, 0, 13),
-				lSnRQjt = MTfzExEDG.iBEGzGTy and rxJnqbwd.ijoGcJk(0, 50, 0, 19) or rxJnqbwd.ijoGcJk(0, 50, 0, 12),
-				uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-				TEXxKvm = true
-			}), string.char(65,81,65,87,119,88,109,84,74)),
-			pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), string.char(), 12), {
-				apWBqbZB = rxJnqbwd.ijoGcJk(1, -60, 0, 12),
-				lSnRQjt = rxJnqbwd.ijoGcJk(0, 50, 1, -25),
-				XILulLJ = not MTfzExEDG.iBEGzGTy
-			}), string.char(109,103,114,104,74,80,122))
+			AddThemeObject(SetProps(MakeElement("Label", LocalPlayer.DisplayName, WindowConfig.HidePremium and 14 or 13), {
+				Size = UDim2.new(1, -60, 0, 13),
+				Position = WindowConfig.HidePremium and UDim2.new(0, 50, 0, 19) or UDim2.new(0, 50, 0, 12),
+				Font = Enum.Font.GothamBold,
+				ClipsDescendants = true
+			}), "Text"),
+			AddThemeObject(SetProps(MakeElement("Label", "", 12), {
+				Size = UDim2.new(1, -60, 0, 12),
+				Position = UDim2.new(0, 50, 1, -25),
+				Visible = not WindowConfig.HidePremium
+			}), "TextDark")
 		}),
-	}), string.char(107,84,119,78,88,98,80,80))
+	}), "Second")
 
-	
-	
-	
-	local nXgaVzeYF = pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), string.char(), 14), {
-		apWBqbZB = rxJnqbwd.ijoGcJk(1, -30, 2, 0),
-		lSnRQjt = rxJnqbwd.ijoGcJk(0, 25, 0, -24),
-		uDHbCoVoX = WXSzlaM.uDHbCoVoX.bAZLyUH,
-		tMQjBRl = 20
-	}), string.char(65,81,65,87,119,88,109,84,74))
+	-- ==========================================
+	-- タイピングアニメーション タイトル
+	-- ==========================================
+	local WindowName = AddThemeObject(SetProps(MakeElement("Label", "", 14), {
+		Size = UDim2.new(1, -30, 2, 0),
+		Position = UDim2.new(0, 25, 0, -24),
+		Font = Enum.Font.GothamBlack,
+		TextSize = 20
+	}), "Text")
 
-	local HdyPXM = MTfzExEDG.HxiwPdrJ or string.char(109,72,70,86,75,104,78,72,87,32,109,80,106,113,87,75,106,72,90)
-	local ksWcHCQBH = 1
-	local tozDenzGh = false
-	local exsCju = 0.1
-	local vOtwXdiWk = 2
+	local targetText = WindowConfig.Name or "Ramune Library"
+	local currentCharIndex = 1
+	local isDeleting = false
+	local typingSpeed = 0.1
+	local pauseTime = 2
 
-	local function sUlZXg()
+	local function TypeAnimation()
 		while true do
-			if not tozDenzGh then
-				if ksWcHCQBH <= #HdyPXM then
-					nXgaVzeYF.AQAWwXmTJ = gjKMQV.UWHXjdd(HdyPXM, 1, ksWcHCQBH) .. string.char(124)
-					ksWcHCQBH = ksWcHCQBH + 1
-					dQIWVIOV.oVyqIV(exsCju)
+			if not isDeleting then
+				if currentCharIndex <= #targetText then
+					WindowName.Text = string.sub(targetText, 1, currentCharIndex) .. "|"
+					currentCharIndex = currentCharIndex + 1
+					task.wait(typingSpeed)
 				else
-					nXgaVzeYF.AQAWwXmTJ = HdyPXM .. string.char(124)
-					dQIWVIOV.oVyqIV(vOtwXdiWk)
-					tozDenzGh = true
+					WindowName.Text = targetText .. "|"
+					task.wait(pauseTime)
+					isDeleting = true
 				end
 			else
-				if ksWcHCQBH > 1 then
-					ksWcHCQBH = ksWcHCQBH - 1
-					nXgaVzeYF.AQAWwXmTJ = gjKMQV.UWHXjdd(HdyPXM, 1, ksWcHCQBH) .. string.char(124)
-					dQIWVIOV.oVyqIV(exsCju / 1.5)
+				if currentCharIndex > 1 then
+					currentCharIndex = currentCharIndex - 1
+					WindowName.Text = string.sub(targetText, 1, currentCharIndex) .. "|"
+					task.wait(typingSpeed / 1.5)
 				else
-					nXgaVzeYF.AQAWwXmTJ = string.char(124)
-					tozDenzGh = false
-					dQIWVIOV.oVyqIV(0.5)
+					WindowName.Text = "|"
+					isDeleting = false
+					task.wait(0.5)
 				end
 			end
 		end
 	end
 
-	dQIWVIOV.IlfnpMRl(sUlZXg)
+	task.spawn(TypeAnimation)
 
-	local wePUVuK = pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(109,84,66,72,121,103,80,90,118)), {
-		apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 1),
-		lSnRQjt = rxJnqbwd.ijoGcJk(0, 0, 1, -1)
-	}), string.char(109,121,117,120,114,112,75))
+	local WindowTopBarLine = AddThemeObject(SetProps(MakeElement("Frame"), {
+		Size = UDim2.new(1, 0, 0, 1),
+		Position = UDim2.new(0, 0, 1, -1)
+	}), "Stroke")
 
-	local VgDrzob = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 10), {
-		psCCLwq = mHFVKhNHW,
-		lSnRQjt = rxJnqbwd.ijoGcJk(0.5, -307, 0.5, -172),
-		apWBqbZB = rxJnqbwd.ijoGcJk(0, 650, 0, 400),
-		dZGyqaV = 0.3,
-		TEXxKvm = true
+	local MainWindow = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 10), {
+		Parent = Ramune,
+		Position = UDim2.new(0.5, -307, 0.5, -172),
+		Size = UDim2.new(0, 650, 0, 400),
+		BackgroundTransparency = 0.3,
+		ClipsDescendants = true
 	}), {
-		RAUyIjm(OdMuytTV(VcYvQRO(string.char(73,71,115,102,69,113,76)), {
-			apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 50),
-			HxiwPdrJ = string.char(66,110,86,102,104,98)
+		SetChildren(SetProps(MakeElement("TFrame"), {
+			Size = UDim2.new(1, 0, 0, 50),
+			Name = "TopBar"
 		}), {
-			nXgaVzeYF,
-			wePUVuK,
-			pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 7), {
-				apWBqbZB = rxJnqbwd.ijoGcJk(0, 70, 0, 30),
-				lSnRQjt = rxJnqbwd.ijoGcJk(1, -90, 0, 10)
+			WindowName,
+			WindowTopBarLine,
+			AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 7), {
+				Size = UDim2.new(0, 70, 0, 30),
+				Position = UDim2.new(1, -90, 0, 10)
 			}), {
-				pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75)),
-				pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(109,84,66,72,121,103,80,90,118)), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(0, 1, 1, 0),
-					lSnRQjt = rxJnqbwd.ijoGcJk(0.5, 0, 0, 0)
-				}), string.char(109,121,117,120,114,112,75)), 
-				MGwizPZBc,
-				wKBHuP
-			}), string.char(107,84,119,78,88,98,80,80)), 
+				AddThemeObject(MakeElement("Stroke"), "Stroke"),
+				AddThemeObject(SetProps(MakeElement("Frame"), {
+					Size = UDim2.new(0, 1, 1, 0),
+					Position = UDim2.new(0.5, 0, 0, 0)
+				}), "Stroke"), 
+				CloseBtn,
+				MinimizeBtn
+			}), "Second"), 
 		}),
-		MtjwybH,
-		sCJJDso
-	}), string.char(78,119,116,69,97,71))
+		DragPoint,
+		WindowStuff
+	}), "Main")
 
-	
-	
-	
-	dQIWVIOV.IlfnpMRl(function()
-		local WitkGKcY
-		local otGCGAA = VgDrzob
+	-- ==========================================
+	-- レインボー機能 (UIStroke, タイトル)
+	-- ==========================================
+	task.spawn(function()
+		local uiStroke
+		local mainFrame = MainWindow
 		
-		dQIWVIOV.oVyqIV(0.5)
-		WitkGKcY = otGCGAA:NLvvUKlKl(string.char(121,78,73,98,87,98))
-		if not WitkGKcY then
-			WitkGKcY = rtsMROFD.ijoGcJk(string.char(121,78,73,98,87,98))
-			WitkGKcY.LbvKumTs = 2.5
-			WitkGKcY.EsuDhvx = WXSzlaM.EsuDhvx.nQctAmB
-			WitkGKcY.psCCLwq = otGCGAA
+		task.wait(0.5)
+		uiStroke = mainFrame:FindFirstChildWhichIsA("UIStroke")
+		if not uiStroke then
+			uiStroke = Instance.new("UIStroke")
+			uiStroke.Thickness = 2.5
+			uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+			uiStroke.Parent = mainFrame
 		end
 		
-		CKZhfnUN.oAZzEp:MqFdSmdxP(function()
-			local rkzxnlF = (rKkvZnh() % 4) / 4
-			local vKgwLYX = JLFPzYjW.iMghvFcC(rkzxnlF, 1, 1)
+		RunService.RenderStepped:Connect(function()
+			local hue = (tick() % 4) / 4
+			local rainbowColor = Color3.fromHSV(hue, 1, 1)
 			
-			if WitkGKcY then 
-				WitkGKcY.ilFXIbNMI = vKgwLYX 
-				WitkGKcY.JZHoqdSs = 0.5
+			if uiStroke then 
+				uiStroke.Color = rainbowColor 
+				uiStroke.Transparency = 0.5
 			end
-			if nXgaVzeYF then 
-				nXgaVzeYF.KnvIbhbK = vKgwLYX 
+			if WindowName then 
+				WindowName.TextColor3 = rainbowColor 
 			end
 		end)
 	end)
 
-	if MTfzExEDG.WJFGZFaE then
-		nXgaVzeYF.lSnRQjt = rxJnqbwd.ijoGcJk(0, 50, 0, -24)
-		local ZJESGchl = OdMuytTV(VcYvQRO(string.char(97,78,73,84,75,79,121), MTfzExEDG.pXPouVv), {
-			apWBqbZB = rxJnqbwd.ijoGcJk(0, 20, 0, 20),
-			lSnRQjt = rxJnqbwd.ijoGcJk(0, 25, 0, 15)
+	if WindowConfig.ShowIcon then
+		WindowName.Position = UDim2.new(0, 50, 0, -24)
+		local WindowIcon = SetProps(MakeElement("Image", WindowConfig.Icon), {
+			Size = UDim2.new(0, 20, 0, 20),
+			Position = UDim2.new(0, 25, 0, 15)
 		})
-		ZJESGchl.psCCLwq = VgDrzob.BnVfhb
+		WindowIcon.Parent = MainWindow.TopBar
 	end	
 
-	wvFEcTV(MtjwybH, VgDrzob)
+	MakeDraggable(DragPoint, MainWindow)
 
-	
-	
-	
-	local sKzbpNIW = RAUyIjm(OdMuytTV(VcYvQRO(string.char(86,65,115,117,80,72,98,112,112)), {
-		psCCLwq = mHFVKhNHW,
-		apWBqbZB = rxJnqbwd.ijoGcJk(0, 40, 0, 40),
-		lSnRQjt = rxJnqbwd.ijoGcJk(0.5, -20, 0, 20),
-		dZGyqaV = 0,
-		pShMNxcHw = nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].NwtEaG,
-		XILulLJ = false,
-		MFgyoUzz = XDPwMgo.ijoGcJk(0.5, 0.5)
+	-- ==========================================
+	-- MobileReopenButton (Noobhub premiumから移植)
+	-- ==========================================
+	local MobileReopenButton = SetChildren(SetProps(MakeElement("Button"), {
+		Parent = Ramune,
+		Size = UDim2.new(0, 40, 0, 40),
+		Position = UDim2.new(0.5, -20, 0, 20),
+		BackgroundTransparency = 0,
+		BackgroundColor3 = RamuneLib.Themes[RamuneLib.SelectedTheme].Main,
+		Visible = false,
+		AnchorPoint = Vector2.new(0.5, 0.5)
 	}), {
-		VcYvQRO(string.char(89,115,121,72,87,77,116,103,109), 1),
-		OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), string.char(87,99,73,68,115,121,76), 12), {
-			apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, 0),
-			KnvIbhbK = JLFPzYjW.toipKy(255, 255, 255),
-			TGCwdvJ = WXSzlaM.TGCwdvJ.dKjZWi,
-			uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-			dZGyqaV = 1
+		MakeElement("Corner", 1),
+		SetProps(MakeElement("Label", "Open", 12), {
+			Size = UDim2.new(1, 0, 1, 0),
+			TextColor3 = Color3.fromRGB(255, 255, 255),
+			TextXAlignment = Enum.TextXAlignment.Center,
+			Font = Enum.Font.GothamBold,
+			BackgroundTransparency = 1
 		})
 	})
 
-	
-	local function idLUPPdKU(BEqcOJJJ)
-		local LdbhaHA = false
-		local RTDYEun, fagdGiY
+	-- ドラッグ機能（MobileReopenButton用）
+	local function MakeDraggableForButton(button)
+		local dragging = false
+		local dragStart, startPos
 
-		local function NnvQDVeZ(dVKQyRWfD)
-			local KGyrpmGFD = dVKQyRWfD.lSnRQjt - RTDYEun
-			local wbjIjMD = rxJnqbwd.ijoGcJk(fagdGiY.TdjSGf.apdBMeq, fagdGiY.TdjSGf.HdFTSFNII + KGyrpmGFD.TdjSGf, fagdGiY.AggfPLe.apdBMeq, fagdGiY.AggfPLe.HdFTSFNII + KGyrpmGFD.AggfPLe)
-			DmdFQTdf:mzQYvzWf(BEqcOJJJ, QOXehqcz.ijoGcJk(0.2), {lSnRQjt = wbjIjMD}):xSpbKxBgW()
+		local function update(input)
+			local delta = input.Position - dragStart
+			local newPosition = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+			TweenService:Create(button, TweenInfo.new(0.2), {Position = newPosition}):Play()
 		end
 
-		BEqcOJJJ.TcyjoDFJ:MqFdSmdxP(function(dVKQyRWfD)
-			if dVKQyRWfD.RUVDAExCV == WXSzlaM.RUVDAExCV.EFnybWP or dVKQyRWfD.RUVDAExCV == WXSzlaM.RUVDAExCV.qdvwstU then
-				LdbhaHA = true
-				RTDYEun = dVKQyRWfD.lSnRQjt
-				fagdGiY = BEqcOJJJ.lSnRQjt
+		button.InputBegan:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+				dragging = true
+				dragStart = input.Position
+				startPos = button.Position
 
-				dVKQyRWfD.DLpUFQd:MqFdSmdxP(function()
-					if dVKQyRWfD.SgYLtUOom == WXSzlaM.SgYLtUOom.MdIsUT then
-						LdbhaHA = false
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragging = false
 					end
 				end)
 			end
 		end)
 
-		usslBIh.jliYIawVK:MqFdSmdxP(function(dVKQyRWfD)
-			if LdbhaHA and (dVKQyRWfD.RUVDAExCV == WXSzlaM.RUVDAExCV.ImHMYxh or dVKQyRWfD.RUVDAExCV == WXSzlaM.RUVDAExCV.qdvwstU) then
-				NnvQDVeZ(dVKQyRWfD)
+		UserInputService.InputChanged:Connect(function(input)
+			if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+				update(input)
 			end
 		end)
 	end
 
-	idLUPPdKU(sKzbpNIW)
+	MakeDraggableForButton(MobileReopenButton)
 
-	local function PJlJUkU()
-		if usslBIh.KPISguX and not usslBIh.RYuJkvAH then
-			if kJhePiX then
-				sKzbpNIW.XILulLJ = true
+	local function showMobileOpenButton()
+		if UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled then
+			if UIHidden then
+				MobileReopenButton.Visible = true
 			else
-				sKzbpNIW.XILulLJ = false
+				MobileReopenButton.Visible = false
 			end
 		end
 	end
 
-	GBSSvogm(MGwizPZBc.ofvlsMZ, function()
-		VgDrzob.XILulLJ = false
-		kJhePiX = true
-		sKzbpNIW.XILulLJ = true
+	AddConnection(CloseBtn.MouseButton1Up, function()
+		MainWindow.Visible = false
+		UIHidden = true
+		MobileReopenButton.Visible = true
 		
-		if MTfzExEDG.nwoxqhGZ then
-			JMOLlmI(false)
+		if WindowConfig.FreeMouse then
+			UnlockMouse(false)
 		end
 		
-		nLwJHpS:PtmEJAFM({
-			HxiwPdrJ = string.char(38750,34920,31034,12395,12373,12428,12414,12375,12383,12290),
-			pfhAaL = string.char(110,76,119,74,72,112,83,12364,38750,34920,31034,12395,12373,12428,12414,12375,12383,12290,20877,24230,38283,12367,22580,21512,12399,12289,30011,38754,12395,34920,31034,12373,12428,12427,87,99,73,68,115,121,76,12508,12479,12531,12434,25276,12375,12390,12367,12384,12373,12356,12290),
-			LKDjBKj = 5
+		RamuneLib:MakeNotification({
+			Name = "非表示にされました。",
+			Content = "RamuneLibが非表示にされました。再度開く場合は、画面に表示されるOpenボタンを押してください。",
+			Time = 5
 		})
 
-		PJlJUkU()
-		MTfzExEDG.uZwykh()
+		showMobileOpenButton()
+		WindowConfig.CloseCallback()
 	end)
 
-	GBSSvogm(usslBIh.TcyjoDFJ, function(OiIOzYmdt, JXrReXF)
-		if not JXrReXF then
-			if OiIOzYmdt.YQgHxp == WXSzlaM.YQgHxp[MTfzExEDG.tQMJWHY] and kJhePiX then
-				VgDrzob.XILulLJ = true
-				sKzbpNIW.XILulLJ = false
-				kJhePiX = false
-				if MTfzExEDG.nwoxqhGZ then
-					JMOLlmI(true)
+	AddConnection(UserInputService.InputBegan, function(Input, Focus)
+		if not Focus then
+			if Input.KeyCode == Enum.KeyCode[WindowConfig.KeyToOpenWindow] and UIHidden then
+				MainWindow.Visible = true
+				MobileReopenButton.Visible = false
+				UIHidden = false
+				if WindowConfig.FreeMouse then
+					UnlockMouse(true)
 				end
-				PJlJUkU()
-			elseif OiIOzYmdt.YQgHxp == WXSzlaM.YQgHxp[MTfzExEDG.tQMJWHY] and not kJhePiX then
-				VgDrzob.XILulLJ = false
-				sKzbpNIW.XILulLJ = true
-				kJhePiX = true
+				showMobileOpenButton()
+			elseif Input.KeyCode == Enum.KeyCode[WindowConfig.KeyToOpenWindow] and not UIHidden then
+				MainWindow.Visible = false
+				MobileReopenButton.Visible = true
+				UIHidden = true
 
-				if MTfzExEDG.nwoxqhGZ then
-					JMOLlmI(false)
+				if WindowConfig.FreeMouse then
+					UnlockMouse(false)
 				end
-				nLwJHpS:PtmEJAFM({
-					HxiwPdrJ = string.char(38750,34920,31034,12395,12373,12428,12414,12375,12383,12290),
-					pfhAaL = string.char(110,76,119,74,72,112,83,12364,38750,34920,31034,12395,12373,12428,12414,12375,12383,12290,20877,24230,38283,12367,22580,21512,12399,12289,30011,38754,12395,34920,31034,12373,12428,12427,87,99,73,68,115,121,76,12508,12479,12531,12434,25276,12375,12390,12367,12384,12373,12356,12290),
-					LKDjBKj = 5
+				RamuneLib:MakeNotification({
+					Name = "非表示にされました。",
+					Content = "RamuneLibが非表示にされました。再度開く場合は、画面に表示されるOpenボタンを押してください。",
+					Time = 5
 				})
-				PJlJUkU()
+				showMobileOpenButton()
 			end
 		end
 	end)
 
-	GBSSvogm(sKzbpNIW.CNqpxTTY, function()
-		VgDrzob.XILulLJ = true
-		sKzbpNIW.XILulLJ = false
-		kJhePiX = false
-		PJlJUkU()
+	AddConnection(MobileReopenButton.Activated, function()
+		MainWindow.Visible = true
+		MobileReopenButton.Visible = false
+		UIHidden = false
+		showMobileOpenButton()
 	end)
 
-	GBSSvogm(wKBHuP.ofvlsMZ, function()
-		if IBREYuaS then
-			DmdFQTdf:mzQYvzWf(VgDrzob, QOXehqcz.ijoGcJk(0.5, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {apWBqbZB = rxJnqbwd.ijoGcJk(0, 650, 0, 400)}):xSpbKxBgW()
-			wKBHuP.CnpUrmF.aNITKOy = string.char(71,71,90,88,117,118,58,47,47,55,48,55,50,55,49,57,51,51,56)
-			oVyqIV(.02)
-			VgDrzob.TEXxKvm = false
-			sCJJDso.XILulLJ = true
-			wePUVuK.XILulLJ = true
+	AddConnection(MinimizeBtn.MouseButton1Up, function()
+		if Minimized then
+			TweenService:Create(MainWindow, TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, 650, 0, 400)}):Play()
+			MinimizeBtn.Ico.Image = "rbxassetid://7072719338"
+			wait(.02)
+			MainWindow.ClipsDescendants = false
+			WindowStuff.Visible = true
+			WindowTopBarLine.Visible = true
 		else
-			VgDrzob.TEXxKvm = true
-			wePUVuK.XILulLJ = false
-			wKBHuP.CnpUrmF.aNITKOy = string.char(71,71,90,88,117,118,58,47,47,55,48,55,50,55,50,48,56,55,48)
+			MainWindow.ClipsDescendants = true
+			WindowTopBarLine.Visible = false
+			MinimizeBtn.Ico.Image = "rbxassetid://7072720870"
 
-			DmdFQTdf:mzQYvzWf(VgDrzob, QOXehqcz.ijoGcJk(0.5, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {apWBqbZB = rxJnqbwd.ijoGcJk(0, nXgaVzeYF.bfrjxsqdJ.TdjSGf + 140, 0, 50)}):xSpbKxBgW()
-			oVyqIV(0.1)
-			sCJJDso.XILulLJ = false	
+			TweenService:Create(MainWindow, TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, WindowName.TextBounds.X + 140, 0, 50)}):Play()
+			wait(0.1)
+			WindowStuff.Visible = false	
 		end
-		IBREYuaS = not IBREYuaS    
+		Minimized = not Minimized    
 	end)
 
-	local function QZqKQXsrY()
-		VgDrzob.XILulLJ = false
+	local function LoadSequence()
+		MainWindow.Visible = false
 		
-		local spkLkUZ = OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), string.char(), 14), {
-			psCCLwq = mHFVKhNHW,
-			apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, 0),
-			MFgyoUzz = XDPwMgo.ijoGcJk(0.5, 0.5),
-			lSnRQjt = rxJnqbwd.ijoGcJk(0.5, 0, 0.5, 0),
-			TGCwdvJ = WXSzlaM.TGCwdvJ.dKjZWi,
-			uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-			GvluwTEXs = 1
+		local LoadSequenceText = SetProps(MakeElement("Label", "", 14), {
+			Parent = Ramune,
+			Size = UDim2.new(1, 0, 1, 0),
+			AnchorPoint = Vector2.new(0.5, 0.5),
+			Position = UDim2.new(0.5, 0, 0.5, 0),
+			TextXAlignment = Enum.TextXAlignment.Center,
+			Font = Enum.Font.GothamBold,
+			TextTransparency = 1
 		})
 
-		local FUfCoSSgy = MTfzExEDG.chdbExHf or string.char(109,72,70,86,75,104,78,72,87,32,109,80,106,113,87,75,106,72,90)
-		local aGfjFMfg = 1
-		local EiysZkrhC = false
-		local CljqOZAp = 0.08
-		local JCHHcFPx = 1.5
+		local introTargetText = WindowConfig.IntroText or "Ramune Library"
+		local introCharIndex = 1
+		local introIsDeleting = false
+		local introTypingSpeed = 0.08
+		local introPauseTime = 1.5
 
-		dQIWVIOV.IlfnpMRl(function()
-			while spkLkUZ and spkLkUZ.psCCLwq do
-				if not EiysZkrhC then
-					if aGfjFMfg <= #FUfCoSSgy then
-						spkLkUZ.AQAWwXmTJ = gjKMQV.UWHXjdd(FUfCoSSgy, 1, aGfjFMfg) .. string.char(124)
-						aGfjFMfg = aGfjFMfg + 1
-						dQIWVIOV.oVyqIV(CljqOZAp)
+		task.spawn(function()
+			while LoadSequenceText and LoadSequenceText.Parent do
+				if not introIsDeleting then
+					if introCharIndex <= #introTargetText then
+						LoadSequenceText.Text = string.sub(introTargetText, 1, introCharIndex) .. "|"
+						introCharIndex = introCharIndex + 1
+						task.wait(introTypingSpeed)
 					else
-						spkLkUZ.AQAWwXmTJ = FUfCoSSgy .. string.char(124)
-						dQIWVIOV.oVyqIV(JCHHcFPx)
-						EiysZkrhC = true
+						LoadSequenceText.Text = introTargetText .. "|"
+						task.wait(introPauseTime)
+						introIsDeleting = true
 					end
 				else
-					if aGfjFMfg > 1 then
-						aGfjFMfg = aGfjFMfg - 1
-						spkLkUZ.AQAWwXmTJ = gjKMQV.UWHXjdd(FUfCoSSgy, 1, aGfjFMfg) .. string.char(124)
-						dQIWVIOV.oVyqIV(CljqOZAp / 1.5)
+					if introCharIndex > 1 then
+						introCharIndex = introCharIndex - 1
+						LoadSequenceText.Text = string.sub(introTargetText, 1, introCharIndex) .. "|"
+						task.wait(introTypingSpeed / 1.5)
 					else
-						spkLkUZ.AQAWwXmTJ = string.char(124)
-						EiysZkrhC = false
-						dQIWVIOV.oVyqIV(0.5)
+						LoadSequenceText.Text = "|"
+						introIsDeleting = false
+						task.wait(0.5)
 					end
 				end
 			end
 		end)
 
-		dQIWVIOV.IlfnpMRl(function()
-			while spkLkUZ and spkLkUZ.psCCLwq do
-				local rkzxnlF = (rKkvZnh() % 4) / 4
-				spkLkUZ.KnvIbhbK = JLFPzYjW.iMghvFcC(rkzxnlF, 1, 1)
-				dQIWVIOV.oVyqIV(0.05)
+		task.spawn(function()
+			while LoadSequenceText and LoadSequenceText.Parent do
+				local hue = (tick() % 4) / 4
+				LoadSequenceText.TextColor3 = Color3.fromHSV(hue, 1, 1)
+				task.wait(0.05)
 			end
 		end)
 
-		DmdFQTdf:mzQYvzWf(spkLkUZ, QOXehqcz.ijoGcJk(.3, WXSzlaM.ApSxIMXTC.FWjOofNWK, WXSzlaM.BUlZJC.ErWHLU), {GvluwTEXs = 0}):xSpbKxBgW()
+		TweenService:Create(LoadSequenceText, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
 		
-		local MRqnUP = (#FUfCoSSgy * CljqOZAp) + JCHHcFPx + 1
-		oVyqIV(MRqnUP)
+		local waitTime = (#introTargetText * introTypingSpeed) + introPauseTime + 1
+		wait(waitTime)
 		
-		DmdFQTdf:mzQYvzWf(spkLkUZ, QOXehqcz.ijoGcJk(.3, WXSzlaM.ApSxIMXTC.FWjOofNWK, WXSzlaM.BUlZJC.ErWHLU), {GvluwTEXs = 1}):xSpbKxBgW()
-		VgDrzob.XILulLJ = true
-		spkLkUZ:BbZvQEN()
+		TweenService:Create(LoadSequenceText, TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 1}):Play()
+		MainWindow.Visible = true
+		LoadSequenceText:Destroy()
 	end 
 
-	if MTfzExEDG.GKxbaTfy then
-		QZqKQXsrY()
+	if WindowConfig.IntroEnabled then
+		LoadSequence()
 	end	
 
-	if MTfzExEDG.nwoxqhGZ then
-		nLwJHpS:PtmEJAFM({
-			HxiwPdrJ = string.char(78,117,120,121,69,79,122,84,109,32,76,73,117,69,76,113,101,32,78,100,86,87,107,77,68,76,83,32,118,99,110,75,110,117,72,115,84,32,109,105,98,85,69,90,112,81,99),
-			pfhAaL = string.char(105,102,32,77,67,115,86,65,115,98,119,76,32,110,76,110,89,74,119,32,118,77,87,115,103,75,32,84,84,117,104,83,67,103,69,86,32,120,105,85,102,111,117,121,32,120,101,99,109,104,118,116,111,106,32,84,84,117,104,83,67,103,69,86,32,88,73,70,74,81,87,71,44,32,70,75,75,66,80,109,32,67,122,87,68,75,78,114,102,32,121,117,116,88,80,69,32,111,114,32,102,106,102,117,106,66,32,106,119,101,119,80,82,76,99,65,32,65,120,107,107,77,112,90,83),
-			LKDjBKj = 10
+	if WindowConfig.FreeMouse then
+		RamuneLib:MakeNotification({
+			Name = "Free Mouse mode is on",
+			Content = "if you want it to go back to normal, just press M or close the GUI",
+			Time = 10
 		})
 	end
 
-	local qcbArL = {}
-	function qcbArL:JLFSqKU(OAAKYXtVl)
-		OAAKYXtVl = OAAKYXtVl or {}
-		OAAKYXtVl.HxiwPdrJ = OAAKYXtVl.HxiwPdrJ or string.char(115,72,90,71,69,114)
-		OAAKYXtVl.pXPouVv = OAAKYXtVl.pXPouVv or string.char()
-		OAAKYXtVl.LOCULzmv = OAAKYXtVl.LOCULzmv or false
+	local TabFunction = {}
+	function TabFunction:MakeTab(TabConfig)
+		TabConfig = TabConfig or {}
+		TabConfig.Name = TabConfig.Name or "Tab"
+		TabConfig.Icon = TabConfig.Icon or ""
+		TabConfig.PremiumOnly = TabConfig.PremiumOnly or false
 
-		local hvhcCJ = RAUyIjm(OdMuytTV(VcYvQRO(string.char(86,65,115,117,80,72,98,112,112)), {
-			apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 30),
-			psCCLwq = poDrYuV
+		local TabFrame = SetChildren(SetProps(MakeElement("Button"), {
+			Size = UDim2.new(1, 0, 0, 30),
+			Parent = TabHolder
 		}), {
-			pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(97,78,73,84,75,79,121), OAAKYXtVl.pXPouVv), {
-				MFgyoUzz = XDPwMgo.ijoGcJk(0, 0.5),
-				apWBqbZB = rxJnqbwd.ijoGcJk(0, 18, 0, 18),
-				lSnRQjt = rxJnqbwd.ijoGcJk(0, 10, 0.5, 0),
-				blilLqjG = 0.4,
-				HxiwPdrJ = string.char(67,110,112,85,114,109,70)
-			}), string.char(65,81,65,87,119,88,109,84,74)),
-			pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), OAAKYXtVl.HxiwPdrJ, 14), {
-				apWBqbZB = rxJnqbwd.ijoGcJk(1, -35, 1, 0),
-				lSnRQjt = rxJnqbwd.ijoGcJk(0, 35, 0, 0),
-				uDHbCoVoX = WXSzlaM.uDHbCoVoX.heCAXEa,
-				GvluwTEXs = 0.4,
-				HxiwPdrJ = string.char(111,88,78,113,104,116,71,70)
-			}), string.char(65,81,65,87,119,88,109,84,74))
+			AddThemeObject(SetProps(MakeElement("Image", TabConfig.Icon), {
+				AnchorPoint = Vector2.new(0, 0.5),
+				Size = UDim2.new(0, 18, 0, 18),
+				Position = UDim2.new(0, 10, 0.5, 0),
+				ImageTransparency = 0.4,
+				Name = "Ico"
+			}), "Text"),
+			AddThemeObject(SetProps(MakeElement("Label", TabConfig.Name, 14), {
+				Size = UDim2.new(1, -35, 1, 0),
+				Position = UDim2.new(0, 35, 0, 0),
+				Font = Enum.Font.GothamSemibold,
+				TextTransparency = 0.4,
+				Name = "Title"
+			}), "Text")
 		})
 
-		if GJMmjbjq(OAAKYXtVl.pXPouVv) ~= nil then
-			hvhcCJ.CnpUrmF.aNITKOy = GJMmjbjq(OAAKYXtVl.pXPouVv)
+		if GetIcon(TabConfig.Icon) ~= nil then
+			TabFrame.Ico.Image = GetIcon(TabConfig.Icon)
 		end	
 
-		local lQYnFB = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,117,119,73,108,72,88,103,83), JLFPzYjW.toipKy(255, 255, 255), 5), {
-			apWBqbZB = rxJnqbwd.ijoGcJk(1, -150, 1, -50),
-			lSnRQjt = rxJnqbwd.ijoGcJk(0, 150, 0, 50),
-			psCCLwq = VgDrzob,
-			XILulLJ = false,
-			HxiwPdrJ = string.char(112,67,68,89,116,106,88,117,65)
+		local Container = AddThemeObject(SetChildren(SetProps(MakeElement("ScrollFrame", Color3.fromRGB(255, 255, 255), 5), {
+			Size = UDim2.new(1, -150, 1, -50),
+			Position = UDim2.new(0, 150, 0, 50),
+			Parent = MainWindow,
+			Visible = false,
+			Name = "ItemContainer"
 		}), {
-			VcYvQRO(string.char(107,119,108,103,119,73,66), 0, 6),
-			VcYvQRO(string.char(107,76,101,102,65,108,68,121,112), 15, 10, 10, 15)
-		}), string.char(82,109,73,77,66,117,82))
+			MakeElement("List", 0, 6),
+			MakeElement("Padding", 15, 10, 10, 15)
+		}), "Divider")
 
-		GBSSvogm(lQYnFB.cJXXvJl:ZAlbivyHj(string.char(117,67,108,74,67,66,71,81,112)), function()
-			lQYnFB.WEAEEuj = rxJnqbwd.ijoGcJk(0, 0, 0, lQYnFB.cJXXvJl.uClJCBGQp.AggfPLe + 30)
+		AddConnection(Container.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
+			Container.CanvasSize = UDim2.new(0, 0, 0, Container.UIListLayout.AbsoluteContentSize.Y + 30)
 		end)
 
-		if GfqpOZZuq then
-			GfqpOZZuq = false
-			hvhcCJ.CnpUrmF.blilLqjG = 0
-			hvhcCJ.oXNqhtGF.GvluwTEXs = 0
-			hvhcCJ.oXNqhtGF.uDHbCoVoX = WXSzlaM.uDHbCoVoX.bAZLyUH
-			lQYnFB.XILulLJ = true
+		if FirstTab then
+			FirstTab = false
+			TabFrame.Ico.ImageTransparency = 0
+			TabFrame.Title.TextTransparency = 0
+			TabFrame.Title.Font = Enum.Font.GothamBlack
+			Container.Visible = true
 		end    
 
-		GBSSvogm(hvhcCJ.oBbxGC, function()
-			for swAOpHGgk, sHZGEr in next, poDrYuV:YjCmHaKW() do
-				if sHZGEr:fNxvEvs(string.char(113,116,122,88,97,102)) then
-					sHZGEr.oXNqhtGF.uDHbCoVoX = WXSzlaM.uDHbCoVoX.heCAXEa
-					DmdFQTdf:mzQYvzWf(sHZGEr.CnpUrmF, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {blilLqjG = 0.4}):xSpbKxBgW()
-					DmdFQTdf:mzQYvzWf(sHZGEr.oXNqhtGF, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {GvluwTEXs = 0.4}):xSpbKxBgW()
+		AddConnection(TabFrame.MouseButton1Click, function()
+			for _, Tab in next, TabHolder:GetChildren() do
+				if Tab:IsA("TextButton") then
+					Tab.Title.Font = Enum.Font.GothamSemibold
+					TweenService:Create(Tab.Ico, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0.4}):Play()
+					TweenService:Create(Tab.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency = 0.4}):Play()
 				end    
 			end
-			for swAOpHGgk, pCDYtjXuA in next, VgDrzob:YjCmHaKW() do
-				if pCDYtjXuA.HxiwPdrJ == string.char(112,67,68,89,116,106,88,117,65) then
-					pCDYtjXuA.XILulLJ = false
+			for _, ItemContainer in next, MainWindow:GetChildren() do
+				if ItemContainer.Name == "ItemContainer" then
+					ItemContainer.Visible = false
 				end    
 			end  
-			DmdFQTdf:mzQYvzWf(hvhcCJ.CnpUrmF, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {blilLqjG = 0}):xSpbKxBgW()
-			DmdFQTdf:mzQYvzWf(hvhcCJ.oXNqhtGF, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {GvluwTEXs = 0}):xSpbKxBgW()
-			hvhcCJ.oXNqhtGF.uDHbCoVoX = WXSzlaM.uDHbCoVoX.bAZLyUH
-			lQYnFB.XILulLJ = true   
+			TweenService:Create(TabFrame.Ico, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = 0}):Play()
+			TweenService:Create(TabFrame.Title, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
+			TabFrame.Title.Font = Enum.Font.GothamBlack
+			Container.Visible = true   
 		end)
 
-		local function yVPXEYApl(zDeLRKypo)
-			local oAfGoIP = {}
+		local function GetElements(ItemParent)
+			local ElementFunction = {}
 			
-			function oAfGoIP:EmBRBKkh(AQAWwXmTJ)
-				local hAHvIirfN = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 5), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 30),
-					dZGyqaV = 0.7,
-					psCCLwq = zDeLRKypo
+			function ElementFunction:AddLabel(Text)
+				local LabelFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
+					Size = UDim2.new(1, 0, 0, 30),
+					BackgroundTransparency = 0.7,
+					Parent = ItemParent
 				}), {
-					pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), AQAWwXmTJ, 15), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(1, -12, 1, 0),
-						lSnRQjt = rxJnqbwd.ijoGcJk(0, 12, 0, 0),
-						uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-						HxiwPdrJ = string.char(112,102,104,65,97,76)
-					}), string.char(65,81,65,87,119,88,109,84,74)),
-					pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75))
-				}), string.char(107,84,119,78,88,98,80,80))
+					AddThemeObject(SetProps(MakeElement("Label", Text, 15), {
+						Size = UDim2.new(1, -12, 1, 0),
+						Position = UDim2.new(0, 12, 0, 0),
+						Font = Enum.Font.GothamBold,
+						Name = "Content"
+					}), "Text"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke")
+				}), "Second")
 
-				local jKxQgPjp = {}
-				function jKxQgPjp:ewhNQlzb(GZOFwTZhN)
-					hAHvIirfN.pfhAaL.AQAWwXmTJ = GZOFwTZhN
+				local LabelFunction = {}
+				function LabelFunction:Set(ToChange)
+					LabelFrame.Content.Text = ToChange
 				end
-				return jKxQgPjp
+				return LabelFunction
 			end
 
-			function oAfGoIP:ThHmNJz(wDQmIQ)
-				wDQmIQ = wDQmIQ or 0
+			function ElementFunction:AddPlayerParagraph(userId)
+				userId = userId or 0
 			
-				local jKghenhF = string.char(87,81,70,70,99,81,81,90,106)
-				local qgrYOUXjD = string.char(87,81,70,70,99,81,81,90,106)
+				local displayName = "Unknown"
+				local username = "Unknown"
 			
-				local LCGAlthD, ylmmBNgY = lgINmhB(function()
-					return OeioNkG:qFjGjW({wDQmIQ})
+				local success, result = pcall(function()
+					return UserService:GetUserInfosByUserIdsAsync({userId})
 				end)
 			
-				if LCGAlthD and ylmmBNgY and ylmmBNgY[1] then
-					jKghenhF = ylmmBNgY[1].YfayRR or string.char(87,81,70,70,99,81,81,90,106)
-					qgrYOUXjD = ylmmBNgY[1].rnQbsH or string.char(87,81,70,70,99,81,81,90,106)
+				if success and result and result[1] then
+					displayName = result[1].DisplayName or "Unknown"
+					username = result[1].Username or "Unknown"
 				end
 			
-				local XayFhC = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 5), {
-				apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 70),
-				dZGyqaV = 0.7,
-				psCCLwq = zDeLRKypo
+				local ParagraphFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
+				Size = UDim2.new(1, 0, 0, 70),
+				BackgroundTransparency = 0.7,
+				Parent = ItemParent
 				}), {
-				OdMuytTV(VcYvQRO(string.char(97,78,73,84,75,79,121), string.char(), 0), {
-				HxiwPdrJ = string.char(88,103,107,115,87,67),
-				apWBqbZB = rxJnqbwd.ijoGcJk(0, 60, 0, 60),
-				lSnRQjt = rxJnqbwd.ijoGcJk(0, 5, 0, 5),
-				dZGyqaV = 1,
-				aNITKOy = string.char(101,75,83,80,117,80,103,74,58,47,47,75,114,79,118,78,67,98,46,101,86,120,89,106,109,46,65,119,111,100,69,89,86,47,117,89,109,65,101,78,120,70,45,86,81,122,100,117,83,47,68,68,75,72,81,113,71,77,63,119,68,81,109,73,81,61) .. wDQmIQ .. string.char(38,81,75,109,110,72,67,73,89,61,52,50,48,38,74,103,73,107,113,109,107,102,61,52,50,48,38,116,111,78,110,105,68,104,61,67,71,89,113,98,100)
+				SetProps(MakeElement("Image", "", 0), {
+				Name = "Avatar",
+				Size = UDim2.new(0, 60, 0, 60),
+				Position = UDim2.new(0, 5, 0, 5),
+				BackgroundTransparency = 1,
+				Image = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. userId .. "&width=420&height=420&format=png"
 				}),
 			
-				pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), jKghenhF, 15), {
-				HxiwPdrJ = string.char(89,102,97,121,82,82),
-				apWBqbZB = rxJnqbwd.ijoGcJk(1, -70, 0, 20),
-				lSnRQjt = rxJnqbwd.ijoGcJk(0, 70, 0, 10),
-				uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-				TGCwdvJ = WXSzlaM.TGCwdvJ.tvqKTD
-				}), string.char(65,81,65,87,119,88,109,84,74)),
+				AddThemeObject(SetProps(MakeElement("Label", displayName, 15), {
+				Name = "DisplayName",
+				Size = UDim2.new(1, -70, 0, 20),
+				Position = UDim2.new(0, 70, 0, 10),
+				Font = Enum.Font.GothamBold,
+				TextXAlignment = Enum.TextXAlignment.Left
+				}), "Text"),
 			
-				pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), qgrYOUXjD, 13), {
-				HxiwPdrJ = string.char(114,110,81,98,115,72),
-				apWBqbZB = rxJnqbwd.ijoGcJk(1, -70, 0, 20),
-				lSnRQjt = rxJnqbwd.ijoGcJk(0, 70, 0, 35),
-				uDHbCoVoX = WXSzlaM.uDHbCoVoX.heCAXEa,
-				TGCwdvJ = WXSzlaM.TGCwdvJ.tvqKTD
-				}), string.char(109,103,114,104,74,80,122)),
+				AddThemeObject(SetProps(MakeElement("Label", username, 13), {
+				Name = "Username",
+				Size = UDim2.new(1, -70, 0, 20),
+				Position = UDim2.new(0, 70, 0, 35),
+				Font = Enum.Font.GothamSemibold,
+				TextXAlignment = Enum.TextXAlignment.Left
+				}), "TextDark"),
 			
-				pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75))
-				}), string.char(107,84,119,78,88,98,80,80))
+				AddThemeObject(MakeElement("Stroke"), "Stroke")
+				}), "Second")
 			
-				local PgrJmxexx = {}
+				local PlayerParagraph = {}
 				
-				function PgrJmxexx:ewhNQlzb(rztMbLQV)
-					rztMbLQV = rztMbLQV or 0
+				function PlayerParagraph:Set(newUserId)
+					newUserId = newUserId or 0
 				
-					local YZjPjqIn = string.char(87,81,70,70,99,81,81,90,106)
-					local JgdVgRKL = string.char(87,81,70,70,99,81,81,90,106)
+					local dname = "Unknown"
+					local uname = "Unknown"
 				
-					local nJPYlsorM, ZaZQYp = lgINmhB(function()
-						return OeioNkG:qFjGjW({rztMbLQV})
+					local ok, data = pcall(function()
+						return UserService:GetUserInfosByUserIdsAsync({newUserId})
 					end)
 				
-					if nJPYlsorM and ZaZQYp and ZaZQYp[1] then
-						YZjPjqIn = ZaZQYp[1].YfayRR or string.char(87,81,70,70,99,81,81,90,106)
-						JgdVgRKL = ZaZQYp[1].rnQbsH or string.char(87,81,70,70,99,81,81,90,106)
+					if ok and data and data[1] then
+						dname = data[1].DisplayName or "Unknown"
+						uname = data[1].Username or "Unknown"
 					end
 				
-					XayFhC.YfayRR.AQAWwXmTJ = YZjPjqIn
-					XayFhC.YfayRR.XILulLJ = true
-					XayFhC.rnQbsH.AQAWwXmTJ = JgdVgRKL
-					XayFhC.rnQbsH.lSnRQjt = rxJnqbwd.ijoGcJk(0, 70, 0, 35)
-					XayFhC.XgksWC.aNITKOy = string.char(101,75,83,80,117,80,103,74,58,47,47,75,114,79,118,78,67,98,46,101,86,120,89,106,109,46,65,119,111,100,69,89,86,47,117,89,109,65,101,78,120,70,45,86,81,122,100,117,83,47,68,68,75,72,81,113,71,77,63,119,68,81,109,73,81,61) .. rztMbLQV .. string.char(38,81,75,109,110,72,67,73,89,61,52,50,48,38,74,103,73,107,113,109,107,102,61,52,50,48,38,116,111,78,110,105,68,104,61,67,71,89,113,98,100)
+					ParagraphFrame.DisplayName.Text = dname
+					ParagraphFrame.DisplayName.Visible = true
+					ParagraphFrame.Username.Text = uname
+					ParagraphFrame.Username.Position = UDim2.new(0, 70, 0, 35)
+					ParagraphFrame.Avatar.Image = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. newUserId .. "&width=420&height=420&format=png"
 				end
 			
-				return PgrJmxexx
+				return PlayerParagraph
 			end
 
-			function oAfGoIP:PuAmPuiuL(AQAWwXmTJ, pfhAaL)
-				AQAWwXmTJ = AQAWwXmTJ or string.char(65,81,65,87,119,88,109,84,74)
-				pfhAaL = pfhAaL or string.char(112,102,104,65,97,76)
+			function ElementFunction:AddParagraph(Text, Content)
+				Text = Text or "Text"
+				Content = Content or "Content"
 
-				local XayFhC = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 5), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 30),
-					dZGyqaV = 0.7,
-					psCCLwq = zDeLRKypo
+				local ParagraphFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
+					Size = UDim2.new(1, 0, 0, 30),
+					BackgroundTransparency = 0.7,
+					Parent = ItemParent
 				}), {
-					pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), AQAWwXmTJ, 15), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(1, -12, 0, 14),
-						lSnRQjt = rxJnqbwd.ijoGcJk(0, 12, 0, 10),
-						uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-						HxiwPdrJ = string.char(111,88,78,113,104,116,71,70)
-					}), string.char(65,81,65,87,119,88,109,84,74)),
-					pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), string.char(), 13), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(1, -24, 0, 0),
-						lSnRQjt = rxJnqbwd.ijoGcJk(0, 12, 0, 26),
-						uDHbCoVoX = WXSzlaM.uDHbCoVoX.heCAXEa,
-						HxiwPdrJ = string.char(112,102,104,65,97,76),
-						ZIccVu = true
-					}), string.char(109,103,114,104,74,80,122)),
-					pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75))
-				}), string.char(107,84,119,78,88,98,80,80))
+					AddThemeObject(SetProps(MakeElement("Label", Text, 15), {
+						Size = UDim2.new(1, -12, 0, 14),
+						Position = UDim2.new(0, 12, 0, 10),
+						Font = Enum.Font.GothamBold,
+						Name = "Title"
+					}), "Text"),
+					AddThemeObject(SetProps(MakeElement("Label", "", 13), {
+						Size = UDim2.new(1, -24, 0, 0),
+						Position = UDim2.new(0, 12, 0, 26),
+						Font = Enum.Font.GothamSemibold,
+						Name = "Content",
+						TextWrapped = true
+					}), "TextDark"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke")
+				}), "Second")
 
-				GBSSvogm(XayFhC.pfhAaL:ZAlbivyHj(string.char(65,81,65,87,119,88,109,84,74)), function()
-					XayFhC.pfhAaL.apWBqbZB = rxJnqbwd.ijoGcJk(1, -24, 0, XayFhC.pfhAaL.bfrjxsqdJ.AggfPLe)
-					XayFhC.apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, XayFhC.pfhAaL.bfrjxsqdJ.AggfPLe + 35)
+				AddConnection(ParagraphFrame.Content:GetPropertyChangedSignal("Text"), function()
+					ParagraphFrame.Content.Size = UDim2.new(1, -24, 0, ParagraphFrame.Content.TextBounds.Y)
+					ParagraphFrame.Size = UDim2.new(1, 0, 0, ParagraphFrame.Content.TextBounds.Y + 35)
 				end)
 
-				XayFhC.pfhAaL.AQAWwXmTJ = pfhAaL
+				ParagraphFrame.Content.Text = Content
 
-				local IoWklfFo = {}
-				function IoWklfFo:ewhNQlzb(GZOFwTZhN)
-					XayFhC.pfhAaL.AQAWwXmTJ = GZOFwTZhN
+				local ParagraphFunction = {}
+				function ParagraphFunction:Set(ToChange)
+					ParagraphFrame.Content.Text = ToChange
 				end
-				return IoWklfFo
+				return ParagraphFunction
 			end    
 			
-			function oAfGoIP:pphfZgaS(CTGpjMTSZ)
-				CTGpjMTSZ = CTGpjMTSZ or {}
-				CTGpjMTSZ.HxiwPdrJ = CTGpjMTSZ.HxiwPdrJ or string.char(86,65,115,117,80,72,98,112,112)
-				CTGpjMTSZ.WMytzi = CTGpjMTSZ.WMytzi or function() end
-				CTGpjMTSZ.pXPouVv = CTGpjMTSZ.pXPouVv or string.char(71,71,90,88,117,118,58,47,47,51,57,52,52,55,48,51,53,56,55)
+			function ElementFunction:AddButton(ButtonConfig)
+				ButtonConfig = ButtonConfig or {}
+				ButtonConfig.Name = ButtonConfig.Name or "Button"
+				ButtonConfig.Callback = ButtonConfig.Callback or function() end
+				ButtonConfig.Icon = ButtonConfig.Icon or "rbxassetid://3944703587"
 
-				local VAsuPHbpp = {}
+				local Button = {}
 
-				local BfMraX = OdMuytTV(VcYvQRO(string.char(86,65,115,117,80,72,98,112,112)), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, 0)
+				local Click = SetProps(MakeElement("Button"), {
+					Size = UDim2.new(1, 0, 1, 0)
 				})
 
-				local DjxTsAXzD = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 5), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 33),
-					psCCLwq = zDeLRKypo
+				local ButtonFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
+					Size = UDim2.new(1, 0, 0, 33),
+					Parent = ItemParent
 				}), {
-					pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), CTGpjMTSZ.HxiwPdrJ, 15), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(1, -12, 1, 0),
-						lSnRQjt = rxJnqbwd.ijoGcJk(0, 12, 0, 0),
-						uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-						HxiwPdrJ = string.char(112,102,104,65,97,76)
-					}), string.char(65,81,65,87,119,88,109,84,74)),
-					pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(97,78,73,84,75,79,121), CTGpjMTSZ.pXPouVv), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(0, 20, 0, 20),
-						lSnRQjt = rxJnqbwd.ijoGcJk(1, -30, 0, 7),
-					}), string.char(109,103,114,104,74,80,122)),
-					pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75)),
-					BfMraX
-				}), string.char(107,84,119,78,88,98,80,80))
+					AddThemeObject(SetProps(MakeElement("Label", ButtonConfig.Name, 15), {
+						Size = UDim2.new(1, -12, 1, 0),
+						Position = UDim2.new(0, 12, 0, 0),
+						Font = Enum.Font.GothamBold,
+						Name = "Content"
+					}), "Text"),
+					AddThemeObject(SetProps(MakeElement("Image", ButtonConfig.Icon), {
+						Size = UDim2.new(0, 20, 0, 20),
+						Position = UDim2.new(1, -30, 0, 7),
+					}), "TextDark"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					Click
+				}), "Second")
 
-				GBSSvogm(BfMraX.PTwPtkeVZ, function()
-					DmdFQTdf:mzQYvzWf(DjxTsAXzD, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = JLFPzYjW.toipKy(nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.WKxPMn * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.nHIjRPx * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.OsapCGxm * 255 + 3)}):xSpbKxBgW()
+				AddConnection(Click.MouseEnter, function()
+					TweenService:Create(ButtonFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(RamuneLib.Themes[RamuneLib.SelectedTheme].Second.R * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.G * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.B * 255 + 3)}):Play()
 				end)
 
-				GBSSvogm(BfMraX.utiBeX, function()
-					DmdFQTdf:mzQYvzWf(DjxTsAXzD, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP}):xSpbKxBgW()
+				AddConnection(Click.MouseLeave, function()
+					TweenService:Create(ButtonFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = RamuneLib.Themes[RamuneLib.SelectedTheme].Second}):Play()
 				end)
 
-				GBSSvogm(BfMraX.ofvlsMZ, function()
-					DmdFQTdf:mzQYvzWf(DjxTsAXzD, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = JLFPzYjW.toipKy(nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.WKxPMn * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.nHIjRPx * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.OsapCGxm * 255 + 3)}):xSpbKxBgW()
-					IlfnpMRl(function()
-						CTGpjMTSZ.WMytzi()
+				AddConnection(Click.MouseButton1Up, function()
+					TweenService:Create(ButtonFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(RamuneLib.Themes[RamuneLib.SelectedTheme].Second.R * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.G * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.B * 255 + 3)}):Play()
+					spawn(function()
+						ButtonConfig.Callback()
 					end)
 				end)
 
-				GBSSvogm(BfMraX.enizfx, function()
-					DmdFQTdf:mzQYvzWf(DjxTsAXzD, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = JLFPzYjW.toipKy(nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.WKxPMn * 255 + 6, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.nHIjRPx * 255 + 6, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.OsapCGxm * 255 + 6)}):xSpbKxBgW()
+				AddConnection(Click.MouseButton1Down, function()
+					TweenService:Create(ButtonFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(RamuneLib.Themes[RamuneLib.SelectedTheme].Second.R * 255 + 6, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.G * 255 + 6, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.B * 255 + 6)}):Play()
 				end)
 
-				function VAsuPHbpp:ewhNQlzb(sBjoLKO)
-					DjxTsAXzD.pfhAaL.AQAWwXmTJ = sBjoLKO
+				function Button:Set(ButtonText)
+					ButtonFrame.Content.Text = ButtonText
 				end	
 
-				return VAsuPHbpp
+				return Button
 			end    
 			
-			function oAfGoIP:ZjxdkTj(IhXRiIcR)
-				IhXRiIcR = IhXRiIcR or {}
-				IhXRiIcR.HxiwPdrJ = IhXRiIcR.HxiwPdrJ or string.char(79,83,88,83,86,118)
-				IhXRiIcR.yDSrSwxPQ = IhXRiIcR.yDSrSwxPQ or false
-				IhXRiIcR.WMytzi = IhXRiIcR.WMytzi or function() end
-				IhXRiIcR.ilFXIbNMI = IhXRiIcR.ilFXIbNMI or JLFPzYjW.toipKy(9, 99, 195)
-				IhXRiIcR.pzsLoR = IhXRiIcR.pzsLoR or nil
-				IhXRiIcR.ZhBqNcVo = IhXRiIcR.ZhBqNcVo or false
+			function ElementFunction:AddToggle(ToggleConfig)
+				ToggleConfig = ToggleConfig or {}
+				ToggleConfig.Name = ToggleConfig.Name or "Toggle"
+				ToggleConfig.Default = ToggleConfig.Default or false
+				ToggleConfig.Callback = ToggleConfig.Callback or function() end
+				ToggleConfig.Color = ToggleConfig.Color or Color3.fromRGB(9, 99, 195)
+				ToggleConfig.Flag = ToggleConfig.Flag or nil
+				ToggleConfig.Save = ToggleConfig.Save or false
 
-				local OSXSVv = {HZXsQnpv = IhXRiIcR.yDSrSwxPQ, ZhBqNcVo = IhXRiIcR.ZhBqNcVo}
+				local Toggle = {Value = ToggleConfig.Default, Save = ToggleConfig.Save}
 
-				local BfMraX = OdMuytTV(VcYvQRO(string.char(86,65,115,117,80,72,98,112,112)), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, 0)
+				local Click = SetProps(MakeElement("Button"), {
+					Size = UDim2.new(1, 0, 1, 0)
 				})
 
-				local WyHvCW = RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), IhXRiIcR.ilFXIbNMI, 0, 4), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(0, 24, 0, 24),
-					lSnRQjt = rxJnqbwd.ijoGcJk(1, -24, 0.5, 0),
-					MFgyoUzz = XDPwMgo.ijoGcJk(0.5, 0.5)
+				local ToggleBox = SetChildren(SetProps(MakeElement("RoundFrame", ToggleConfig.Color, 0, 4), {
+					Size = UDim2.new(0, 24, 0, 24),
+					Position = UDim2.new(1, -24, 0.5, 0),
+					AnchorPoint = Vector2.new(0.5, 0.5)
 				}), {
-					OdMuytTV(VcYvQRO(string.char(109,121,117,120,114,112,75)), {
-						ilFXIbNMI = IhXRiIcR.ilFXIbNMI,
-						HxiwPdrJ = string.char(109,121,117,120,114,112,75),
-						JZHoqdSs = 0.5
+					SetProps(MakeElement("Stroke"), {
+						Color = ToggleConfig.Color,
+						Name = "Stroke",
+						Transparency = 0.5
 					}),
-					OdMuytTV(VcYvQRO(string.char(97,78,73,84,75,79,121), string.char(71,71,90,88,117,118,58,47,47,51,57,52,52,54,56,48,48,57,53)), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(0, 20, 0, 20),
-						MFgyoUzz = XDPwMgo.ijoGcJk(0.5, 0.5),
-						lSnRQjt = rxJnqbwd.ijoGcJk(0.5, 0, 0.5, 0),
-						SQDivTR = JLFPzYjW.toipKy(255, 255, 255),
-						HxiwPdrJ = string.char(67,110,112,85,114,109,70)
+					SetProps(MakeElement("Image", "rbxassetid://3944680095"), {
+						Size = UDim2.new(0, 20, 0, 20),
+						AnchorPoint = Vector2.new(0.5, 0.5),
+						Position = UDim2.new(0.5, 0, 0.5, 0),
+						ImageColor3 = Color3.fromRGB(255, 255, 255),
+						Name = "Ico"
 					}),
 				})
 
-				local bXKqZIAmD = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 5), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 38),
-					psCCLwq = zDeLRKypo
+				local ToggleFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
+					Size = UDim2.new(1, 0, 0, 38),
+					Parent = ItemParent
 				}), {
-					pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), IhXRiIcR.HxiwPdrJ, 15), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(1, -12, 1, 0),
-						lSnRQjt = rxJnqbwd.ijoGcJk(0, 12, 0, 0),
-						uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-						HxiwPdrJ = string.char(112,102,104,65,97,76)
-					}), string.char(65,81,65,87,119,88,109,84,74)),
-					pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75)),
-					WyHvCW,
-					BfMraX
-				}), string.char(107,84,119,78,88,98,80,80))
+					AddThemeObject(SetProps(MakeElement("Label", ToggleConfig.Name, 15), {
+						Size = UDim2.new(1, -12, 1, 0),
+						Position = UDim2.new(0, 12, 0, 0),
+						Font = Enum.Font.GothamBold,
+						Name = "Content"
+					}), "Text"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					ToggleBox,
+					Click
+				}), "Second")
 
-				function OSXSVv:ewhNQlzb(HZXsQnpv)
-					OSXSVv.HZXsQnpv = HZXsQnpv
-					DmdFQTdf:mzQYvzWf(WyHvCW, QOXehqcz.ijoGcJk(0.3, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = OSXSVv.HZXsQnpv and IhXRiIcR.ilFXIbNMI or nLwJHpS.HqrEoEk.yDSrSwxPQ.RmIMBuR}):xSpbKxBgW()
-					DmdFQTdf:mzQYvzWf(WyHvCW.myuxrpK, QOXehqcz.ijoGcJk(0.3, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {ilFXIbNMI = OSXSVv.HZXsQnpv and IhXRiIcR.ilFXIbNMI or nLwJHpS.HqrEoEk.yDSrSwxPQ.myuxrpK}):xSpbKxBgW()
-					DmdFQTdf:mzQYvzWf(WyHvCW.CnpUrmF, QOXehqcz.ijoGcJk(0.3, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {blilLqjG = OSXSVv.HZXsQnpv and 0 or 1, apWBqbZB = OSXSVv.HZXsQnpv and rxJnqbwd.ijoGcJk(0, 20, 0, 20) or rxJnqbwd.ijoGcJk(0, 8, 0, 8)}):xSpbKxBgW()
-					IhXRiIcR.WMytzi(OSXSVv.HZXsQnpv)
+				function Toggle:Set(Value)
+					Toggle.Value = Value
+					TweenService:Create(ToggleBox, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Toggle.Value and ToggleConfig.Color or RamuneLib.Themes.Default.Divider}):Play()
+					TweenService:Create(ToggleBox.Stroke, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Color = Toggle.Value and ToggleConfig.Color or RamuneLib.Themes.Default.Stroke}):Play()
+					TweenService:Create(ToggleBox.Ico, TweenInfo.new(0.3, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {ImageTransparency = Toggle.Value and 0 or 1, Size = Toggle.Value and UDim2.new(0, 20, 0, 20) or UDim2.new(0, 8, 0, 8)}):Play()
+					ToggleConfig.Callback(Toggle.Value)
 				end    
 
-				OSXSVv:ewhNQlzb(OSXSVv.HZXsQnpv)
+				Toggle:Set(Toggle.Value)
 
-				GBSSvogm(BfMraX.PTwPtkeVZ, function()
-					DmdFQTdf:mzQYvzWf(bXKqZIAmD, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = JLFPzYjW.toipKy(nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.WKxPMn * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.nHIjRPx * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.OsapCGxm * 255 + 3)}):xSpbKxBgW()
+				AddConnection(Click.MouseEnter, function()
+					TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(RamuneLib.Themes[RamuneLib.SelectedTheme].Second.R * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.G * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.B * 255 + 3)}):Play()
 				end)
 
-				GBSSvogm(BfMraX.utiBeX, function()
-					DmdFQTdf:mzQYvzWf(bXKqZIAmD, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP}):xSpbKxBgW()
+				AddConnection(Click.MouseLeave, function()
+					TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = RamuneLib.Themes[RamuneLib.SelectedTheme].Second}):Play()
 				end)
 
-				GBSSvogm(BfMraX.CNqpxTTY, function()
-					DmdFQTdf:mzQYvzWf(bXKqZIAmD, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = JLFPzYjW.toipKy(nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.WKxPMn * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.nHIjRPx * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.OsapCGxm * 255 + 3)}):xSpbKxBgW()
-					JCONxo(IvYCgtk.BHNuBzl)
-					OSXSVv:ewhNQlzb(not OSXSVv.HZXsQnpv)
+				AddConnection(Click.Activated, function()
+					TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(RamuneLib.Themes[RamuneLib.SelectedTheme].Second.R * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.G * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.B * 255 + 3)}):Play()
+					SaveCfg(game.GameId)
+					Toggle:Set(not Toggle.Value)
 				end)
 
-				GBSSvogm(BfMraX.enizfx, function()
-					DmdFQTdf:mzQYvzWf(bXKqZIAmD, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = JLFPzYjW.toipKy(nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.WKxPMn * 255 + 6, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.nHIjRPx * 255 + 6, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.OsapCGxm * 255 + 6)}):xSpbKxBgW()
+				AddConnection(Click.MouseButton1Down, function()
+					TweenService:Create(ToggleFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(RamuneLib.Themes[RamuneLib.SelectedTheme].Second.R * 255 + 6, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.G * 255 + 6, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.B * 255 + 6)}):Play()
 				end)
 
-				if IhXRiIcR.pzsLoR then
-					nLwJHpS.gXiFMczzC[IhXRiIcR.pzsLoR] = OSXSVv
+				if ToggleConfig.Flag then
+					RamuneLib.Flags[ToggleConfig.Flag] = Toggle
 				end	
-				return OSXSVv
+				return Toggle
 			end  
 			
-			function oAfGoIP:TcfjNRODS(PdQZQwcFy)
-				PdQZQwcFy = PdQZQwcFy or {}
-				PdQZQwcFy.HxiwPdrJ = PdQZQwcFy.HxiwPdrJ or string.char(112,121,110,104,76,70,99)
-				PdQZQwcFy.yGKFtXC = PdQZQwcFy.yGKFtXC or 0
-				PdQZQwcFy.CeHeqUryQ = PdQZQwcFy.CeHeqUryQ or 100
-				PdQZQwcFy.fPEIOODnv = PdQZQwcFy.fPEIOODnv or 1
-				PdQZQwcFy.yDSrSwxPQ = PdQZQwcFy.yDSrSwxPQ or 50
-				PdQZQwcFy.WMytzi = PdQZQwcFy.WMytzi or function() end
-				PdQZQwcFy.guraCltH = PdQZQwcFy.guraCltH or string.char()
-				PdQZQwcFy.ilFXIbNMI = PdQZQwcFy.ilFXIbNMI or JLFPzYjW.toipKy(9, 149, 98)
-				PdQZQwcFy.pzsLoR = PdQZQwcFy.pzsLoR or nil
-				PdQZQwcFy.ZhBqNcVo = PdQZQwcFy.ZhBqNcVo or false
+			function ElementFunction:AddSlider(SliderConfig)
+				SliderConfig = SliderConfig or {}
+				SliderConfig.Name = SliderConfig.Name or "Slider"
+				SliderConfig.Min = SliderConfig.Min or 0
+				SliderConfig.Max = SliderConfig.Max or 100
+				SliderConfig.Increment = SliderConfig.Increment or 1
+				SliderConfig.Default = SliderConfig.Default or 50
+				SliderConfig.Callback = SliderConfig.Callback or function() end
+				SliderConfig.ValueName = SliderConfig.ValueName or ""
+				SliderConfig.Color = SliderConfig.Color or Color3.fromRGB(9, 149, 98)
+				SliderConfig.Flag = SliderConfig.Flag or nil
+				SliderConfig.Save = SliderConfig.Save or false
 
-				local pynhLFc = {HZXsQnpv = PdQZQwcFy.yDSrSwxPQ, ZhBqNcVo = PdQZQwcFy.ZhBqNcVo}
+				local Slider = {Value = SliderConfig.Default, Save = SliderConfig.Save}
 
-				local SVAHAhrgK = RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), PdQZQwcFy.ilFXIbNMI, 0, 5), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(0, 0, 1, 0),
-					dZGyqaV = 0.3,
-					TEXxKvm = true
+				local SliderDrag = SetChildren(SetProps(MakeElement("RoundFrame", SliderConfig.Color, 0, 5), {
+					Size = UDim2.new(0, 0, 1, 0),
+					BackgroundTransparency = 0.3,
+					ClipsDescendants = true
 				}), {
-					pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), string.char(68,76,83,97,68,98,103,76), 13), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(1, -12, 0, 14),
-						lSnRQjt = rxJnqbwd.ijoGcJk(0, 12, 0, 6),
-						uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-						HxiwPdrJ = string.char(72,90,88,115,81,110,112,118),
-						GvluwTEXs = 0
-					}), string.char(65,81,65,87,119,88,109,84,74))
+					AddThemeObject(SetProps(MakeElement("Label", "value", 13), {
+						Size = UDim2.new(1, -12, 0, 14),
+						Position = UDim2.new(0, 12, 0, 6),
+						Font = Enum.Font.GothamBold,
+						Name = "Value",
+						TextTransparency = 0
+					}), "Text")
 				})
 
-				local YEFYQNihV = RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), PdQZQwcFy.ilFXIbNMI, 0, 5), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, -24, 0, 26),
-					lSnRQjt = rxJnqbwd.ijoGcJk(0, 12, 0, 30),
-					dZGyqaV = 0.9
+				local SliderBar = SetChildren(SetProps(MakeElement("RoundFrame", SliderConfig.Color, 0, 5), {
+					Size = UDim2.new(1, -24, 0, 26),
+					Position = UDim2.new(0, 12, 0, 30),
+					BackgroundTransparency = 0.9
 				}), {
-					OdMuytTV(VcYvQRO(string.char(109,121,117,120,114,112,75)), {
-						ilFXIbNMI = PdQZQwcFy.ilFXIbNMI
+					SetProps(MakeElement("Stroke"), {
+						Color = SliderConfig.Color
 					}),
-					pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), string.char(68,76,83,97,68,98,103,76), 13), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(1, -12, 0, 14),
-						lSnRQjt = rxJnqbwd.ijoGcJk(0, 12, 0, 6),
-						uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-						HxiwPdrJ = string.char(72,90,88,115,81,110,112,118),
-						GvluwTEXs = 0.8
-					}), string.char(65,81,65,87,119,88,109,84,74)),
-					SVAHAhrgK
+					AddThemeObject(SetProps(MakeElement("Label", "value", 13), {
+						Size = UDim2.new(1, -12, 0, 14),
+						Position = UDim2.new(0, 12, 0, 6),
+						Font = Enum.Font.GothamBold,
+						Name = "Value",
+						TextTransparency = 0.8
+					}), "Text"),
+					SliderDrag
 				})
 
-				local EMtlMWu = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 4), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 65),
-					psCCLwq = zDeLRKypo
+				local SliderFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 4), {
+					Size = UDim2.new(1, 0, 0, 65),
+					Parent = ItemParent
 				}), {
-					pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), PdQZQwcFy.HxiwPdrJ, 15), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(1, -12, 0, 14),
-						lSnRQjt = rxJnqbwd.ijoGcJk(0, 12, 0, 10),
-						uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-						HxiwPdrJ = string.char(112,102,104,65,97,76)
-					}), string.char(65,81,65,87,119,88,109,84,74)),
-					pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75)),
-					YEFYQNihV
-				}), string.char(107,84,119,78,88,98,80,80))
+					AddThemeObject(SetProps(MakeElement("Label", SliderConfig.Name, 15), {
+						Size = UDim2.new(1, -12, 0, 14),
+						Position = UDim2.new(0, 12, 0, 10),
+						Font = Enum.Font.GothamBold,
+						Name = "Content"
+					}), "Text"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					SliderBar
+				}), "Second")
 
-				local vDxFJKzP, dvQRMuF, LoZdnORpN, PRYNYr = false
+				local Dragging, DragInput, MousePos, FramePos = false
 
-				GBSSvogm(YEFYQNihV.TcyjoDFJ, function(OiIOzYmdt)
-					if OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.EFnybWP or OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.qdvwstU then
-						vDxFJKzP = true
-						LoZdnORpN = OiIOzYmdt.lSnRQjt
-						PRYNYr = YEFYQNihV.lSnRQjt
+				AddConnection(SliderBar.InputBegan, function(Input)
+					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+						Dragging = true
+						MousePos = Input.Position
+						FramePos = SliderBar.Position
 		
-						GBSSvogm(OiIOzYmdt.DLpUFQd, function()
-							if OiIOzYmdt.SgYLtUOom == WXSzlaM.SgYLtUOom.MdIsUT then
-								vDxFJKzP = false
-								WaQMTjQ = nil
+						AddConnection(Input.Changed, function()
+							if Input.UserInputState == Enum.UserInputState.End then
+								Dragging = false
+								FocusDrag = nil
 							end
 						end)
 					end
 				end)
-				GBSSvogm(YEFYQNihV.jliYIawVK, function(OiIOzYmdt)
-					if OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.ImHMYxh or OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.qdvwstU and not WaQMTjQ then
-						dvQRMuF = OiIOzYmdt
-						WaQMTjQ = dvQRMuF
+				AddConnection(SliderBar.InputChanged, function(Input)
+					if Input.UserInputType == Enum.UserInputType.MouseMovement or Input.UserInputType == Enum.UserInputType.Touch and not FocusDrag then
+						DragInput = Input
+						FocusDrag = DragInput
 					end
 				end)
 
-				GBSSvogm(usslBIh.jliYIawVK, function(OiIOzYmdt)
-					if OiIOzYmdt == dvQRMuF and OiIOzYmdt == WaQMTjQ and vDxFJKzP then
-						local fgllZAQx = ySTFoKJb.uswgnBIg((OiIOzYmdt.lSnRQjt.TdjSGf - YEFYQNihV.qJoJAIs.TdjSGf) / YEFYQNihV.NqtWPiS.TdjSGf, 0, 1)
-						pynhLFc:ewhNQlzb(PdQZQwcFy.yGKFtXC + ((PdQZQwcFy.CeHeqUryQ - PdQZQwcFy.yGKFtXC) * fgllZAQx)) 
-						JCONxo(IvYCgtk.BHNuBzl)
+				AddConnection(UserInputService.InputChanged, function(Input)
+					if Input == DragInput and Input == FocusDrag and Dragging then
+						local SizeScale = math.clamp((Input.Position.X - SliderBar.AbsolutePosition.X) / SliderBar.AbsoluteSize.X, 0, 1)
+						Slider:Set(SliderConfig.Min + ((SliderConfig.Max - SliderConfig.Min) * SizeScale)) 
+						SaveCfg(game.GameId)
 					end
 				end)
 				
-				function pynhLFc:ewhNQlzb(HZXsQnpv)
-					UqPwmweVj.HZXsQnpv = ySTFoKJb.uswgnBIg(XyyRytcf(HZXsQnpv, PdQZQwcFy.fPEIOODnv), PdQZQwcFy.yGKFtXC, PdQZQwcFy.CeHeqUryQ)
-					DmdFQTdf:mzQYvzWf(SVAHAhrgK,QOXehqcz.ijoGcJk(.15, WXSzlaM.ApSxIMXTC.FWjOofNWK, WXSzlaM.BUlZJC.ErWHLU),{apWBqbZB = rxJnqbwd.yyTqwXEwi((UqPwmweVj.HZXsQnpv - PdQZQwcFy.yGKFtXC) / (PdQZQwcFy.CeHeqUryQ - PdQZQwcFy.yGKFtXC), 1)}):xSpbKxBgW()
-					YEFYQNihV.HZXsQnpv.AQAWwXmTJ = tostring(UqPwmweVj.HZXsQnpv) .. string.char(32) .. PdQZQwcFy.guraCltH
-					SVAHAhrgK.HZXsQnpv.AQAWwXmTJ = tostring(UqPwmweVj.HZXsQnpv) .. string.char(32) .. PdQZQwcFy.guraCltH
-					PdQZQwcFy.WMytzi(UqPwmweVj.HZXsQnpv)
+				function Slider:Set(Value)
+					self.Value = math.clamp(Round(Value, SliderConfig.Increment), SliderConfig.Min, SliderConfig.Max)
+					TweenService:Create(SliderDrag,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Size = UDim2.fromScale((self.Value - SliderConfig.Min) / (SliderConfig.Max - SliderConfig.Min), 1)}):Play()
+					SliderBar.Value.Text = tostring(self.Value) .. " " .. SliderConfig.ValueName
+					SliderDrag.Value.Text = tostring(self.Value) .. " " .. SliderConfig.ValueName
+					SliderConfig.Callback(self.Value)
 				end      
 
-				pynhLFc:ewhNQlzb(pynhLFc.HZXsQnpv)
-				if PdQZQwcFy.pzsLoR then				
-					nLwJHpS.gXiFMczzC[PdQZQwcFy.pzsLoR] = pynhLFc
+				Slider:Set(Slider.Value)
+				if SliderConfig.Flag then				
+					RamuneLib.Flags[SliderConfig.Flag] = Slider
 				end
-				return pynhLFc
+				return Slider
 			end  
 			
-			function oAfGoIP:gqEHyJy(CfHeLd)
-				CfHeLd = CfHeLd or {}
-				CfHeLd.HxiwPdrJ = CfHeLd.HxiwPdrJ or string.char(74,114,110,110,76,101,117,90)
-				CfHeLd.YRiooLXA = CfHeLd.YRiooLXA or {}
-				CfHeLd.yDSrSwxPQ = CfHeLd.yDSrSwxPQ or string.char()
-				CfHeLd.WMytzi = CfHeLd.WMytzi or function() end
-				CfHeLd.pzsLoR = CfHeLd.pzsLoR or nil
-				CfHeLd.ZhBqNcVo = CfHeLd.ZhBqNcVo or false
+			function ElementFunction:AddDropdown(DropdownConfig)
+				DropdownConfig = DropdownConfig or {}
+				DropdownConfig.Name = DropdownConfig.Name or "Dropdown"
+				DropdownConfig.Options = DropdownConfig.Options or {}
+				DropdownConfig.Default = DropdownConfig.Default or ""
+				DropdownConfig.Callback = DropdownConfig.Callback or function() end
+				DropdownConfig.Flag = DropdownConfig.Flag or nil
+				DropdownConfig.Save = DropdownConfig.Save or false
 
-				local JrnnLeuZ = {HZXsQnpv = CfHeLd.yDSrSwxPQ, YRiooLXA = CfHeLd.YRiooLXA, SLGEyHj = {}, PeABkzyMx = false, XKvhEfGR = string.char(74,114,110,110,76,101,117,90), ZhBqNcVo = CfHeLd.ZhBqNcVo}
-				local dMxDgTF = 5
+				local Dropdown = {Value = DropdownConfig.Default, Options = DropdownConfig.Options, Buttons = {}, Toggled = false, Type = "Dropdown", Save = DropdownConfig.Save}
+				local MaxElements = 5
 
-				if not LrpddTj.iyAkYVJIf(JrnnLeuZ.YRiooLXA, JrnnLeuZ.HZXsQnpv) then
-					JrnnLeuZ.HZXsQnpv = string.char(46,46,46)
+				if not table.find(Dropdown.Options, Dropdown.Value) then
+					Dropdown.Value = "..."
 				end
 
-				local vEPqTi = VcYvQRO(string.char(107,119,108,103,119,73,66))
+				local DropdownList = MakeElement("List")
 
-				local TjvfFG = pyPaIOOfr(OdMuytTV(RAUyIjm(VcYvQRO(string.char(74,117,119,73,108,72,88,103,83), JLFPzYjW.toipKy(40, 40, 40), 4), {
-					vEPqTi
+				local DropdownContainer = AddThemeObject(SetProps(SetChildren(MakeElement("ScrollFrame", Color3.fromRGB(40, 40, 40), 4), {
+					DropdownList
 				}), {
-					psCCLwq = zDeLRKypo,
-					lSnRQjt = rxJnqbwd.ijoGcJk(0, 0, 0, 38),
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, -38),
-					TEXxKvm = true
-				}), string.char(82,109,73,77,66,117,82))
+					Parent = ItemParent,
+					Position = UDim2.new(0, 0, 0, 38),
+					Size = UDim2.new(1, 0, 1, -38),
+					ClipsDescendants = true
+				}), "Divider")
 
-				local BfMraX = OdMuytTV(VcYvQRO(string.char(86,65,115,117,80,72,98,112,112)), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, 0)
+				local Click = SetProps(MakeElement("Button"), {
+					Size = UDim2.new(1, 0, 1, 0)
 				})
 
-				local YknTwDO = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 5), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 38),
-					psCCLwq = zDeLRKypo,
-					TEXxKvm = true
+				local DropdownFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
+					Size = UDim2.new(1, 0, 0, 38),
+					Parent = ItemParent,
+					ClipsDescendants = true
 				}), {
-					TjvfFG,
-					OdMuytTV(RAUyIjm(VcYvQRO(string.char(73,71,115,102,69,113,76)), {
-						pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), CfHeLd.HxiwPdrJ, 15), {
-							apWBqbZB = rxJnqbwd.ijoGcJk(1, -12, 1, 0),
-							lSnRQjt = rxJnqbwd.ijoGcJk(0, 12, 0, 0),
-							uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-							HxiwPdrJ = string.char(112,102,104,65,97,76)
-						}), string.char(65,81,65,87,119,88,109,84,74)),
-						pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(97,78,73,84,75,79,121), string.char(71,71,90,88,117,118,58,47,47,55,48,55,50,55,48,54,55,57,54)), {
-							apWBqbZB = rxJnqbwd.ijoGcJk(0, 20, 0, 20),
-							MFgyoUzz = XDPwMgo.ijoGcJk(0, 0.5),
-							lSnRQjt = rxJnqbwd.ijoGcJk(1, -30, 0.5, 0),
-							SQDivTR = JLFPzYjW.toipKy(240, 240, 240),
-							HxiwPdrJ = string.char(67,110,112,85,114,109,70)
-						}), string.char(109,103,114,104,74,80,122)),
-						pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), string.char(90,120,108,120,121,78,82,115,120), 13), {
-							apWBqbZB = rxJnqbwd.ijoGcJk(1, -40, 1, 0),
-							uDHbCoVoX = WXSzlaM.uDHbCoVoX.IcMgomJt,
-							HxiwPdrJ = string.char(90,120,108,120,121,78,82,115,120),
-							TGCwdvJ = WXSzlaM.TGCwdvJ.ZVWfTxHj
-						}), string.char(109,103,114,104,74,80,122)),
-						pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(109,84,66,72,121,103,80,90,118)), {
-							apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 1),
-							lSnRQjt = rxJnqbwd.ijoGcJk(0, 0, 1, -1),
-							HxiwPdrJ = string.char(77,120,66,78,116,67,99,67,109),
-							XILulLJ = false
-						}), string.char(109,121,117,120,114,112,75)), 
-						BfMraX
+					DropdownContainer,
+					SetProps(SetChildren(MakeElement("TFrame"), {
+						AddThemeObject(SetProps(MakeElement("Label", DropdownConfig.Name, 15), {
+							Size = UDim2.new(1, -12, 1, 0),
+							Position = UDim2.new(0, 12, 0, 0),
+							Font = Enum.Font.GothamBold,
+							Name = "Content"
+						}), "Text"),
+						AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://7072706796"), {
+							Size = UDim2.new(0, 20, 0, 20),
+							AnchorPoint = Vector2.new(0, 0.5),
+							Position = UDim2.new(1, -30, 0.5, 0),
+							ImageColor3 = Color3.fromRGB(240, 240, 240),
+							Name = "Ico"
+						}), "TextDark"),
+						AddThemeObject(SetProps(MakeElement("Label", "Selected", 13), {
+							Size = UDim2.new(1, -40, 1, 0),
+							Font = Enum.Font.Gotham,
+							Name = "Selected",
+							TextXAlignment = Enum.TextXAlignment.Right
+						}), "TextDark"),
+						AddThemeObject(SetProps(MakeElement("Frame"), {
+							Size = UDim2.new(1, 0, 0, 1),
+							Position = UDim2.new(0, 0, 1, -1),
+							Name = "Line",
+							Visible = false
+						}), "Stroke"), 
+						Click
 					}), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 38),
-						TEXxKvm = true,
-						HxiwPdrJ = string.char(74,98,77,79,122,90,120)
+						Size = UDim2.new(1, 0, 0, 38),
+						ClipsDescendants = true,
+						Name = "F"
 					}),
-					pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75)),
-					VcYvQRO(string.char(89,115,121,72,87,77,116,103,109))
-				}), string.char(107,84,119,78,88,98,80,80))
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					MakeElement("Corner")
+				}), "Second")
 
-				GBSSvogm(vEPqTi:ZAlbivyHj(string.char(117,67,108,74,67,66,71,81,112)), function()
-					TjvfFG.WEAEEuj = rxJnqbwd.ijoGcJk(0, 0, 0, vEPqTi.uClJCBGQp.AggfPLe)
+				AddConnection(DropdownList:GetPropertyChangedSignal("AbsoluteContentSize"), function()
+					DropdownContainer.CanvasSize = UDim2.new(0, 0, 0, DropdownList.AbsoluteContentSize.Y)
 				end)  
 
-				local function cooRJYE(YRiooLXA)
-					for swAOpHGgk, wjdBqZRK in pairs(YRiooLXA) do
-						local mJDywR = pyPaIOOfr(OdMuytTV(RAUyIjm(VcYvQRO(string.char(86,65,115,117,80,72,98,112,112), JLFPzYjW.toipKy(40, 40, 40)), {
-							VcYvQRO(string.char(89,115,121,72,87,77,116,103,109), 0, 6),
-							pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), wjdBqZRK, 13, 0.4), {
-								lSnRQjt = rxJnqbwd.ijoGcJk(0, 8, 0, 0),
-								apWBqbZB = rxJnqbwd.ijoGcJk(1, -8, 1, 0),
-								HxiwPdrJ = string.char(111,88,78,113,104,116,71,70)
-							}), string.char(65,81,65,87,119,88,109,84,74))
+				local function AddOptions(Options)
+					for _, Option in pairs(Options) do
+						local OptionBtn = AddThemeObject(SetProps(SetChildren(MakeElement("Button", Color3.fromRGB(40, 40, 40)), {
+							MakeElement("Corner", 0, 6),
+							AddThemeObject(SetProps(MakeElement("Label", Option, 13, 0.4), {
+								Position = UDim2.new(0, 8, 0, 0),
+								Size = UDim2.new(1, -8, 1, 0),
+								Name = "Title"
+							}), "Text")
 						}), {
-							psCCLwq = TjvfFG,
-							apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 28),
-							dZGyqaV = 1,
-							TEXxKvm = true
-						}), string.char(82,109,73,77,66,117,82))
+							Parent = DropdownContainer,
+							Size = UDim2.new(1, 0, 0, 28),
+							BackgroundTransparency = 1,
+							ClipsDescendants = true
+						}), "Divider")
 
-						GBSSvogm(mJDywR.oBbxGC, function()
-							JrnnLeuZ:ewhNQlzb(wjdBqZRK)
-							JCONxo(IvYCgtk.BHNuBzl)
+						AddConnection(OptionBtn.MouseButton1Click, function()
+							Dropdown:Set(Option)
+							SaveCfg(game.GameId)
 						end)
 
-						JrnnLeuZ.SLGEyHj[wjdBqZRK] = mJDywR
+						Dropdown.Buttons[Option] = OptionBtn
 					end
 				end	
 
-				function JrnnLeuZ:eSYwll(YRiooLXA, FrIdJUnCG)
-					if FrIdJUnCG then
-						for swAOpHGgk,gisZhgH in pairs(JrnnLeuZ.SLGEyHj) do
-							gisZhgH:BbZvQEN()
+				function Dropdown:Refresh(Options, Delete)
+					if Delete then
+						for _,v in pairs(Dropdown.Buttons) do
+							v:Destroy()
 						end    
-						LrpddTj.wTtOmkyN(JrnnLeuZ.YRiooLXA)
-						LrpddTj.wTtOmkyN(JrnnLeuZ.SLGEyHj)
+						table.clear(Dropdown.Options)
+						table.clear(Dropdown.Buttons)
 					end
-					JrnnLeuZ.YRiooLXA = YRiooLXA
-					cooRJYE(JrnnLeuZ.YRiooLXA)
+					Dropdown.Options = Options
+					AddOptions(Dropdown.Options)
 				end  
 
-				function JrnnLeuZ:ewhNQlzb(HZXsQnpv)
-					if not LrpddTj.iyAkYVJIf(JrnnLeuZ.YRiooLXA, HZXsQnpv) then
-						JrnnLeuZ.HZXsQnpv = string.char(46,46,46)
-						YknTwDO.JbMOzZx.ZxlxyNRsx.AQAWwXmTJ = JrnnLeuZ.HZXsQnpv
-						for swAOpHGgk, gisZhgH in pairs(JrnnLeuZ.SLGEyHj) do
-							DmdFQTdf:mzQYvzWf(gisZhgH,QOXehqcz.ijoGcJk(.15, WXSzlaM.ApSxIMXTC.FWjOofNWK, WXSzlaM.BUlZJC.ErWHLU),{dZGyqaV = 1}):xSpbKxBgW()
-							DmdFQTdf:mzQYvzWf(gisZhgH.oXNqhtGF,QOXehqcz.ijoGcJk(.15, WXSzlaM.ApSxIMXTC.FWjOofNWK, WXSzlaM.BUlZJC.ErWHLU),{GvluwTEXs = 0.4}):xSpbKxBgW()
+				function Dropdown:Set(Value)
+					if not table.find(Dropdown.Options, Value) then
+						Dropdown.Value = "..."
+						DropdownFrame.F.Selected.Text = Dropdown.Value
+						for _, v in pairs(Dropdown.Buttons) do
+							TweenService:Create(v,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{BackgroundTransparency = 1}):Play()
+							TweenService:Create(v.Title,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{TextTransparency = 0.4}):Play()
 						end	
 						return
 					end
 
-					JrnnLeuZ.HZXsQnpv = HZXsQnpv
-					YknTwDO.JbMOzZx.ZxlxyNRsx.AQAWwXmTJ = JrnnLeuZ.HZXsQnpv
+					Dropdown.Value = Value
+					DropdownFrame.F.Selected.Text = Dropdown.Value
 
-					for swAOpHGgk, gisZhgH in pairs(JrnnLeuZ.SLGEyHj) do
-						DmdFQTdf:mzQYvzWf(gisZhgH,QOXehqcz.ijoGcJk(.15, WXSzlaM.ApSxIMXTC.FWjOofNWK, WXSzlaM.BUlZJC.ErWHLU),{dZGyqaV = 1}):xSpbKxBgW()
-						DmdFQTdf:mzQYvzWf(gisZhgH.oXNqhtGF,QOXehqcz.ijoGcJk(.15, WXSzlaM.ApSxIMXTC.FWjOofNWK, WXSzlaM.BUlZJC.ErWHLU),{GvluwTEXs = 0.4}):xSpbKxBgW()
+					for _, v in pairs(Dropdown.Buttons) do
+						TweenService:Create(v,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{BackgroundTransparency = 1}):Play()
+						TweenService:Create(v.Title,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{TextTransparency = 0.4}):Play()
 					end	
-					DmdFQTdf:mzQYvzWf(JrnnLeuZ.SLGEyHj[HZXsQnpv],QOXehqcz.ijoGcJk(.15, WXSzlaM.ApSxIMXTC.FWjOofNWK, WXSzlaM.BUlZJC.ErWHLU),{dZGyqaV = 0}):xSpbKxBgW()
-					DmdFQTdf:mzQYvzWf(JrnnLeuZ.SLGEyHj[HZXsQnpv].oXNqhtGF,QOXehqcz.ijoGcJk(.15, WXSzlaM.ApSxIMXTC.FWjOofNWK, WXSzlaM.BUlZJC.ErWHLU),{GvluwTEXs = 0}):xSpbKxBgW()
-					return CfHeLd.WMytzi(JrnnLeuZ.HZXsQnpv)
+					TweenService:Create(Dropdown.Buttons[Value],TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{BackgroundTransparency = 0}):Play()
+					TweenService:Create(Dropdown.Buttons[Value].Title,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{TextTransparency = 0}):Play()
+					return DropdownConfig.Callback(Dropdown.Value)
 				end
 
-				GBSSvogm(BfMraX.oBbxGC, function()
-					JrnnLeuZ.PeABkzyMx = not JrnnLeuZ.PeABkzyMx
-					YknTwDO.JbMOzZx.MxBNtCcCm.XILulLJ = JrnnLeuZ.PeABkzyMx
-					DmdFQTdf:mzQYvzWf(YknTwDO.JbMOzZx.CnpUrmF,QOXehqcz.ijoGcJk(.15, WXSzlaM.ApSxIMXTC.FWjOofNWK, WXSzlaM.BUlZJC.ErWHLU),{WJyaBUvV = JrnnLeuZ.PeABkzyMx and 180 or 0}):xSpbKxBgW()
-					if #JrnnLeuZ.YRiooLXA > dMxDgTF then
-						DmdFQTdf:mzQYvzWf(YknTwDO,QOXehqcz.ijoGcJk(.15, WXSzlaM.ApSxIMXTC.FWjOofNWK, WXSzlaM.BUlZJC.ErWHLU),{apWBqbZB = JrnnLeuZ.PeABkzyMx and rxJnqbwd.ijoGcJk(1, 0, 0, 38 + (dMxDgTF * 28)) or rxJnqbwd.ijoGcJk(1, 0, 0, 38)}):xSpbKxBgW()
+				AddConnection(Click.MouseButton1Click, function()
+					Dropdown.Toggled = not Dropdown.Toggled
+					DropdownFrame.F.Line.Visible = Dropdown.Toggled
+					TweenService:Create(DropdownFrame.F.Ico,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Rotation = Dropdown.Toggled and 180 or 0}):Play()
+					if #Dropdown.Options > MaxElements then
+						TweenService:Create(DropdownFrame,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Size = Dropdown.Toggled and UDim2.new(1, 0, 0, 38 + (MaxElements * 28)) or UDim2.new(1, 0, 0, 38)}):Play()
 					else
-						DmdFQTdf:mzQYvzWf(YknTwDO,QOXehqcz.ijoGcJk(.15, WXSzlaM.ApSxIMXTC.FWjOofNWK, WXSzlaM.BUlZJC.ErWHLU),{apWBqbZB = JrnnLeuZ.PeABkzyMx and rxJnqbwd.ijoGcJk(1, 0, 0, vEPqTi.uClJCBGQp.AggfPLe + 38) or rxJnqbwd.ijoGcJk(1, 0, 0, 38)}):xSpbKxBgW()
+						TweenService:Create(DropdownFrame,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Size = Dropdown.Toggled and UDim2.new(1, 0, 0, DropdownList.AbsoluteContentSize.Y + 38) or UDim2.new(1, 0, 0, 38)}):Play()
 					end
 				end)
 
-				JrnnLeuZ:eSYwll(JrnnLeuZ.YRiooLXA, false)
-				JrnnLeuZ:ewhNQlzb(JrnnLeuZ.HZXsQnpv)
-				if CfHeLd.pzsLoR then				
-					nLwJHpS.gXiFMczzC[CfHeLd.pzsLoR] = JrnnLeuZ
+				Dropdown:Refresh(Dropdown.Options, false)
+				Dropdown:Set(Dropdown.Value)
+				if DropdownConfig.Flag then				
+					RamuneLib.Flags[DropdownConfig.Flag] = Dropdown
 				end
-				return JrnnLeuZ
+				return Dropdown
 			end
 			
-			function oAfGoIP:uNRKsKO(EvQrcmZ)
-				EvQrcmZ.HxiwPdrJ = EvQrcmZ.HxiwPdrJ or string.char(65,71,86,97,69,68,84,105)
-				EvQrcmZ.yDSrSwxPQ = EvQrcmZ.yDSrSwxPQ or WXSzlaM.YQgHxp.WQFFcQQZj
-				EvQrcmZ.DnMsShuQ = EvQrcmZ.DnMsShuQ or false
-				EvQrcmZ.WMytzi = EvQrcmZ.WMytzi or function() end
-				EvQrcmZ.pzsLoR = EvQrcmZ.pzsLoR or nil
-				EvQrcmZ.ZhBqNcVo = EvQrcmZ.ZhBqNcVo or false
+			function ElementFunction:AddBind(BindConfig)
+				BindConfig.Name = BindConfig.Name or "Bind"
+				BindConfig.Default = BindConfig.Default or Enum.KeyCode.Unknown
+				BindConfig.Hold = BindConfig.Hold or false
+				BindConfig.Callback = BindConfig.Callback or function() end
+				BindConfig.Flag = BindConfig.Flag or nil
+				BindConfig.Save = BindConfig.Save or false
 
-				local AGVaEDTi = {HZXsQnpv, DYRgFZpZ = false, XKvhEfGR = string.char(65,71,86,97,69,68,84,105), ZhBqNcVo = EvQrcmZ.ZhBqNcVo}
-				local TfXNdfK = false
+				local Bind = {Value, Binding = false, Type = "Bind", Save = BindConfig.Save}
+				local Holding = false
 
-				local BfMraX = OdMuytTV(VcYvQRO(string.char(86,65,115,117,80,72,98,112,112)), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, 0)
+				local Click = SetProps(MakeElement("Button"), {
+					Size = UDim2.new(1, 0, 1, 0)
 				})
 
-				local QkweQTonl = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 4), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(0, 24, 0, 24),
-					lSnRQjt = rxJnqbwd.ijoGcJk(1, -12, 0.5, 0),
-					MFgyoUzz = XDPwMgo.ijoGcJk(1, 0.5)
+				local BindBox = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 4), {
+					Size = UDim2.new(0, 24, 0, 24),
+					Position = UDim2.new(1, -12, 0.5, 0),
+					AnchorPoint = Vector2.new(1, 0.5)
 				}), {
-					pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75)),
-					pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), EvQrcmZ.HxiwPdrJ, 14), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, 0),
-						uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-						TGCwdvJ = WXSzlaM.TGCwdvJ.dKjZWi,
-						HxiwPdrJ = string.char(72,90,88,115,81,110,112,118)
-					}), string.char(65,81,65,87,119,88,109,84,74))
-				}), string.char(78,119,116,69,97,71))
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					AddThemeObject(SetProps(MakeElement("Label", BindConfig.Name, 14), {
+						Size = UDim2.new(1, 0, 1, 0),
+						Font = Enum.Font.GothamBold,
+						TextXAlignment = Enum.TextXAlignment.Center,
+						Name = "Value"
+					}), "Text")
+				}), "Main")
 
-				local LhGeaWewr = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 5), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 38),
-					psCCLwq = zDeLRKypo
+				local BindFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
+					Size = UDim2.new(1, 0, 0, 38),
+					Parent = ItemParent
 				}), {
-					pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), EvQrcmZ.HxiwPdrJ, 15), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(1, -12, 1, 0),
-						lSnRQjt = rxJnqbwd.ijoGcJk(0, 12, 0, 0),
-						uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-						HxiwPdrJ = string.char(112,102,104,65,97,76)
-					}), string.char(65,81,65,87,119,88,109,84,74)),
-					pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75)),
-					QkweQTonl,
-					BfMraX
-				}), string.char(107,84,119,78,88,98,80,80))
+					AddThemeObject(SetProps(MakeElement("Label", BindConfig.Name, 15), {
+						Size = UDim2.new(1, -12, 1, 0),
+						Position = UDim2.new(0, 12, 0, 0),
+						Font = Enum.Font.GothamBold,
+						Name = "Content"
+					}), "Text"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					BindBox,
+					Click
+				}), "Second")
 
-				GBSSvogm(QkweQTonl.HZXsQnpv:ZAlbivyHj(string.char(65,81,65,87,119,88,109,84,74)), function()
-					DmdFQTdf:mzQYvzWf(QkweQTonl, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {apWBqbZB = rxJnqbwd.ijoGcJk(0, QkweQTonl.HZXsQnpv.bfrjxsqdJ.TdjSGf + 16, 0, 24)}):xSpbKxBgW()
+				AddConnection(BindBox.Value:GetPropertyChangedSignal("Text"), function()
+					TweenService:Create(BindBox, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, BindBox.Value.TextBounds.X + 16, 0, 24)}):Play()
 				end)
 
-				GBSSvogm(BfMraX.hOiTxlNm, function(OiIOzYmdt)
-					if OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.EFnybWP then
-						if AGVaEDTi.DYRgFZpZ then return end
-						AGVaEDTi.DYRgFZpZ = true
-						QkweQTonl.HZXsQnpv.AQAWwXmTJ = string.char()
+				AddConnection(Click.InputEnded, function(Input)
+					if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+						if Bind.Binding then return end
+						Bind.Binding = true
+						BindBox.Value.Text = ""
 					end
 				end)
 
-				GBSSvogm(usslBIh.TcyjoDFJ, function(OiIOzYmdt)
-					if usslBIh:huuybZ() then return end
-					if (OiIOzYmdt.YQgHxp.HxiwPdrJ == AGVaEDTi.HZXsQnpv or OiIOzYmdt.RUVDAExCV.HxiwPdrJ == AGVaEDTi.HZXsQnpv) and not AGVaEDTi.DYRgFZpZ then
-						if EvQrcmZ.DnMsShuQ then
-							TfXNdfK = true
-							EvQrcmZ.WMytzi(TfXNdfK)
+				AddConnection(UserInputService.InputBegan, function(Input)
+					if UserInputService:GetFocusedTextBox() then return end
+					if (Input.KeyCode.Name == Bind.Value or Input.UserInputType.Name == Bind.Value) and not Bind.Binding then
+						if BindConfig.Hold then
+							Holding = true
+							BindConfig.Callback(Holding)
 						else
-							EvQrcmZ.WMytzi()
+							BindConfig.Callback()
 						end
-					elseif AGVaEDTi.DYRgFZpZ then
-						local vaNOwFpLc
-						lgINmhB(function()
-							if not eXPoIRFNs(gwaREoL, OiIOzYmdt.YQgHxp) then
-								vaNOwFpLc = OiIOzYmdt.YQgHxp
+					elseif Bind.Binding then
+						local Key
+						pcall(function()
+							if not CheckKey(BlacklistedKeys, Input.KeyCode) then
+								Key = Input.KeyCode
 							end
 						end)
-						lgINmhB(function()
-							if eXPoIRFNs(ZRmTxet, OiIOzYmdt.RUVDAExCV) and not vaNOwFpLc then
-								vaNOwFpLc = OiIOzYmdt.RUVDAExCV
+						pcall(function()
+							if CheckKey(WhitelistedMouse, Input.UserInputType) and not Key then
+								Key = Input.UserInputType
 							end
 						end)
-						vaNOwFpLc = vaNOwFpLc or AGVaEDTi.HZXsQnpv
-						AGVaEDTi:ewhNQlzb(vaNOwFpLc)
-						JCONxo(IvYCgtk.BHNuBzl)
+						Key = Key or Bind.Value
+						Bind:Set(Key)
+						SaveCfg(game.GameId)
 					end
 				end)
 
-				GBSSvogm(usslBIh.hOiTxlNm, function(OiIOzYmdt)
-					if OiIOzYmdt.YQgHxp.HxiwPdrJ == AGVaEDTi.HZXsQnpv or OiIOzYmdt.RUVDAExCV.HxiwPdrJ == AGVaEDTi.HZXsQnpv then
-						if EvQrcmZ.DnMsShuQ and TfXNdfK then
-							TfXNdfK = false
-							EvQrcmZ.WMytzi(TfXNdfK)
+				AddConnection(UserInputService.InputEnded, function(Input)
+					if Input.KeyCode.Name == Bind.Value or Input.UserInputType.Name == Bind.Value then
+						if BindConfig.Hold and Holding then
+							Holding = false
+							BindConfig.Callback(Holding)
 						end
 					end
 				end)
 
-				GBSSvogm(BfMraX.PTwPtkeVZ, function()
-					DmdFQTdf:mzQYvzWf(LhGeaWewr, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = JLFPzYjW.toipKy(nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.WKxPMn * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.nHIjRPx * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.OsapCGxm * 255 + 3)}):xSpbKxBgW()
+				AddConnection(Click.MouseEnter, function()
+					TweenService:Create(BindFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(RamuneLib.Themes[RamuneLib.SelectedTheme].Second.R * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.G * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.B * 255 + 3)}):Play()
 				end)
 
-				GBSSvogm(BfMraX.utiBeX, function()
-					DmdFQTdf:mzQYvzWf(LhGeaWewr, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP}):xSpbKxBgW()
+				AddConnection(Click.MouseLeave, function()
+					TweenService:Create(BindFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = RamuneLib.Themes[RamuneLib.SelectedTheme].Second}):Play()
 				end)
 
-				GBSSvogm(BfMraX.ofvlsMZ, function()
-					DmdFQTdf:mzQYvzWf(LhGeaWewr, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = JLFPzYjW.toipKy(nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.WKxPMn * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.nHIjRPx * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.OsapCGxm * 255 + 3)}):xSpbKxBgW()
+				AddConnection(Click.MouseButton1Up, function()
+					TweenService:Create(BindFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(RamuneLib.Themes[RamuneLib.SelectedTheme].Second.R * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.G * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.B * 255 + 3)}):Play()
 				end)
 
-				GBSSvogm(BfMraX.enizfx, function()
-					DmdFQTdf:mzQYvzWf(LhGeaWewr, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = JLFPzYjW.toipKy(nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.WKxPMn * 255 + 6, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.nHIjRPx * 255 + 6, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.OsapCGxm * 255 + 6)}):xSpbKxBgW()
+				AddConnection(Click.MouseButton1Down, function()
+					TweenService:Create(BindFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(RamuneLib.Themes[RamuneLib.SelectedTheme].Second.R * 255 + 6, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.G * 255 + 6, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.B * 255 + 6)}):Play()
 				end)
 
-				function AGVaEDTi:ewhNQlzb(vaNOwFpLc)
-					AGVaEDTi.DYRgFZpZ = false
-					AGVaEDTi.HZXsQnpv = vaNOwFpLc or AGVaEDTi.HZXsQnpv
-					AGVaEDTi.HZXsQnpv = AGVaEDTi.HZXsQnpv.HxiwPdrJ or AGVaEDTi.HZXsQnpv
-					QkweQTonl.HZXsQnpv.AQAWwXmTJ = AGVaEDTi.HZXsQnpv
+				function Bind:Set(Key)
+					Bind.Binding = false
+					Bind.Value = Key or Bind.Value
+					Bind.Value = Bind.Value.Name or Bind.Value
+					BindBox.Value.Text = Bind.Value
 				end
 
-				AGVaEDTi:ewhNQlzb(EvQrcmZ.yDSrSwxPQ)
-				if EvQrcmZ.pzsLoR then				
-					nLwJHpS.gXiFMczzC[EvQrcmZ.pzsLoR] = AGVaEDTi
+				Bind:Set(BindConfig.Default)
+				if BindConfig.Flag then				
+					RamuneLib.Flags[BindConfig.Flag] = Bind
 				end
-				return AGVaEDTi
+				return Bind
 			end  
 			
-			function oAfGoIP:FRHqgkX(lyYxBB)
-				lyYxBB = lyYxBB or {}
-				lyYxBB.HxiwPdrJ = lyYxBB.HxiwPdrJ or string.char(99,116,78,109,117,87,103,111,72)
-				lyYxBB.yDSrSwxPQ = lyYxBB.yDSrSwxPQ or string.char()
-				lyYxBB.iqLgAxO = lyYxBB.iqLgAxO or false
-				lyYxBB.WMytzi = lyYxBB.WMytzi or function() end
+			function ElementFunction:AddTextbox(TextboxConfig)
+				TextboxConfig = TextboxConfig or {}
+				TextboxConfig.Name = TextboxConfig.Name or "Textbox"
+				TextboxConfig.Default = TextboxConfig.Default or ""
+				TextboxConfig.TextDisappear = TextboxConfig.TextDisappear or false
+				TextboxConfig.Callback = TextboxConfig.Callback or function() end
 
-				local BfMraX = OdMuytTV(VcYvQRO(string.char(86,65,115,117,80,72,98,112,112)), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, 0)
+				local Click = SetProps(MakeElement("Button"), {
+					Size = UDim2.new(1, 0, 1, 0)
 				})
 
-				local AIRpTDF = pyPaIOOfr(mzQYvzWf(string.char(73,90,97,98,85,84,98,99), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, 0),
-					dZGyqaV = 1,
-					KnvIbhbK = JLFPzYjW.toipKy(255, 255, 255),
-					ubUYrS = JLFPzYjW.toipKy(210,210,210),
-					tkvcnAVy = string.char(79,105,73,79,122,89,109,100,116),
-					uDHbCoVoX = WXSzlaM.uDHbCoVoX.heCAXEa,
-					TGCwdvJ = WXSzlaM.TGCwdvJ.dKjZWi,
-					tMQjBRl = 14,
-					ehwEwlRJ = false
-				}), string.char(65,81,65,87,119,88,109,84,74))
+				local TextboxActual = AddThemeObject(Create("TextBox", {
+					Size = UDim2.new(1, 0, 1, 0),
+					BackgroundTransparency = 1,
+					TextColor3 = Color3.fromRGB(255, 255, 255),
+					PlaceholderColor3 = Color3.fromRGB(210,210,210),
+					PlaceholderText = "Input",
+					Font = Enum.Font.GothamSemibold,
+					TextXAlignment = Enum.TextXAlignment.Center,
+					TextSize = 14,
+					ClearTextOnFocus = false
+				}), "Text")
 
-				local fdpNbUzw = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 4), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(0, 24, 0, 24),
-					lSnRQjt = rxJnqbwd.ijoGcJk(1, -12, 0.5, 0),
-					MFgyoUzz = XDPwMgo.ijoGcJk(1, 0.5)
+				local TextContainer = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 4), {
+					Size = UDim2.new(0, 24, 0, 24),
+					Position = UDim2.new(1, -12, 0.5, 0),
+					AnchorPoint = Vector2.new(1, 0.5)
 				}), {
-					pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75)),
-					AIRpTDF
-				}), string.char(78,119,116,69,97,71))
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					TextboxActual
+				}), "Main")
 
 
-				local auBzwGmST = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 5), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 38),
-					psCCLwq = zDeLRKypo
+				local TextboxFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
+					Size = UDim2.new(1, 0, 0, 38),
+					Parent = ItemParent
 				}), {
-					pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), lyYxBB.HxiwPdrJ, 15), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(1, -12, 1, 0),
-						lSnRQjt = rxJnqbwd.ijoGcJk(0, 12, 0, 0),
-						uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-						HxiwPdrJ = string.char(112,102,104,65,97,76)
-					}), string.char(65,81,65,87,119,88,109,84,74)),
-					pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75)),
-					fdpNbUzw,
-					BfMraX
-				}), string.char(107,84,119,78,88,98,80,80))
+					AddThemeObject(SetProps(MakeElement("Label", TextboxConfig.Name, 15), {
+						Size = UDim2.new(1, -12, 1, 0),
+						Position = UDim2.new(0, 12, 0, 0),
+						Font = Enum.Font.GothamBold,
+						Name = "Content"
+					}), "Text"),
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+					TextContainer,
+					Click
+				}), "Second")
 
-				GBSSvogm(AIRpTDF:ZAlbivyHj(string.char(65,81,65,87,119,88,109,84,74)), function()
-					DmdFQTdf:mzQYvzWf(fdpNbUzw, QOXehqcz.ijoGcJk(0.45, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {apWBqbZB = rxJnqbwd.ijoGcJk(0, AIRpTDF.bfrjxsqdJ.TdjSGf + 16, 0, 24)}):xSpbKxBgW()
+				AddConnection(TextboxActual:GetPropertyChangedSignal("Text"), function()
+					TweenService:Create(TextContainer, TweenInfo.new(0.45, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, TextboxActual.TextBounds.X + 16, 0, 24)}):Play()
 				end)
 
-				GBSSvogm(AIRpTDF.JyUriyJU, function()
-					lyYxBB.WMytzi(AIRpTDF.AQAWwXmTJ)
-					if lyYxBB.iqLgAxO then
-						AIRpTDF.AQAWwXmTJ = string.char()
+				AddConnection(TextboxActual.FocusLost, function()
+					TextboxConfig.Callback(TextboxActual.Text)
+					if TextboxConfig.TextDisappear then
+						TextboxActual.Text = ""
 					end	
 				end)
 
-				AIRpTDF.AQAWwXmTJ = lyYxBB.yDSrSwxPQ
+				TextboxActual.Text = TextboxConfig.Default
 
-				GBSSvogm(BfMraX.PTwPtkeVZ, function()
-					DmdFQTdf:mzQYvzWf(auBzwGmST, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = JLFPzYjW.toipKy(nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.WKxPMn * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.nHIjRPx * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.OsapCGxm * 255 + 3)}):xSpbKxBgW()
+				AddConnection(Click.MouseEnter, function()
+					TweenService:Create(TextboxFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(RamuneLib.Themes[RamuneLib.SelectedTheme].Second.R * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.G * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.B * 255 + 3)}):Play()
 				end)
 
-				GBSSvogm(BfMraX.utiBeX, function()
-					DmdFQTdf:mzQYvzWf(auBzwGmST, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP}):xSpbKxBgW()
+				AddConnection(Click.MouseLeave, function()
+					TweenService:Create(TextboxFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = RamuneLib.Themes[RamuneLib.SelectedTheme].Second}):Play()
 				end)
 
-				GBSSvogm(BfMraX.ofvlsMZ, function()
-					DmdFQTdf:mzQYvzWf(auBzwGmST, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = JLFPzYjW.toipKy(nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.WKxPMn * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.nHIjRPx * 255 + 3, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.OsapCGxm * 255 + 3)}):xSpbKxBgW()
-					AIRpTDF:lvXmwH()
+				AddConnection(Click.MouseButton1Up, function()
+					TweenService:Create(TextboxFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(RamuneLib.Themes[RamuneLib.SelectedTheme].Second.R * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.G * 255 + 3, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.B * 255 + 3)}):Play()
+					TextboxActual:CaptureFocus()
 				end)
 
-				GBSSvogm(BfMraX.enizfx, function()
-					DmdFQTdf:mzQYvzWf(auBzwGmST, QOXehqcz.ijoGcJk(0.25, WXSzlaM.ApSxIMXTC.pnBPfdV, WXSzlaM.BUlZJC.ErWHLU), {pShMNxcHw = JLFPzYjW.toipKy(nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.WKxPMn * 255 + 6, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.nHIjRPx * 255 + 6, nLwJHpS.HqrEoEk[nLwJHpS.bzrGvvLD].kTwNXbPP.OsapCGxm * 255 + 6)}):xSpbKxBgW()
+				AddConnection(Click.MouseButton1Down, function()
+					TweenService:Create(TextboxFrame, TweenInfo.new(0.25, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(RamuneLib.Themes[RamuneLib.SelectedTheme].Second.R * 255 + 6, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.G * 255 + 6, RamuneLib.Themes[RamuneLib.SelectedTheme].Second.B * 255 + 6)}):Play()
 				end)
 			end 
 			
-			function oAfGoIP:dNAlNQd(VdVJSOncJ)
-				VdVJSOncJ = VdVJSOncJ or {}
-				VdVJSOncJ.HxiwPdrJ = VdVJSOncJ.HxiwPdrJ or string.char(86,82,86,90,76,84,106)
-				VdVJSOncJ.yDSrSwxPQ = VdVJSOncJ.yDSrSwxPQ or JLFPzYjW.toipKy(255,255,255)
-				VdVJSOncJ.WMytzi = VdVJSOncJ.WMytzi or function() end
-				VdVJSOncJ.pzsLoR = VdVJSOncJ.pzsLoR or nil
-				VdVJSOncJ.ZhBqNcVo = VdVJSOncJ.ZhBqNcVo or false
+			function ElementFunction:AddColorpicker(ColorpickerConfig)
+				ColorpickerConfig = ColorpickerConfig or {}
+				ColorpickerConfig.Name = ColorpickerConfig.Name or "Colorpicker"
+				ColorpickerConfig.Default = ColorpickerConfig.Default or Color3.fromRGB(255,255,255)
+				ColorpickerConfig.Callback = ColorpickerConfig.Callback or function() end
+				ColorpickerConfig.Flag = ColorpickerConfig.Flag or nil
+				ColorpickerConfig.Save = ColorpickerConfig.Save or false
 
-				local DmsrAjUJ, pNqnRBf, RWGZdqI = 1, 1, 1
-				local VRVZLTj = {HZXsQnpv = VdVJSOncJ.yDSrSwxPQ, PeABkzyMx = false, XKvhEfGR = string.char(86,82,86,90,76,84,106), ZhBqNcVo = VdVJSOncJ.ZhBqNcVo}
+				local ColorH, ColorS, ColorV = 1, 1, 1
+				local Colorpicker = {Value = ColorpickerConfig.Default, Toggled = false, Type = "Colorpicker", Save = ColorpickerConfig.Save}
 
-				local vcPCRIhI = mzQYvzWf(string.char(67,118,75,75,73,77,65), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(0, 18, 0, 18),
-					lSnRQjt = rxJnqbwd.ijoGcJk(JysFMW(3, JLFPzYjW.PpfHQGkMH(VRVZLTj.HZXsQnpv))),
-					AFbOCGGKt = WXSzlaM.AFbOCGGKt.VzWMrtyLs,
-					MFgyoUzz = XDPwMgo.ijoGcJk(0.5, 0.5),
-					dZGyqaV = 1,
-					aNITKOy = string.char(70,89,66,73,114,119,58,47,47,75,114,79,118,78,67,98,46,101,86,120,89,106,109,46,65,119,111,100,69,89,86,47,113,67,85,68,73,73,47,63,73,112,68,97,67,103,66,113,122,61,52,56,48,53,54,51,57,48,48,48)
+				local ColorSelection = Create("ImageLabel", {
+					Size = UDim2.new(0, 18, 0, 18),
+					Position = UDim2.new(select(3, Color3.toHSV(Colorpicker.Value))),
+					ScaleType = Enum.ScaleType.Fit,
+					AnchorPoint = Vector2.new(0.5, 0.5),
+					BackgroundTransparency = 1,
+					Image = "http://www.roblox.com/asset/?id=4805639000"
 				})
 
-				local EFxQamr = mzQYvzWf(string.char(67,118,75,75,73,77,65), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(0, 18, 0, 18),
-					lSnRQjt = rxJnqbwd.ijoGcJk(0.5, 0, 1 - JysFMW(1, JLFPzYjW.PpfHQGkMH(VRVZLTj.HZXsQnpv))),
-					AFbOCGGKt = WXSzlaM.AFbOCGGKt.VzWMrtyLs,
-					MFgyoUzz = XDPwMgo.ijoGcJk(0.5, 0.5),
-					dZGyqaV = 1,
-					aNITKOy = string.char(70,89,66,73,114,119,58,47,47,75,114,79,118,78,67,98,46,101,86,120,89,106,109,46,65,119,111,100,69,89,86,47,113,67,85,68,73,73,47,63,73,112,68,97,67,103,66,113,122,61,52,56,48,53,54,51,57,48,48,48)
+				local HueSelection = Create("ImageLabel", {
+					Size = UDim2.new(0, 18, 0, 18),
+					Position = UDim2.new(0.5, 0, 1 - select(1, Color3.toHSV(Colorpicker.Value))),
+					ScaleType = Enum.ScaleType.Fit,
+					AnchorPoint = Vector2.new(0.5, 0.5),
+					BackgroundTransparency = 1,
+					Image = "http://www.roblox.com/asset/?id=4805639000"
 				})
 
-				local ilFXIbNMI = mzQYvzWf(string.char(67,118,75,75,73,77,65), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, -25, 1, 0),
-					XILulLJ = false,
-					aNITKOy = string.char(71,71,90,88,117,118,58,47,47,52,49,53,53,56,48,49,50,53,50)
+				local Color = Create("ImageLabel", {
+					Size = UDim2.new(1, -25, 1, 0),
+					Visible = false,
+					Image = "rbxassetid://4155801252"
 				}, {
-					mzQYvzWf(string.char(66,111,106,73,74,84,74), {iotXlQEB = csgNmTBR.ijoGcJk(0, 5)}),
-					vcPCRIhI
+					Create("UICorner", {CornerRadius = UDim.new(0, 5)}),
+					ColorSelection
 				})
 
-				local wZswTCRmG = mzQYvzWf(string.char(109,84,66,72,121,103,80,90,118), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(0, 20, 1, 0),
-					lSnRQjt = rxJnqbwd.ijoGcJk(1, -20, 0, 0),
-					XILulLJ = false
+				local Hue = Create("Frame", {
+					Size = UDim2.new(0, 20, 1, 0),
+					Position = UDim2.new(1, -20, 0, 0),
+					Visible = false
 				}, {
-					mzQYvzWf(string.char(101,108,120,72,107,109), {WJyaBUvV = 270, ilFXIbNMI = RHzSseWE.ijoGcJk{aSiXitmJD.ijoGcJk(0.00, JLFPzYjW.toipKy(255, 0, 4)), aSiXitmJD.ijoGcJk(0.20, JLFPzYjW.toipKy(234, 255, 0)), aSiXitmJD.ijoGcJk(0.40, JLFPzYjW.toipKy(21, 255, 0)), aSiXitmJD.ijoGcJk(0.60, JLFPzYjW.toipKy(0, 255, 255)), aSiXitmJD.ijoGcJk(0.80, JLFPzYjW.toipKy(0, 17, 255)), aSiXitmJD.ijoGcJk(0.90, JLFPzYjW.toipKy(255, 0, 251)), aSiXitmJD.ijoGcJk(1.00, JLFPzYjW.toipKy(255, 0, 4))},}),
-					mzQYvzWf(string.char(66,111,106,73,74,84,74), {iotXlQEB = csgNmTBR.ijoGcJk(0, 5)}),
-					EFxQamr
+					Create("UIGradient", {Rotation = 270, Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.20, Color3.fromRGB(234, 255, 0)), ColorSequenceKeypoint.new(0.40, Color3.fromRGB(21, 255, 0)), ColorSequenceKeypoint.new(0.60, Color3.fromRGB(0, 255, 255)), ColorSequenceKeypoint.new(0.80, Color3.fromRGB(0, 17, 255)), ColorSequenceKeypoint.new(0.90, Color3.fromRGB(255, 0, 251)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 4))},}),
+					Create("UICorner", {CornerRadius = UDim.new(0, 5)}),
+					HueSelection
 				})
 
-				local dKIVFi = mzQYvzWf(string.char(109,84,66,72,121,103,80,90,118), {
-					lSnRQjt = rxJnqbwd.ijoGcJk(0, 0, 0, 32),
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, -32),
-					dZGyqaV = 1,
-					TEXxKvm = true
+				local ColorpickerContainer = Create("Frame", {
+					Position = UDim2.new(0, 0, 0, 32),
+					Size = UDim2.new(1, 0, 1, -32),
+					BackgroundTransparency = 1,
+					ClipsDescendants = true
 				}, {
-					wZswTCRmG,
-					ilFXIbNMI,
-					mzQYvzWf(string.char(66,85,112,81,71,80,88), {
-						pVoFWy = csgNmTBR.ijoGcJk(0, 35),
-						LsjnDFe = csgNmTBR.ijoGcJk(0, 35),
-						iOhkeh = csgNmTBR.ijoGcJk(0, 10),
-						ZFDXeI = csgNmTBR.ijoGcJk(0, 17)
+					Hue,
+					Color,
+					Create("UIPadding", {
+						PaddingLeft = UDim.new(0, 35),
+						PaddingRight = UDim.new(0, 35),
+						PaddingBottom = UDim.new(0, 10),
+						PaddingTop = UDim.new(0, 17)
 					})
 				})
 
-				local BfMraX = OdMuytTV(VcYvQRO(string.char(86,65,115,117,80,72,98,112,112)), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, 0)
+				local Click = SetProps(MakeElement("Button"), {
+					Size = UDim2.new(1, 0, 1, 0)
 				})
 
-				local tXRWpVGv = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 4), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(0, 24, 0, 24),
-					lSnRQjt = rxJnqbwd.ijoGcJk(1, -12, 0.5, 0),
-					MFgyoUzz = XDPwMgo.ijoGcJk(1, 0.5)
+				local ColorpickerBox = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 4), {
+					Size = UDim2.new(0, 24, 0, 24),
+					Position = UDim2.new(1, -12, 0.5, 0),
+					AnchorPoint = Vector2.new(1, 0.5)
 				}), {
-					pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75))
-				}), string.char(78,119,116,69,97,71))
+					AddThemeObject(MakeElement("Stroke"), "Stroke")
+				}), "Main")
 
-				local nihRISc = pyPaIOOfr(RAUyIjm(OdMuytTV(VcYvQRO(string.char(74,65,77,81,98,80), JLFPzYjW.toipKy(255, 255, 255), 0, 5), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 38),
-					psCCLwq = zDeLRKypo
+				local ColorpickerFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
+					Size = UDim2.new(1, 0, 0, 38),
+					Parent = ItemParent
 				}), {
-					OdMuytTV(RAUyIjm(VcYvQRO(string.char(73,71,115,102,69,113,76)), {
-						pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), VdVJSOncJ.HxiwPdrJ, 15), {
-							apWBqbZB = rxJnqbwd.ijoGcJk(1, -12, 1, 0),
-							lSnRQjt = rxJnqbwd.ijoGcJk(0, 12, 0, 0),
-							uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg,
-							HxiwPdrJ = string.char(112,102,104,65,97,76)
-						}), string.char(65,81,65,87,119,88,109,84,74)),
-						tXRWpVGv,
-						BfMraX,
-						pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(109,84,66,72,121,103,80,90,118)), {
-							apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 1),
-							lSnRQjt = rxJnqbwd.ijoGcJk(0, 0, 1, -1),
-							HxiwPdrJ = string.char(77,120,66,78,116,67,99,67,109),
-							XILulLJ = false
-						}), string.char(109,121,117,120,114,112,75)), 
+					SetProps(SetChildren(MakeElement("TFrame"), {
+						AddThemeObject(SetProps(MakeElement("Label", ColorpickerConfig.Name, 15), {
+							Size = UDim2.new(1, -12, 1, 0),
+							Position = UDim2.new(0, 12, 0, 0),
+							Font = Enum.Font.GothamBold,
+							Name = "Content"
+						}), "Text"),
+						ColorpickerBox,
+						Click,
+						AddThemeObject(SetProps(MakeElement("Frame"), {
+							Size = UDim2.new(1, 0, 0, 1),
+							Position = UDim2.new(0, 0, 1, -1),
+							Name = "Line",
+							Visible = false
+						}), "Stroke"), 
 					}), {
-						apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 38),
-						TEXxKvm = true,
-						HxiwPdrJ = string.char(74,98,77,79,122,90,120)
+						Size = UDim2.new(1, 0, 0, 38),
+						ClipsDescendants = true,
+						Name = "F"
 					}),
-					dKIVFi,
-					pyPaIOOfr(VcYvQRO(string.char(109,121,117,120,114,112,75)), string.char(109,121,117,120,114,112,75)),
-				}), string.char(107,84,119,78,88,98,80,80))
+					ColorpickerContainer,
+					AddThemeObject(MakeElement("Stroke"), "Stroke"),
+				}), "Second")
 
-				GBSSvogm(BfMraX.oBbxGC, function()
-					VRVZLTj.PeABkzyMx = not VRVZLTj.PeABkzyMx
-					DmdFQTdf:mzQYvzWf(nihRISc,QOXehqcz.ijoGcJk(.15, WXSzlaM.ApSxIMXTC.FWjOofNWK, WXSzlaM.BUlZJC.ErWHLU),{apWBqbZB = VRVZLTj.PeABkzyMx and rxJnqbwd.ijoGcJk(1, 0, 0, 148) or rxJnqbwd.ijoGcJk(1, 0, 0, 38)}):xSpbKxBgW()
-					ilFXIbNMI.XILulLJ = VRVZLTj.PeABkzyMx
-					wZswTCRmG.XILulLJ = VRVZLTj.PeABkzyMx
-					nihRISc.JbMOzZx.MxBNtCcCm.XILulLJ = VRVZLTj.PeABkzyMx
+				AddConnection(Click.MouseButton1Click, function()
+					Colorpicker.Toggled = not Colorpicker.Toggled
+					TweenService:Create(ColorpickerFrame,TweenInfo.new(.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Size = Colorpicker.Toggled and UDim2.new(1, 0, 0, 148) or UDim2.new(1, 0, 0, 38)}):Play()
+					Color.Visible = Colorpicker.Toggled
+					Hue.Visible = Colorpicker.Toggled
+					ColorpickerFrame.F.Line.Visible = Colorpicker.Toggled
 				end)
 
-				local function WljdpnAa()
-					tXRWpVGv.pShMNxcHw = JLFPzYjW.iMghvFcC(DmsrAjUJ, pNqnRBf, RWGZdqI)
-					ilFXIbNMI.pShMNxcHw = JLFPzYjW.iMghvFcC(DmsrAjUJ, 1, 1)
-					VRVZLTj:ewhNQlzb(tXRWpVGv.pShMNxcHw)
-					VdVJSOncJ.WMytzi(tXRWpVGv.pShMNxcHw)
-					JCONxo(IvYCgtk.BHNuBzl)
+				local function UpdateColorPicker()
+					ColorpickerBox.BackgroundColor3 = Color3.fromHSV(ColorH, ColorS, ColorV)
+					Color.BackgroundColor3 = Color3.fromHSV(ColorH, 1, 1)
+					Colorpicker:Set(ColorpickerBox.BackgroundColor3)
+					ColorpickerConfig.Callback(ColorpickerBox.BackgroundColor3)
+					SaveCfg(game.GameId)
 				end
 
-				DmsrAjUJ = 1 - (ySTFoKJb.uswgnBIg(EFxQamr.qJoJAIs.AggfPLe - wZswTCRmG.qJoJAIs.AggfPLe, 0, wZswTCRmG.NqtWPiS.AggfPLe) / wZswTCRmG.NqtWPiS.AggfPLe)
-				pNqnRBf = (ySTFoKJb.uswgnBIg(vcPCRIhI.qJoJAIs.TdjSGf - ilFXIbNMI.qJoJAIs.TdjSGf, 0, ilFXIbNMI.NqtWPiS.TdjSGf) / ilFXIbNMI.NqtWPiS.TdjSGf)
-				RWGZdqI = 1 - (ySTFoKJb.uswgnBIg(vcPCRIhI.qJoJAIs.AggfPLe - ilFXIbNMI.qJoJAIs.AggfPLe, 0, ilFXIbNMI.NqtWPiS.AggfPLe) / ilFXIbNMI.NqtWPiS.AggfPLe)
+				ColorH = 1 - (math.clamp(HueSelection.AbsolutePosition.Y - Hue.AbsolutePosition.Y, 0, Hue.AbsoluteSize.Y) / Hue.AbsoluteSize.Y)
+				ColorS = (math.clamp(ColorSelection.AbsolutePosition.X - Color.AbsolutePosition.X, 0, Color.AbsoluteSize.X) / Color.AbsoluteSize.X)
+				ColorV = 1 - (math.clamp(ColorSelection.AbsolutePosition.Y - Color.AbsolutePosition.Y, 0, Color.AbsoluteSize.Y) / Color.AbsoluteSize.Y)
 				
-				local vDxFJKzP, dvQRMuF, LoZdnORpN, PRYNYr = false
+				local Dragging, DragInput, MousePos, FramePos = false
 
-				GBSSvogm(ilFXIbNMI.TcyjoDFJ, function(OiIOzYmdt)
-					if OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.EFnybWP or OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.qdvwstU then
-						vDxFJKzP = true
-						LoZdnORpN = OiIOzYmdt.lSnRQjt
-						PRYNYr = vcPCRIhI.lSnRQjt
+				AddConnection(Color.InputBegan, function(Input)
+					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+						Dragging = true
+						MousePos = Input.Position
+						FramePos = ColorSelection.Position
 		
-						GBSSvogm(OiIOzYmdt.DLpUFQd, function()
-							if OiIOzYmdt.SgYLtUOom == WXSzlaM.SgYLtUOom.MdIsUT then
-								vDxFJKzP = false
-								WaQMTjQ = nil
+						AddConnection(Input.Changed, function()
+							if Input.UserInputState == Enum.UserInputState.End then
+								Dragging = false
+								FocusDrag = nil
 							end
 						end)
 					end
 				end)
 
-				GBSSvogm(ilFXIbNMI.jliYIawVK, function(OiIOzYmdt)
-					if OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.ImHMYxh or OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.qdvwstU and not WaQMTjQ then
-						dvQRMuF = OiIOzYmdt
-						WaQMTjQ = dvQRMuF
+				AddConnection(Color.InputChanged, function(Input)
+					if Input.UserInputType == Enum.UserInputType.MouseMovement or Input.UserInputType == Enum.UserInputType.Touch and not FocusDrag then
+						DragInput = Input
+						FocusDrag = DragInput
 					end
 				end)
 				
-				GBSSvogm(usslBIh.jliYIawVK, function(OiIOzYmdt)
-					if OiIOzYmdt == dvQRMuF and vDxFJKzP and OiIOzYmdt == WaQMTjQ then
-						local zOtwMlV = (ySTFoKJb.uswgnBIg(dvQRMuF.lSnRQjt.TdjSGf - ilFXIbNMI.qJoJAIs.TdjSGf, 0, ilFXIbNMI.NqtWPiS.TdjSGf) / ilFXIbNMI.NqtWPiS.TdjSGf)
-						local Qlulyqwmx = (ySTFoKJb.uswgnBIg(OiIOzYmdt.lSnRQjt.AggfPLe - ilFXIbNMI.qJoJAIs.AggfPLe, 0, ilFXIbNMI.NqtWPiS.AggfPLe) / ilFXIbNMI.NqtWPiS.AggfPLe)
-						vcPCRIhI.lSnRQjt = rxJnqbwd.ijoGcJk(zOtwMlV, 0, Qlulyqwmx, 0)
-						pNqnRBf = zOtwMlV
-						RWGZdqI = 1 - Qlulyqwmx
-						WljdpnAa()
+				AddConnection(UserInputService.InputChanged, function(Input)
+					if Input == DragInput and Dragging and Input == FocusDrag then
+						local ColorX = (math.clamp(DragInput.Position.X - Color.AbsolutePosition.X, 0, Color.AbsoluteSize.X) / Color.AbsoluteSize.X)
+						local ColorY = (math.clamp(Input.Position.Y - Color.AbsolutePosition.Y, 0, Color.AbsoluteSize.Y) / Color.AbsoluteSize.Y)
+						ColorSelection.Position = UDim2.new(ColorX, 0, ColorY, 0)
+						ColorS = ColorX
+						ColorV = 1 - ColorY
+						UpdateColorPicker()
 					end
 				end)
 
-				local gLezriIJU, KOGYtI, wxDFDQUb, lHBheyLk = false
+				local Dragging_1, DragInput_1, MousePos_1, FramePos_1 = false
 
-				GBSSvogm(wZswTCRmG.TcyjoDFJ, function(OiIOzYmdt)
-					if OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.EFnybWP or OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.qdvwstU then
-						gLezriIJU = true
-						wxDFDQUb = OiIOzYmdt.lSnRQjt
-						lHBheyLk = EFxQamr.lSnRQjt
+				AddConnection(Hue.InputBegan, function(Input)
+					if Input.UserInputType == Enum.UserInputType.MouseButton1 or Input.UserInputType == Enum.UserInputType.Touch then
+						Dragging_1 = true
+						MousePos_1 = Input.Position
+						FramePos_1 = HueSelection.Position
 		
-						GBSSvogm(OiIOzYmdt.DLpUFQd, function()
-							if OiIOzYmdt.SgYLtUOom == WXSzlaM.SgYLtUOom.MdIsUT then
-								gLezriIJU = false
-								WaQMTjQ = nil
+						AddConnection(Input.Changed, function()
+							if Input.UserInputState == Enum.UserInputState.End then
+								Dragging_1 = false
+								FocusDrag = nil
 							end
 						end)
 					end
 				end)
-				GBSSvogm(wZswTCRmG.jliYIawVK, function(OiIOzYmdt)
-					if OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.ImHMYxh or OiIOzYmdt.RUVDAExCV == WXSzlaM.RUVDAExCV.qdvwstU and not WaQMTjQ then
-						KOGYtI = OiIOzYmdt
-						WaQMTjQ = KOGYtI
+				AddConnection(Hue.InputChanged, function(Input)
+					if Input.UserInputType == Enum.UserInputType.MouseMovement or Input.UserInputType == Enum.UserInputType.Touch and not FocusDrag then
+						DragInput_1 = Input
+						FocusDrag = DragInput_1
 					end
 				end)
 				
-				GBSSvogm(usslBIh.jliYIawVK, function(OiIOzYmdt)
-					if OiIOzYmdt == KOGYtI and gLezriIJU and KOGYtI == WaQMTjQ then
-						local keNDUFbGB = (ySTFoKJb.uswgnBIg(OiIOzYmdt.lSnRQjt.AggfPLe - wZswTCRmG.qJoJAIs.AggfPLe, 0, wZswTCRmG.NqtWPiS.AggfPLe) / wZswTCRmG.NqtWPiS.AggfPLe)
-						EFxQamr.lSnRQjt = rxJnqbwd.ijoGcJk(0.5, 0, keNDUFbGB, 0)
-						DmsrAjUJ = 1 - keNDUFbGB
-						WljdpnAa()
+				AddConnection(UserInputService.InputChanged, function(Input)
+					if Input == DragInput_1 and Dragging_1 and DragInput_1 == FocusDrag then
+						local HueY = (math.clamp(Input.Position.Y - Hue.AbsolutePosition.Y, 0, Hue.AbsoluteSize.Y) / Hue.AbsoluteSize.Y)
+						HueSelection.Position = UDim2.new(0.5, 0, HueY, 0)
+						ColorH = 1 - HueY
+						UpdateColorPicker()
 					end
 				end)
 
-				function VRVZLTj:ewhNQlzb(HZXsQnpv)
-					VRVZLTj.HZXsQnpv = HZXsQnpv
-					tXRWpVGv.pShMNxcHw = VRVZLTj.HZXsQnpv
-					VdVJSOncJ.WMytzi(VRVZLTj.HZXsQnpv)
+				function Colorpicker:Set(Value)
+					Colorpicker.Value = Value
+					ColorpickerBox.BackgroundColor3 = Colorpicker.Value
+					ColorpickerConfig.Callback(Colorpicker.Value)
 				end
 
-				VRVZLTj:ewhNQlzb(VRVZLTj.HZXsQnpv)
-				if VdVJSOncJ.pzsLoR then				
-					nLwJHpS.gXiFMczzC[VdVJSOncJ.pzsLoR] = VRVZLTj
+				Colorpicker:Set(Colorpicker.Value)
+				if ColorpickerConfig.Flag then				
+					RamuneLib.Flags[ColorpickerConfig.Flag] = Colorpicker
 				end
-				return VRVZLTj
+				return Colorpicker
 			end  
-			return oAfGoIP   
+			return ElementFunction   
 		end	
 
-		local oAfGoIP = {}
+		local ElementFunction = {}
 
-		function oAfGoIP:AFkbGko(rMfnBLKM)
-			rMfnBLKM.HxiwPdrJ = rMfnBLKM.HxiwPdrJ or string.char(113,88,65,106,100,66,86,110,82)
+		function ElementFunction:AddSection(SectionConfig)
+			SectionConfig.Name = SectionConfig.Name or "Section"
 
-			local sBapxU = RAUyIjm(OdMuytTV(VcYvQRO(string.char(73,71,115,102,69,113,76)), {
-				apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, 26),
-				psCCLwq = lQYnFB
+			local SectionFrame = SetChildren(SetProps(MakeElement("TFrame"), {
+				Size = UDim2.new(1, 0, 0, 26),
+				Parent = Container
 			}), {
-				pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), rMfnBLKM.HxiwPdrJ, 14), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, -12, 0, 16),
-					lSnRQjt = rxJnqbwd.ijoGcJk(0, 0, 0, 3),
-					uDHbCoVoX = WXSzlaM.uDHbCoVoX.heCAXEa
-				}), string.char(109,103,114,104,74,80,122)),
-				RAUyIjm(OdMuytTV(VcYvQRO(string.char(73,71,115,102,69,113,76)), {
-					MFgyoUzz = XDPwMgo.ijoGcJk(0, 0),
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, -24),
-					lSnRQjt = rxJnqbwd.ijoGcJk(0, 0, 0, 23),
-					HxiwPdrJ = string.char(72,76,111,117,81,84)
+				AddThemeObject(SetProps(MakeElement("Label", SectionConfig.Name, 14), {
+					Size = UDim2.new(1, -12, 0, 16),
+					Position = UDim2.new(0, 0, 0, 3),
+					Font = Enum.Font.GothamSemibold
+				}), "TextDark"),
+				SetChildren(SetProps(MakeElement("TFrame"), {
+					AnchorPoint = Vector2.new(0, 0),
+					Size = UDim2.new(1, 0, 1, -24),
+					Position = UDim2.new(0, 0, 0, 23),
+					Name = "Holder"
 				}), {
-					VcYvQRO(string.char(107,119,108,103,119,73,66), 0, 6)
+					MakeElement("List", 0, 6)
 				}),
 			})
 
-			GBSSvogm(sBapxU.HLouQT.cJXXvJl:ZAlbivyHj(string.char(117,67,108,74,67,66,71,81,112)), function()
-				sBapxU.apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, sBapxU.HLouQT.cJXXvJl.uClJCBGQp.AggfPLe + 31)
-				sBapxU.HLouQT.apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 0, sBapxU.HLouQT.cJXXvJl.uClJCBGQp.AggfPLe)
+			AddConnection(SectionFrame.Holder.UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"), function()
+				SectionFrame.Size = UDim2.new(1, 0, 0, SectionFrame.Holder.UIListLayout.AbsoluteContentSize.Y + 31)
+				SectionFrame.Holder.Size = UDim2.new(1, 0, 0, SectionFrame.Holder.UIListLayout.AbsoluteContentSize.Y)
 			end)
 
-			local TqEBDQVeT = {}
-			for MepRpes, gisZhgH in next, yVPXEYApl(sBapxU.HLouQT) do
-				TqEBDQVeT[MepRpes] = gisZhgH 
+			local SectionFunction = {}
+			for i, v in next, GetElements(SectionFrame.Holder) do
+				SectionFunction[i] = v 
 			end
-			return TqEBDQVeT
+			return SectionFunction
 		end	
 
-		for MepRpes, gisZhgH in next, yVPXEYApl(lQYnFB) do
-			oAfGoIP[MepRpes] = gisZhgH 
+		for i, v in next, GetElements(Container) do
+			ElementFunction[i] = v 
 		end
 
-		if OAAKYXtVl.LOCULzmv then
-			for MepRpes, gisZhgH in next, oAfGoIP do
-				oAfGoIP[MepRpes] = function() end
+		if TabConfig.PremiumOnly then
+			for i, v in next, ElementFunction do
+				ElementFunction[i] = function() end
 			end    
-			lQYnFB:pVRHmaxs(string.char(99,74,88,88,118,74,108)):BbZvQEN()
-			lQYnFB:pVRHmaxs(string.char(66,85,112,81,71,80,88)):BbZvQEN()
-			RAUyIjm(OdMuytTV(VcYvQRO(string.char(73,71,115,102,69,113,76)), {
-				apWBqbZB = rxJnqbwd.ijoGcJk(1, 0, 1, 0),
-				psCCLwq = zDeLRKypo
+			Container:FindFirstChild("UIListLayout"):Destroy()
+			Container:FindFirstChild("UIPadding"):Destroy()
+			SetChildren(SetProps(MakeElement("TFrame"), {
+				Size = UDim2.new(1, 0, 1, 0),
+				Parent = ItemParent
 			}), {
-				pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(97,78,73,84,75,79,121), string.char(71,71,90,88,117,118,58,47,47,51,54,49,48,50,51,57,57,54,48)), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(0, 18, 0, 18),
-					lSnRQjt = rxJnqbwd.ijoGcJk(0, 15, 0, 15),
-					blilLqjG = 0.4
-				}), string.char(65,81,65,87,119,88,109,84,74)),
-				pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), string.char(101,107,86,76,120,115,108,110,109,32,72,106,121,110,114,85,80), 14), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, -38, 0, 14),
-					lSnRQjt = rxJnqbwd.ijoGcJk(0, 38, 0, 18),
-					GvluwTEXs = 0.4
-				}), string.char(65,81,65,87,119,88,109,84,74)),
-				pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(97,78,73,84,75,79,121), string.char(71,71,90,88,117,118,58,47,47,52,52,56,51,51,52,53,56,55,53)), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(0, 56, 0, 56),
-					lSnRQjt = rxJnqbwd.ijoGcJk(0, 84, 0, 110),
-				}), string.char(65,81,65,87,119,88,109,84,74)),
-				pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), string.char(68,88,113,90,118,71,32,65,82,67,90,75,117,70,88), 14), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, -150, 0, 14),
-					lSnRQjt = rxJnqbwd.ijoGcJk(0, 150, 0, 112),
-					uDHbCoVoX = WXSzlaM.uDHbCoVoX.eVYwsg
-				}), string.char(65,81,65,87,119,88,109,84,74)),
-				pyPaIOOfr(OdMuytTV(VcYvQRO(string.char(74,88,69,68,71,111,104,71), string.char(66,109,117,82,121,97,114,121,99,32,77,119,122,116,100,73,104,110,32,86,89,85,78,71,88,70,32,106,119,101,119,80,82,76,99,65,32,118,76,99,120,69,117,98,90,32,118,99,110,75,110,117,72,115,84,32,97,98,90,79,122,115,87,108,32,84,84,117,104,83,67,103,69,86,32,77,122,67,115,113,80,103,119,119,32,68,88,113,90,118,71,32,100,114,103,108,82,115,76,46,32,120,89,82,79,117,80,32,68,88,113,90,118,71,32,105,110,32,106,119,101,119,80,82,76,99,65,32,71,79,67,88,79,104,77,32,106,69,90,88,118,84,78,105,32,40,70,101,80,77,75,113,46,84,65,80,107,70,81,47,119,76,85,120,97,68,108,117,97,41), 12), {
-					apWBqbZB = rxJnqbwd.ijoGcJk(1, -200, 0, 14),
-					lSnRQjt = rxJnqbwd.ijoGcJk(0, 150, 0, 138),
-					ZIccVu = true,
-					GvluwTEXs = 0.4
-				}), string.char(65,81,65,87,119,88,109,84,74))
+				AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://3610239960"), {
+					Size = UDim2.new(0, 18, 0, 18),
+					Position = UDim2.new(0, 15, 0, 15),
+					ImageTransparency = 0.4
+				}), "Text"),
+				AddThemeObject(SetProps(MakeElement("Label", "Unauthorised Access", 14), {
+					Size = UDim2.new(1, -38, 0, 14),
+					Position = UDim2.new(0, 38, 0, 18),
+					TextTransparency = 0.4
+				}), "Text"),
+				AddThemeObject(SetProps(MakeElement("Image", "rbxassetid://4483345875"), {
+					Size = UDim2.new(0, 56, 0, 56),
+					Position = UDim2.new(0, 84, 0, 110),
+				}), "Text"),
+				AddThemeObject(SetProps(MakeElement("Label", "Premium Features", 14), {
+					Size = UDim2.new(1, -150, 0, 14),
+					Position = UDim2.new(0, 150, 0, 112),
+					Font = Enum.Font.GothamBold
+				}), "Text"),
+				AddThemeObject(SetProps(MakeElement("Label", "This part of the script is locked to Sirius Premium users. Purchase Premium in the Discord server (discord.gg/sirius)", 12), {
+					Size = UDim2.new(1, -200, 0, 14),
+					Position = UDim2.new(0, 150, 0, 138),
+					TextWrapped = true,
+					TextTransparency = 0.4
+				}), "Text")
 			})
 		end
-		return oAfGoIP   
+		return ElementFunction   
 	end  
 	
-	return qcbArL
+	return TabFunction
 end   
 
-function nLwJHpS:BbZvQEN()
-	mHFVKhNHW:BbZvQEN()
+function RamuneLib:Destroy()
+	Ramune:Destroy()
 end
 
-return nLwJHpS
+return RamuneLib
